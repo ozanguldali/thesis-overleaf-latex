@@ -1,0 +1,99 @@
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} To run on Google Colaboratory}
+\PY{o}{\PYZpc{}}\PY{k}{cd}
+\PY{o}{\PYZpc{}}\PY{k}{cd} ..
+\PY{o}{\PYZpc{}}\PY{k}{cd} content
+\PY{o}{\PYZpc{}}\PY{k}{ls}
+\PY{c+c1}{\PYZsh{} User must see sample\PYZus{}data/ folder}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{os}\PY{n+nn}{.}\PY{n+nn}{path}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{project\PYZus{}exists} \PY{o}{=} \PY{k+kc}{False}
+\PY{k}{if} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{exists}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{modelsWithLASSO}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{:}
+  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{project directory is already exist, pulling last changes}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+  \PY{o}{\PYZpc{}}\PY{k}{cd} modelsWithLASSO
+  \PY{o}{!} git fetch \PYZhy{}\PYZhy{}all
+  \PY{o}{!} git reset \PYZhy{}\PYZhy{}hard origin/method\PYZhy{}in\PYZhy{}paper
+  \PY{o}{!} git pull origin method\PYZhy{}in\PYZhy{}paper
+\PY{k}{else}\PY{p}{:}
+  \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{project directory is NOT exist, checkouting the project}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+  \PY{o}{!} git clone https://github.com/ozanguldali/modelsWithLASSO.git
+  \PY{o}{\PYZpc{}}\PY{k}{cd} modelsWithLASSO
+  \PY{o}{!} git pull origin method\PYZhy{}in\PYZhy{}paper
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{o}{\PYZpc{}}\PY{k}{ls}
+\PY{c+c1}{\PYZsh{} User must see project inner folder and files}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{os}\PY{n+nn}{.}\PY{n+nn}{path}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{o}{!} pip install log4p
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{run\PYZus{}CNN}
+\PY{k+kn}{from} \PY{n+nn}{importlib} \PY{k+kn}{import} \PY{n}{reload}
+\PY{n}{run\PYZus{}CNN} \PY{o}{=} \PY{n}{reload}\PY{p}{(}\PY{n}{run\PYZus{}CNN}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{run\PYZus{}CNN}\PY{o}{.}\PY{n}{main}\PY{p}{(}\PY{n}{save}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{model\PYZus{}name}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{resnet50}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{optimizer\PYZus{}name}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Adam}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{is\PYZus{}pre\PYZus{}trained}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{batch\PYZus{}size}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{,} \PY{n}{lr}\PY{o}{=}\PY{l+m+mf}{0.00001}\PY{p}{,} \PY{n}{num\PYZus{}epochs}\PY{o}{=}\PY{l+m+mi}{50}\PY{p}{,} \PY{n}{validation\PYZus{}freq}\PY{o}{=}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{50}\PY{p}{,} \PY{n}{augmented}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{num\PYZus{}workers}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} To run CNN process}
+\PY{n}{run\PYZus{}CNN}\PY{o}{.}\PY{n}{main}\PY{p}{(}\PY{n}{test\PYZus{}without\PYZus{}train}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{model\PYZus{}name}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{resnet50}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{is\PYZus{}pre\PYZus{}trained}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{pretrain\PYZus{}file}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{92.16\PYZus{}resnet50\PYZus{}Adam\PYZus{}out}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{app}
+\PY{k+kn}{from} \PY{n+nn}{importlib} \PY{k+kn}{import} \PY{n}{reload}
+\PY{n}{app} \PY{o}{=} \PY{n}{reload}\PY{p}{(}\PY{n}{app}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} To run deep feature transfer from saved CNN model weights to ML algorithms}
+\PY{n}{app}\PY{o}{.}\PY{n}{main}\PY{p}{(}\PY{n}{transfer\PYZus{}learning}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{ml\PYZus{}model\PYZus{}name}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{all}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ml\PYZus{}features}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{all}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{cnn\PYZus{}model\PYZus{}name}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{resnet50}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{is\PYZus{}pre\PYZus{}trained}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{dataset\PYZus{}folder}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{dataset}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{pretrain\PYZus{}file}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{92.16\PYZus{}resnet50\PYZus{}Adam\PYZus{}out}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{seed}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}

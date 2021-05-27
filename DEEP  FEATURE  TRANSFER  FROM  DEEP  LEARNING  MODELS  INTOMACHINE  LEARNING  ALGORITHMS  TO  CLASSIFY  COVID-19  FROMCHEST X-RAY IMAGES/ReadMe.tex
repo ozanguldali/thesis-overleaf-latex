@@ -1,0 +1,236 @@
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\section*{ISTANBUL TECHNICAL UNIVERSITY - Institute of Science and
+Technology}\label{istanbul-technical-university---institute-of-science-and-technology}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection*{Ozan GÜLDALİ}\label{ozan-guldali}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection*{Department of Mathematical Engineering - Mathematical
+Engineering
+Program}\label{department-of-mathematical-engineering---mathematical-engineering-program}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection*{M.Sc. THESIS}\label{m.sc.-thesis}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection*{DEEP FEATURE TRANSFER FROM DEEP LEARNING MODELS INTO MACHINE
+LEARNING ALGORITHMS TO CLASSIFY COVID-19 FROM CHEST X-RAY IMAGES}\label{deep-feature-transfer-from-deep-learning-models-into-machine-learning-algorithms-to-classify-covid-19-from-chest-x-ray-and-demographic-information}
+
+% \begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{itemize}
+\item
+  dataset may be a must for some run-configurations
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Link to dataset:
+    \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/dataset}\\
+  \end{itemize}
+\item
+  dataset\_constructor.py was used to create the dataset from
+  \url{https://github.com/ieee8023/covid-chestxray-dataset} source
+\item
+  image\_operations.py was used to investigate the augmentations of
+  image data
+\item
+  visualize\_layers was used to visualize the layers of cnn models
+\item
+  To run only ML, only CNN or both as transfer learning, app.py file can
+  be run with corresponding function parameters.
+\end{itemize}
+
+% \begin{center}\rule{3in}{0.4pt}\end{center}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\subsubsection*{How to Run}\label{how-to-run}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+ \textbf{transfer\_learning:} True if wanted to transfer deep features from CNN
+  model\\
+\item
+  \textbf{save\_numpy:} True if wanted to save computed features. Default is
+  False.\\
+\item
+  \textbf{load\_numpy:} True if wanted to use previously computed features.
+  Default is False.\\
+\item
+  \textbf{numpy\_prefix:} Prefix for numpy feature files. Default is empty
+  string.\\
+\item
+  \textbf{method:} ``ML'' or ``CNN''. Required if transfer\_learning is False.\\
+\item
+  \textbf{ml\_model\_name:} Model name for ML. ``svm'', ``lr'', ``knn'', ``lda'',
+  or ``all''. Default is empty string. Required if method is not CNN.\\
+\item
+  \textbf{ml\_features:} Type of features. ``info'', ``cnn'', or ``all''. Default
+  is empty ``all''.\\
+\item
+  \textbf{validate\_cv:} True if wanted to apply cross-validation on train set.
+  Default is False.\\
+\item
+  \textbf{save\_ml:} True if wanted to save ML weights. Default is False.\\
+\item
+  \textbf{save\_cnn:} True if wanted to save CNN weights. Default is False.\\
+\item
+  \textbf{cv:} Type of cross-validation. Any positive integer or ``LOO''. Default
+  is 10.\\
+\item
+  \textbf{lasso:} Type of regularization. True, False, ``l2'', or None. None is
+  used for all choices. Default is False.\\
+\item
+  \textbf{dataset\_folder:} Folder name of dataset. Default is ``dataset''.\\
+\item
+  \textbf{pretrain\_file:} CNN pretrained pth file name without ``pth''
+  extension. Default is None.\\
+\item
+  \textbf{batch\_size:} Size of each batch. Default is 16.\\
+\item
+  \textbf{img\_size:} Size of image dimension. Default is 227.\\
+\item
+  \textbf{num\_workers:} Number of parallel workers. Default is 2.\\
+\item
+  \textbf{augmented:} True if wanted to augment data. Default is False.\\
+\item
+  \textbf{cnn\_model\_name:} Name of CNN model. ``alexnet'', ``resnet18'',
+  ``resnet34'', ``resnet50'', ``vgg16'', or ``vgg19''. Default is empty
+  string. Required if method is not ML.\\
+\item
+  \textbf{optimizer\_name:} Name of optimizer on CNN process. ``Adam'', ``AdamW''
+  or ``SGD''. Default is ``Adam''.\\
+\item
+  \textbf{validation\_freq:} Validation frequency ratio on CNN process. Any
+  positive rational number. Default is 0.02.\\
+\item
+  \textbf{lr:} Learning rate for CNN optimizers. Any positive rational number.
+  Default is 0.00001.\\
+\item
+  \textbf{momentum:} Momentum ratio for SGD optimizer. Any positive rational
+  number. Default is 0.9.\\
+\item
+  \textbf{weight\_decay:} Weight decay ratio for Adam and AdamW. Any positive
+  rational number. Default is 0.0001.\\
+\item
+  \textbf{update\_lr:} True if wanted to periodically decrease the learning rate
+  on CNN process. Default is False.\\
+\item
+  \textbf{is\_pre\_trained:} True if the CNN model wanted to use is pretrained.
+  Default is True.\\
+\item
+  \textbf{fine\_tune:} True if wanted to freeze first convolution block on CNN
+  models. Default is False.\\
+\item
+  \textbf{num\_epochs:} Number of epochs for CNN process. Any positive integer.
+  Default is 50.\\
+\item
+  \textbf{normalize:} True if wanted to normalize the data. Default is True.\\
+\item
+  \textbf{lambdas:} Lambda values for regularization on ML process. Single
+  positive real number, or a list of positive real numbers. Default is
+  None. List of {[}0.00005, 0.0001, 0.0002, 0.0005, 0.005, 0.01, 0.02,
+  0.05, 0.1, 0.5, 1.0, 2.0, 5.0, 10.0, 15.0{]} is used, if it is None.\\
+\item
+  \textbf{seed:} System seed value for ML process. Any positive integer. Default
+  is 4.
+\end{itemize}
+
+\textbf{\emph{Example of Transfer Leaning:}}
+
+\begin{enumerate}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (Dataset folder is required:
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/dataset})\\
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Unless exists, 92.16\_resnet50\_Adam\_out.pth file must be downloaded
+  and inserted into ``cnn/saved\_models'' directory.\\
+\item
+  Link to file:\\
+    \begin{itemize}
+      \item 
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/cnn/saved_models/92.16_resnet50_Adam_out.pth}
+    \end{itemize}
+
+\end{itemize}
+
+\texttt{app.main(transfer\_learning=True, ml\_model\_name="all", ml\_features="all", cnn\_model\_name="resnet50", is\_pre\_trained=True,          cv=10, dataset\_folder="dataset", pretrain\_file="92.16\_resnet50\_Adam\_out", seed=4)}
+
+\itemsep1pt\parskip0pt\parsep0pt
+\item (Dataset folder is not needed)
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Unless exists, 92.16\_resnet50\_Adam\_final\_X\_cnn\_train.npy,
+  92.16\_resnet50\_Adam\_final\_X\_cnn\_test.npy, X\_info\_train.npy,
+  X\_info\_test.npy, y\_train.npy, and y\_test.npy files must be
+  downloaded and inserted into project root directory.\\
+\item
+  Link to files:\\
+  \begin{itemize}
+\item
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/92.16_resnet50_Adam_final_X_cnn_train.npy}\\
+\item
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/92.16_resnet50_Adam_final_X_cnn_test.npy}\\
+\item
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/X_info_train.npy}\\
+\item
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/X_info_test.npy}\\
+\item
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/y_train.npy}\\
+\item
+  \url{https://github.com/ozanguldali/modelsWithLASSO/blob/master/y_test.npy}
+\end{itemize}
+\end{itemize}
+
+\texttt{app.main(transfer\_learning=True, ml\_model\_name="all", ml\_features="all", load\_numpy=True, validate\_cv=True, cv=10,          numpy\_prefix="92.16\_resnet50\_Adam\_final", seed=4)}
+
+\end{enumerate}
+
+% \begin{center}\rule{3in}{0.4pt}\end{center}
+
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\subsubsection*{Package Versions}\label{package-versions}
+
+\begin{itemize}
+\item
+  Python Language: 3.7.6
+\item
+  Clang: 4.0.1
+\item
+  pip: 20.1.1\\
+\item
+  PyTorch: 1.5.0
+\item
+  TorchSummary: 1.5.1
+\item
+  TorchVision 0.6.0
+\item
+  Scikit-Learn: 0.23.2\\
+\item
+  R Language: 4.0.3
+\item
+  TULIP: 1.0.1
+\item
+  TensorFlow: 2.3.1\\
+\item
+  TensorFlow-Addons: 0.11.2
+\item
+  TensorFlow-Estimator: 2.3.0
+\item
+  TensorFlow-Hub: 0.10.0
+\item
+  TensorFlow-Probability: 0.10.0\\
+\item
+  log4p: 2019.7.13.3
+\item
+  log4python: 0.2.31
+\end{itemize}
