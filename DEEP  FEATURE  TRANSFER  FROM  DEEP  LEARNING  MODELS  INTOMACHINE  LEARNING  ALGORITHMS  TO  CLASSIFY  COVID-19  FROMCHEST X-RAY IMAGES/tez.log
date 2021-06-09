@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.15)  3 JUN 2021 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.15)  9 JUN 2021 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1866,109 +1866,121 @@ File: fig/gradient_example.png Graphic file (type png)
 <use fig/gradient_example.png>
 Package pdftex.def Info: fig/gradient_example.png  used on input line 116.
 (pdftex.def)             Requested size: 790.95308pt x 621.31973pt.
-<fig/basic_cnn_sample.png, id=1053, 817.0525pt x 473.77pt>
+ [16 <./fig/gradient_example.png>]
+<fig/basic_cnn_sample.png, id=1062, 817.0525pt x 473.77pt>
 File: fig/basic_cnn_sample.png Graphic file (type png)
 <use fig/basic_cnn_sample.png>
-Package pdftex.def Info: fig/basic_cnn_sample.png  used on input line 126.
+Package pdftex.def Info: fig/basic_cnn_sample.png  used on input line 150.
 (pdftex.def)             Requested size: 817.05052pt x 473.76884pt.
- [16 <./fig/gradient_example.png> <./fig/basic_cnn_sample.png>]
-<fig/conv_layer.png, id=1067, 1096.095pt x 1113.15875pt>
+ [17 <./fig/basic_cnn_sample.png>]
+<fig/conv_layer.png, id=1079, 1096.095pt x 1113.15875pt>
 File: fig/conv_layer.png Graphic file (type png)
 <use fig/conv_layer.png>
-Package pdftex.def Info: fig/conv_layer.png  used on input line 145.
+Package pdftex.def Info: fig/conv_layer.png  used on input line 169.
 (pdftex.def)             Requested size: 1096.09233pt x 1113.15605pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18 <./fig/conv_layer.png>]
-<fig/MaxpoolSample.png, id=1087, 164.25pt x 68.547pt>
+[18] [19 <./fig/conv_layer.png>]
+<fig/MaxpoolSample.png, id=1098, 164.25pt x 68.547pt>
 File: fig/MaxpoolSample.png Graphic file (type png)
 <use fig/MaxpoolSample.png>
-Package pdftex.def Info: fig/MaxpoolSample.png  used on input line 193.
+Package pdftex.def Info: fig/MaxpoolSample.png  used on input line 217.
 (pdftex.def)             Requested size: 164.24959pt x 68.54681pt.
- [19 <./fig/MaxpoolSample.png>]
-Underfull \hbox (badness 1127) in paragraph at lines 201--202
+
+Underfull \hbox (badness 1127) in paragraph at lines 225--226
 []\T1/ptm/m/n/12 Batch nor-mal-iza-tion is a tech-nique for train-ing the deep 
 neu-ral net-works that
  []
 
-<fig/dropout.png, id=1103, 437.635pt x 243.91125pt>
+[20 <./fig/MaxpoolSample.png>]
+<fig/dropout.png, id=1113, 437.635pt x 243.91125pt>
 File: fig/dropout.png Graphic file (type png)
 <use fig/dropout.png>
-Package pdftex.def Info: fig/dropout.png  used on input line 209.
+Package pdftex.def Info: fig/dropout.png  used on input line 233.
 (pdftex.def)             Requested size: 437.63393pt x 243.91064pt.
-<fig/fully_connected_layer.png, id=1106, 417.2388pt x 189.8292pt>
+<fig/fully_connected_layer.png, id=1116, 417.2388pt x 189.8292pt>
 File: fig/fully_connected_layer.png Graphic file (type png)
 <use fig/fully_connected_layer.png>
-Package pdftex.def Info: fig/fully_connected_layer.png  used on input line 224.
+Package pdftex.def Info: fig/fully_connected_layer.png  used on input line 248.
 
 (pdftex.def)             Requested size: 417.23778pt x 189.82872pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <./fig/dropout.png>] [21 <./fig/fully_connected_layer.png>]
-<fig/pretrain_strategies.png, id=1126, 3008.23875pt x 1692.3225pt>
+[21 <./fig/dropout.png>]
+<fig/pretrain_strategies.png, id=1131, 3008.23875pt x 1692.3225pt>
 File: fig/pretrain_strategies.png Graphic file (type png)
 <use fig/pretrain_strategies.png>
-Package pdftex.def Info: fig/pretrain_strategies.png  used on input line 241.
+Package pdftex.def Info: fig/pretrain_strategies.png  used on input line 265.
 (pdftex.def)             Requested size: 3008.23145pt x 1692.31837pt.
-<fig/deepfeauter_usage.png, id=1131, 424.58624pt x 563.10374pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fig/deepfeauter_usage.png, id=1136, 424.58624pt x 563.10374pt>
 File: fig/deepfeauter_usage.png Graphic file (type png)
 <use fig/deepfeauter_usage.png>
-Package pdftex.def Info: fig/deepfeauter_usage.png  used on input line 252.
+Package pdftex.def Info: fig/deepfeauter_usage.png  used on input line 276.
 (pdftex.def)             Requested size: 424.5852pt x 563.10237pt.
-
+[22 <./fig/fully_connected_layer.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./fig/pretrain_strategies.png (PNG copy)>]
-<fig/alexnet_arch.png, id=1144, 541.02126pt x 184.69pt>
+<fig/alexnet_arch.png, id=1150, 541.02126pt x 184.69pt>
 File: fig/alexnet_arch.png Graphic file (type png)
 <use fig/alexnet_arch.png>
-Package pdftex.def Info: fig/alexnet_arch.png  used on input line 269.
+Package pdftex.def Info: fig/alexnet_arch.png  used on input line 293.
 (pdftex.def)             Requested size: 541.01993pt x 184.68953pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig/residual_block.png, id=1149, 479.7925pt x 259.97125pt>
+[23 <./fig/pretrain_strategies.png (PNG copy)>]
+<fig/residual_block.png, id=1159, 479.7925pt x 259.97125pt>
 File: fig/residual_block.png Graphic file (type png)
 <use fig/residual_block.png>
-Package pdftex.def Info: fig/residual_block.png  used on input line 280.
+Package pdftex.def Info: fig/residual_block.png  used on input line 304.
 (pdftex.def)             Requested size: 479.7913pt x 259.97061pt.
-[23 <./fig/deepfeauter_usage.png>]
-<fig/resnet_archs.png, id=1159, 470.75874pt x 214.8025pt>
-File: fig/resnet_archs.png Graphic file (type png)
-<use fig/resnet_archs.png>
-Package pdftex.def Info: fig/resnet_archs.png  used on input line 288.
-(pdftex.def)             Requested size: 470.7576pt x 214.80197pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./fig/alexnet_arch.png> <./fig/residual_block.png>]
-<fig/vgg16_vgg19_archs.png, id=1171, 510.90875pt x 689.57625pt>
+<fig/resnet_archs.png, id=1164, 470.75874pt x 214.8025pt>
+File: fig/resnet_archs.png Graphic file (type png)
+<use fig/resnet_archs.png>
+Package pdftex.def Info: fig/resnet_archs.png  used on input line 312.
+(pdftex.def)             Requested size: 470.7576pt x 214.80197pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24 <./fig/deepfeauter_usage.png>] [25 <./fig/alexnet_arch.png> <./fig/residual
+_block.png>]
+<fig/vgg16_vgg19_archs.png, id=1181, 510.90875pt x 689.57625pt>
 File: fig/vgg16_vgg19_archs.png Graphic file (type png)
 <use fig/vgg16_vgg19_archs.png>
-Package pdftex.def Info: fig/vgg16_vgg19_archs.png  used on input line 312.
+Package pdftex.def Info: fig/vgg16_vgg19_archs.png  used on input line 336.
 (pdftex.def)             Requested size: 510.9075pt x 689.57455pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25 <./fig/resnet_archs.png>]) (./ch4.tex [26 <./fig/vgg16_vgg19_archs.png>]
+) (./ch4.tex [26 <./fig/resnet_archs.png>] [27 <./fig/vgg16_vgg19_archs.png>]
+[28
+
+]
 Underfull \hbox (badness 2922) in paragraph at lines 5--6
 \T1/ptm/m/n/12 In this chap-ter, we start with the ba-sics of ma-chine learn-in
 g. Then we
  []
 
-<fig/basic_ml.png, id=1188, 804.00375pt x 151.56625pt>
+<fig/basic_ml.png, id=1203, 804.00375pt x 151.56625pt>
 File: fig/basic_ml.png Graphic file (type png)
 <use fig/basic_ml.png>
 Package pdftex.def Info: fig/basic_ml.png  used on input line 9.
 (pdftex.def)             Requested size: 804.0018pt x 151.56587pt.
-<fig/clustering_classification_regression.png, id=1189, 403.5075pt x 323.2075pt
+<fig/clustering_classification_regression.png, id=1204, 403.5075pt x 323.2075pt
 >
 File: fig/clustering_classification_regression.png Graphic file (type png)
 <use fig/clustering_classification_regression.png>
@@ -1978,29 +1990,27 @@ input line 31.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27
-
- <./fig/basic_ml.png>]
-<fig/k_fold_cv.png, id=1198, 1927.2pt x 950.55125pt>
+[29 <./fig/basic_ml.png>]
+<fig/k_fold_cv.png, id=1213, 1927.2pt x 950.55125pt>
 File: fig/k_fold_cv.png Graphic file (type png)
 <use fig/k_fold_cv.png>
 Package pdftex.def Info: fig/k_fold_cv.png  used on input line 52.
 (pdftex.def)             Requested size: 1927.19533pt x 950.54893pt.
- [28 <./fig/clustering_classification_regression.png>] [29 <./fig/k_fold_cv.png
+ [30 <./fig/clustering_classification_regression.png>] [31 <./fig/k_fold_cv.png
 >]
 Underfull \hbox (badness 1694) in paragraph at lines 89--90
 []\T1/ptm/m/n/12 L1 reg-u-lar-iza-tion term, which is known as LASSO, only pe-n
 al-izes the high
  []
 
-[30] [31]
-<fig/SVM_margin_binary.png, id=1237, 389.35463pt x 378.33345pt>
+[32] [33]
+<fig/SVM_margin_binary.png, id=1252, 389.35463pt x 378.33345pt>
 File: fig/SVM_margin_binary.png Graphic file (type png)
 <use fig/SVM_margin_binary.png>
 Package pdftex.def Info: fig/SVM_margin_binary.png  used on input line 139.
 (pdftex.def)             Requested size: 389.35368pt x 378.33252pt.
- [32 <./fig/SVM_margin_binary.png>] [33] [34]
-<fig/logistic_function.png, id=1278, 349.305pt x 261.97874pt>
+ [34 <./fig/SVM_margin_binary.png>] [35] [36]
+<fig/logistic_function.png, id=1292, 349.305pt x 261.97874pt>
 File: fig/logistic_function.png Graphic file (type png)
 <use fig/logistic_function.png>
 Package pdftex.def Info: fig/logistic_function.png  used on input line 305.
@@ -2009,8 +2019,8 @@ Package pdftex.def Info: fig/logistic_function.png  used on input line 305.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35] [36 <./fig/logistic_function.png>] [37]
-<fig/knn_example.png, id=1315, 614.295pt x 382.42876pt>
+[37] [38 <./fig/logistic_function.png>] [39]
+<fig/knn_example.png, id=1331, 614.295pt x 382.42876pt>
 File: fig/knn_example.png Graphic file (type png)
 <use fig/knn_example.png>
 Package pdftex.def Info: fig/knn_example.png  used on input line 430.
@@ -2019,12 +2029,12 @@ Package pdftex.def Info: fig/knn_example.png  used on input line 430.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[38] [39 <./fig/knn_example.png (PNG copy)>] [40]
+[40] [41 <./fig/knn_example.png (PNG copy)>] [42]
 Overfull \hbox (24.11517pt too wide) detected at line 515
 []
  []
 
-<fig/lda.png, id=1356, 417.56pt x 629.35126pt>
+<fig/lda.png, id=1370, 417.56pt x 629.35126pt>
 File: fig/lda.png Graphic file (type png)
 <use fig/lda.png>
 Package pdftex.def Info: fig/lda.png  used on input line 542.
@@ -2032,15 +2042,15 @@ Package pdftex.def Info: fig/lda.png  used on input line 542.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41] [42 <./fig/lda.png>]) (./ch5.tex [43] [44
+[43] [44 <./fig/lda.png>]) (./ch5.tex [45] [46
 
 ]
-<fig/train_covid_data.jpg, id=1397, 599.99156pt x 618.05907pt>
+<fig/train_covid_data.jpg, id=1412, 599.99156pt x 618.05907pt>
 File: fig/train_covid_data.jpg Graphic file (type jpg)
 <use fig/train_covid_data.jpg>
 Package pdftex.def Info: fig/train_covid_data.jpg  used on input line 17.
 (pdftex.def)             Requested size: 599.9901pt x 618.05756pt.
-<fig/test_non_covid_data.jpg, id=1398, 289.08pt x 289.08pt>
+<fig/test_non_covid_data.jpg, id=1413, 289.08pt x 289.08pt>
 File: fig/test_non_covid_data.jpg Graphic file (type jpg)
 <use fig/test_non_covid_data.jpg>
 Package pdftex.def Info: fig/test_non_covid_data.jpg  used on input line 18.
@@ -2049,13 +2059,13 @@ Package pdftex.def Info: fig/test_non_covid_data.jpg  used on input line 18.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45]
-<fig/test_covid_data.jpg, id=1404, 621.82312pt x 578.16pt>
+[47]
+<fig/test_covid_data.jpg, id=1418, 621.82312pt x 578.16pt>
 File: fig/test_covid_data.jpg Graphic file (type jpg)
 <use fig/test_covid_data.jpg>
 Package pdftex.def Info: fig/test_covid_data.jpg  used on input line 27.
 (pdftex.def)             Requested size: 621.8216pt x 578.15858pt.
-<fig/test_covid_data_cropped.png, id=1405, 370.38374pt x 369.38pt>
+<fig/test_covid_data_cropped.png, id=1419, 370.38374pt x 369.38pt>
 File: fig/test_covid_data_cropped.png Graphic file (type png)
 <use fig/test_covid_data_cropped.png>
 Package pdftex.def Info: fig/test_covid_data_cropped.png  used on input line 28
@@ -2066,20 +2076,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--28
 []\T1/ptm/m/n/10 (b) Re-sized, Square
  []
 
-<fig/test_covid_data_cropped_normalized.png, id=1406, 370.38374pt x 369.38pt>
+<fig/test_covid_data_cropped_normalized.png, id=1420, 370.38374pt x 369.38pt>
 File: fig/test_covid_data_cropped_normalized.png Graphic file (type png)
 <use fig/test_covid_data_cropped_normalized.png>
 Package pdftex.def Info: fig/test_covid_data_cropped_normalized.png  used on in
 put line 29.
 (pdftex.def)             Requested size: 370.38283pt x 369.37909pt.
-[46 <./fig/train_covid_data.jpg> <./fig/test_non_covid_data.jpg> <./fig/test_co
+[48 <./fig/train_covid_data.jpg> <./fig/test_non_covid_data.jpg> <./fig/test_co
 vid_data.jpg> <./fig/test_covid_data_cropped.png> <./fig/test_covid_data_croppe
 d_normalized.png>]
 Overfull \hbox (46.0921pt too wide) in paragraph at lines 51--62
  [] 
  []
 
-<fig/train_non_covid_data.jpg, id=1421, 522.45187pt x 578.16pt>
+<fig/train_non_covid_data.jpg, id=1435, 522.45187pt x 578.16pt>
 File: fig/train_non_covid_data.jpg Graphic file (type jpg)
 <use fig/train_non_covid_data.jpg>
 Package pdftex.def Info: fig/train_non_covid_data.jpg  used on input line 69.
@@ -2089,7 +2099,7 @@ Underfull \hbox (badness 1565) in paragraph at lines 69--69
 []\T1/ptm/m/n/10 (a) Orig-i-nal Sam-ple - Train
  []
 
-<fig/horizontalFlipped_train_non_covid_train_data.jpg, id=1422, 696.6025pt x 77
+<fig/horizontalFlipped_train_non_covid_train_data.jpg, id=1436, 696.6025pt x 77
 0.88pt>
 File: fig/horizontalFlipped_train_non_covid_train_data.jpg Graphic file (type j
 pg)
@@ -2097,7 +2107,7 @@ pg)
 Package pdftex.def Info: fig/horizontalFlipped_train_non_covid_train_data.jpg  
 used on input line 70.
 (pdftex.def)             Requested size: 696.6008pt x 770.87813pt.
-<fig/verticalFlipped_train_non_covid_train_data.jpg, id=1423, 696.6025pt x 770.
+<fig/verticalFlipped_train_non_covid_train_data.jpg, id=1437, 696.6025pt x 770.
 88pt>
 File: fig/verticalFlipped_train_non_covid_train_data.jpg Graphic file (type jpg
 )
@@ -2105,20 +2115,20 @@ File: fig/verticalFlipped_train_non_covid_train_data.jpg Graphic file (type jpg
 Package pdftex.def Info: fig/verticalFlipped_train_non_covid_train_data.jpg  us
 ed on input line 71.
 (pdftex.def)             Requested size: 696.6008pt x 770.87813pt.
-<fig/90Rotated_train_non_covid_train_data.jpg, id=1424, 770.88pt x 696.6025pt>
+<fig/90Rotated_train_non_covid_train_data.jpg, id=1438, 770.88pt x 696.6025pt>
 File: fig/90Rotated_train_non_covid_train_data.jpg Graphic file (type jpg)
 <use fig/90Rotated_train_non_covid_train_data.jpg>
 Package pdftex.def Info: fig/90Rotated_train_non_covid_train_data.jpg  used on 
 input line 72.
 (pdftex.def)             Requested size: 770.87813pt x 696.6008pt.
-<fig/180Rotated_train_non_covid_train_data.jpg, id=1425, 696.6025pt x 770.88pt>
+<fig/180Rotated_train_non_covid_train_data.jpg, id=1439, 696.6025pt x 770.88pt>
 
 File: fig/180Rotated_train_non_covid_train_data.jpg Graphic file (type jpg)
 <use fig/180Rotated_train_non_covid_train_data.jpg>
 Package pdftex.def Info: fig/180Rotated_train_non_covid_train_data.jpg  used on
  input line 73.
 (pdftex.def)             Requested size: 696.6008pt x 770.87813pt.
-<fig/270Rotated_train_non_covid_train_data.jpg, id=1426, 770.88pt x 696.6025pt>
+<fig/270Rotated_train_non_covid_train_data.jpg, id=1440, 770.88pt x 696.6025pt>
 
 File: fig/270Rotated_train_non_covid_train_data.jpg Graphic file (type jpg)
 <use fig/270Rotated_train_non_covid_train_data.jpg>
@@ -2134,12 +2144,12 @@ Underfull \hbox (badness 1577) in paragraph at lines 81--82
 at is, the
  []
 
-[47] [48 <./fig/train_non_covid_data.jpg> <./fig/horizontalFlipped_train_non_co
+[49] [50 <./fig/train_non_covid_data.jpg> <./fig/horizontalFlipped_train_non_co
 vid_train_data.jpg> <./fig/verticalFlipped_train_non_covid_train_data.jpg> <./f
 ig/90Rotated_train_non_covid_train_data.jpg> <./fig/180Rotated_train_non_covid_
-train_data.jpg> <./fig/270Rotated_train_non_covid_train_data.jpg>] [49]
-[50]
-<fig/resnet50_visualization.png, id=1458, 2084.78876pt x 991.705pt>
+train_data.jpg> <./fig/270Rotated_train_non_covid_train_data.jpg>] [51]
+[52]
+<fig/resnet50_visualization.png, id=1473, 2084.78876pt x 991.705pt>
 File: fig/resnet50_visualization.png Graphic file (type png)
 <use fig/resnet50_visualization.png>
 Package pdftex.def Info: fig/resnet50_visualization.png  used on input line 120
@@ -2149,23 +2159,23 @@ Package pdftex.def Info: fig/resnet50_visualization.png  used on input line 120
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[51 <./fig/resnet50_visualization.png>]
-<fig/modified_classification_blocks.png, id=1472, 454.69875pt x 322.20375pt>
+[53 <./fig/resnet50_visualization.png>]
+<fig/modified_classification_blocks.png, id=1486, 454.69875pt x 322.20375pt>
 File: fig/modified_classification_blocks.png Graphic file (type png)
 <use fig/modified_classification_blocks.png>
 Package pdftex.def Info: fig/modified_classification_blocks.png  used on input 
 line 145.
 (pdftex.def)             Requested size: 454.69763pt x 322.20296pt.
- [52
+ [54
 
 
  <./fig/modified_classification_blocks.png>]
-<fig/feature_maps.png, id=1480, 545.03625pt x 236.885pt>
+<fig/feature_maps.png, id=1494, 545.03625pt x 236.885pt>
 File: fig/feature_maps.png Graphic file (type png)
 <use fig/feature_maps.png>
 Package pdftex.def Info: fig/feature_maps.png  used on input line 161.
 (pdftex.def)             Requested size: 545.03493pt x 236.88441pt.
- [53 <./fig/feature_maps.png>] [54] [55]
+ [55 <./fig/feature_maps.png>] [56] [57]
 Overfull \hbox (25.04779pt too wide) in paragraph at lines 247--252
  [][] 
  []
@@ -2173,14 +2183,14 @@ Overfull \hbox (25.04779pt too wide) in paragraph at lines 247--252
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./ch6.tex [56] [57] [58
+) (./ch6.tex [58] [59] [60
 
 ]
 Overfull \vbox (14.49998pt too high) detected at line 25
  []
 
-[59] [60]
-<fig/alexnet.png, id=1534, 722.19812pt x 715.17188pt>
+[61] [62]
+<fig/alexnet.png, id=1549, 722.19812pt x 715.17188pt>
 File: fig/alexnet.png Graphic file (type png)
 <use fig/alexnet.png>
 Package pdftex.def Info: fig/alexnet.png  used on input line 109.
@@ -2189,7 +2199,7 @@ Package pdftex.def Info: fig/alexnet.png  used on input line 109.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/resnet18.png, id=1535, 712.16063pt x 714.67pt>
+<fig/resnet18.png, id=1550, 712.16063pt x 714.67pt>
 File: fig/resnet18.png Graphic file (type png)
 <use fig/resnet18.png>
 Package pdftex.def Info: fig/resnet18.png  used on input line 117.
@@ -2197,7 +2207,7 @@ Package pdftex.def Info: fig/resnet18.png  used on input line 117.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/resnet34.png, id=1536, 711.15688pt x 713.66624pt>
+<fig/resnet34.png, id=1551, 711.15688pt x 713.66624pt>
 File: fig/resnet34.png Graphic file (type png)
 <use fig/resnet34.png>
 Package pdftex.def Info: fig/resnet34.png  used on input line 125.
@@ -2205,7 +2215,7 @@ Package pdftex.def Info: fig/resnet34.png  used on input line 125.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/resnet50.png, id=1537, 711.65875pt x 712.16063pt>
+<fig/resnet50.png, id=1552, 711.65875pt x 712.16063pt>
 File: fig/resnet50.png Graphic file (type png)
 <use fig/resnet50.png>
 Package pdftex.def Info: fig/resnet50.png  used on input line 133.
@@ -2213,7 +2223,7 @@ Package pdftex.def Info: fig/resnet50.png  used on input line 133.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/vgg16.png, id=1538, 713.66624pt x 711.65875pt>
+<fig/vgg16.png, id=1553, 713.66624pt x 711.65875pt>
 File: fig/vgg16.png Graphic file (type png)
 <use fig/vgg16.png>
 Package pdftex.def Info: fig/vgg16.png  used on input line 141.
@@ -2221,7 +2231,7 @@ Package pdftex.def Info: fig/vgg16.png  used on input line 141.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/vgg19.png, id=1539, 713.16437pt x 712.16063pt>
+<fig/vgg19.png, id=1554, 713.16437pt x 712.16063pt>
 File: fig/vgg19.png Graphic file (type png)
 <use fig/vgg19.png>
 Package pdftex.def Info: fig/vgg19.png  used on input line 149.
@@ -2229,8 +2239,8 @@ Package pdftex.def Info: fig/vgg19.png  used on input line 149.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[61] [62 <./fig/alexnet.png>] [63 <./fig/resnet18.png>] [64 <./fig/resnet34.png
->] [65 <./fig/resnet50.png>] [66 <./fig/vgg16.png>] [67 <./fig/vgg19.png>]
+[63] [64 <./fig/alexnet.png>] [65 <./fig/resnet18.png>] [66 <./fig/resnet34.png
+>] [67 <./fig/resnet50.png>] [68 <./fig/vgg16.png>] [69 <./fig/vgg19.png>]
 Overfull \hbox (65.15744pt too wide) in paragraph at lines 163--186
  [][] 
  []
@@ -2241,7 +2251,7 @@ LaTeX Warning: Float too large for page by 54.67043pt on input line 186.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[68] [69
+[70] [71
 
 
 ]
@@ -2272,7 +2282,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 343.
 
-[70] [71]
+[72] [73]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 351.
@@ -2282,17 +2292,17 @@ Overfull \hbox (37.0186pt too wide) in paragraph at lines 355--370
  [][] 
  []
 
-[72]
+[74]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[73
+[75
 
 
-] [74]
+] [76]
 Overfull \hbox (37.00916pt too wide) in paragraph at lines 469--479
  [][] 
  []
@@ -2347,13 +2357,13 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 602--612
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[75
+[77
 
 ]
 
-LaTeX Warning: Text page 76 contains only floats.
+LaTeX Warning: Text page 78 contains only floats.
 
-[76] [77]
+[78] [79]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 616.
@@ -2366,7 +2376,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 616.
 
-[78
+[80
 
 ]
 
@@ -2378,17 +2388,17 @@ Overfull \hbox (37.0186pt too wide) in paragraph at lines 629--644
  [][] 
  []
 
-[79]
+[81]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[80
+[82
 
 
-] [81]
+] [83]
 Overfull \hbox (37.00916pt too wide) in paragraph at lines 743--753
  [][] 
  []
@@ -2443,13 +2453,13 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 876--886
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[82
+[84
 
 ]
 
-LaTeX Warning: Text page 83 contains only floats.
+LaTeX Warning: Text page 85 contains only floats.
 
-[83] [84]
+[85] [86]
 Underfull \hbox (badness 2772) in paragraph at lines 893--894
 []\T1/ptm/m/n/12 demographic in-for-ma-tion sup-port only boosts the per-for-ma
 nce on lo-gis-tic
@@ -2461,9 +2471,9 @@ Underfull \hbox (badness 1215) in paragraph at lines 894--895
 crim-i-nant anal-y-sis
  []
 
-) (./ch7.tex [85
+) (./ch7.tex [87
 
-] [86
+] [88
 
 ]
 Underfull \hbox (badness 1571) in paragraph at lines 7--8
@@ -2471,15 +2481,15 @@ Underfull \hbox (badness 1571) in paragraph at lines 7--8
 ost gen-er-al-ized
  []
 
-[87]
+[89]
 Underfull \hbox (badness 2318) in paragraph at lines 22--23
 []\T1/ptm/m/n/12 the best re-sult ob-tained from the com-bined fea-tures of de-
 mo-graphic
  []
 
-[88] [89]) (./tez.bbl [90] [91
+[90] [91]) (./tez.bbl [92] [93
 
-] [92]
+] [94]
 Underfull \hbox (badness 10000) in paragraph at lines 142--144
 []\T1/ptm/b/n/12 Graetz, F.M. and Mat-ters, W.A.\T1/ptm/m/n/12 , (2018), Why Ad
 amW mat-ters,
@@ -2491,7 +2501,7 @@ Underfull \hbox (badness 1226) in paragraph at lines 213--218
 tory Anal-y-sis. Non-para-met-ric
  []
 
-[93]
+[95]
 Underfull \hbox (badness 1168) in paragraph at lines 240--244
 []\T1/ptm/b/n/12 Pan, Y.\T1/ptm/m/n/12 , \T1/ptm/b/n/12 Mai, Q. and Zhang, X. \
 T1/ptm/m/n/12 (2021). TULIP: A Tool-box for Lin-ear
@@ -2503,14 +2513,14 @@ Underfull \hbox (badness 1454) in paragraph at lines 262--265
  görün-tü-lerinde de-rin ö§renme
  []
 
-) [94] (./eklerkapak.tex
+) [96] (./eklerkapak.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[95
+[97
 
-]) (./ekler.tex [96]pdfTeX warning (ext4): destination with the same identifier
+]) (./ekler.tex [98]pdfTeX warning (ext4): destination with the same identifier
  (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2569,7 +2579,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--73
 
  []
 
-[97
+[99
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 73--76
@@ -2661,7 +2671,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
  []
 
-[98]
+[100]
 Underfull \hbox (badness 10000) in paragraph at lines 121--124
 
  []
@@ -2747,7 +2757,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
  []
 
-[99]
+[101]
 Underfull \hbox (badness 10000) in paragraph at lines 181--183
 
  []
@@ -2802,10 +2812,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
-[100]) [101] (./app_run.tex
+[102]) [103] (./app_run.tex
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <12> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 4.
- [102]) [103]) [104
+ [104]) [105]) [106
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 171--171
@@ -2840,7 +2850,7 @@ Underfull \hbox (badness 2229) in paragraph at lines 41--42
 tz In-for-ma-tion
  []
 
-) [105]
+) [107]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (./tez.aux)
@@ -2855,10 +2865,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 30168 strings out of 480608
- 540689 string characters out of 5903630
- 969620 words of memory out of 5000000
- 44825 multiletter control sequences out of 15000+600000
+ 30178 strings out of 480608
+ 540852 string characters out of 5903630
+ 969862 words of memory out of 5000000
+ 44829 multiletter control sequences out of 15000+600000
  604211 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,18n,77p,1845b,820s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2877,10 +2887,10 @@ ol/usyr.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pf
 b></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
 ve/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tez.pdf (139 pages, 8387711 bytes).
+Output written on tez.pdf (141 pages, 8391852 bytes).
 PDF statistics:
- 2013 PDF objects out of 2073 (max. 8388607)
- 1733 compressed objects within 18 object streams
- 437 named destinations out of 1000 (max. 500000)
+ 2028 PDF objects out of 2073 (max. 8388607)
+ 1746 compressed objects within 18 object streams
+ 443 named destinations out of 1000 (max. 500000)
  1074 words of extra memory for PDF output out of 10000 (max. 10000000)
 

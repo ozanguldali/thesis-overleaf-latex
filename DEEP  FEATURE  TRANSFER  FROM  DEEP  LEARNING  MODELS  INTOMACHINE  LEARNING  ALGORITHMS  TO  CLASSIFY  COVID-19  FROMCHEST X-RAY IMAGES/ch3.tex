@@ -105,7 +105,7 @@ Adam with decoupled weight decay does not use the regularization as the normaliz
 
 \section{The Basics of Convolutional Neural Networks} \label{basics_of_cnn}
 
-The convolutional neural networks (CNNs) are the special study and research area of deep neural networks. They are mostly used in visual problem analyzing and solving.
+The convolutional neural networks (CNNs) are the special study and research area of deep neural networks. They are mostly used in visual problem analyzing and solving. In this section and its subsections we study on the fundamental layers and elements of CNN architectures. 
 
 Basically, a CNN model consists of three parts such that an input layer, hidden layers and an output layers. The structure of CNNs comports with the feed-forward networks. That is, the information only goes through in one direction, forward. To feed and train a feed-forward network, backpropagation algorithm is commonly used. The algorithm orders to compute the gradients in weight space of a feed-forward network, with respect to a loss function. Then the weight space is updated with these gradients by the method of corresponding optimizer. The gradient of objective loss function $ f(\textbf{$\theta$}) $ at a weight vector \textbf{$\theta_{t}$} is computed via directional derivatives and chain rule, and represented by $ \nabla f(\textbf{$\theta_{t}$}) $. 
 
@@ -119,7 +119,31 @@ An example of using directional derivatives and chain rule can be found in Figur
 	\label{fig:compute_gradient}
 \end{figure}
 
-In this section and its subsections we study on the fundamental layers and elements of CNN architectures. 
+Assume the simple CNN sample in Figure~\ref{basic_cnn_sample}. Let us name the output layer vector as $\textbf{y} = \textbf{a}_6 = (a_{6,1}, a_{6,2})$, and each $i^{th}$ layer vector as $\textbf{a}_{i}$. For instance, $\textbf{a}_{3} = (a_{3,1}, a_{3,2}, a_{3,3}, a_{3,4})$ and $\textbf{a}_{5} = (a_{5,1}, a_{5,2}, a_{5,3})$. The gray nodes appearing above each layer are real valued bias terms. Assume that the objective loss function is least squares loss, i.e. $l(\textbf{y}, \textbf{y}^{GT}) = \frac{(\textbf{y}^{GT} - \textbf{y})^{2}}{2}$ where $\textbf{y}^{GT}$ is the grand-truth labels of our dataset. Assume that our hypothesis function to create CNN architecture is in the form $f: \setsymbol{R}^{k} \rightarrow \setsymbol{R}^{t}$ where $k$ and $t$ vary according to corresponding layers. Then define $\textbf{a}_{i} = f_{i}(W^{i} \textbf{a}^{i-1} + b^{i})$ for each $i^{th}$ layer where $W \in \setsymbol{R}^{t \times k}$ is weight matrix. We obtain the backward pass of our loss function with respect to the first weight matrix and bias term by chain rule:
+
+\be
+\label{eq:compute_dl/dW}
+\frac{\partial l(\textbf{y}, \textbf{y}^{GT})}{\partial W^{1}} = \frac{\partial l}{\partial \textbf{a}_{6}} \times \frac{\partial \textbf{a}_{6}}{\partial \textbf{a}_{5}} \times \frac{\partial \textbf{a}_{5}}{\partial \textbf{a}_{4}} \times \frac{\partial \textbf{a}_{4}}{\partial \textbf{a}_{3}} \times \frac{\partial \textbf{a}_{3}}{\partial \textbf{a}_{2}} \times \frac{\partial \textbf{a}_{2}}{\partial \textbf{W}^{1}}\:\text{, and}
+\ee
+
+\be
+\label{eq:compute_dl/db}
+\frac{\partial l(\textbf{y}, \textbf{y}^{GT})}{\partial b^{1}} = \frac{\partial l}{\partial \textbf{a}_{6}} \times \frac{\partial \textbf{a}_{6}}{\partial \textbf{a}_{5}} \times \frac{\partial \textbf{a}_{5}}{\partial \textbf{a}_{4}} \times \frac{\partial \textbf{a}_{4}}{\partial \textbf{a}_{3}} \times \frac{\partial \textbf{a}_{3}}{\partial \textbf{a}_{2}} \times \frac{\partial \textbf{a}_{2}}{\partial b^{1}}\:\text{.}
+\ee
+
+Here, each partial derivative is computed as shown in Figure~\ref{fig:compute_gradient}. For instance, if the forward pass connection between $\textbf{a}_{4,2}$ and $\textbf{a}_{5,1}$ is $W^{4}_{2,1}$, we use the directional derivative rule while computing $\frac{\partial l}{\partial \textbf{a}_{6}}$ for the backward pass gradient to update $W^{4}_{2,1}$ value as:
+
+\be
+\label{eq:compute_specific_weight}
+\frac{\partial l}{\partial W^{4}_{2,1}} =  \frac{\partial l}{\partial \textbf{a}_{6}} \times \frac{\partial \textbf{a}_{6}}{\partial \textbf{a}_{5,1}} \times \frac{\partial \textbf{a}_{5,1}}{\partial W^{4}_{2,1}} = \Big ( \frac{\partial l}{\partial \textbf{a}_{6,1}} \times \frac{\partial \textbf{a}_{6,1}}{\partial \textbf{a}_{5,1}} + \frac{\partial l}{\partial \textbf{a}_{6,2}} \times \frac{\partial \textbf{a}_{6,2}}{\partial \textbf{a}_{5,1}} \Big ) \times \frac{\partial \textbf{a}_{5,1}}{\partial W^{4}_{2,1}} \:\text{.}
+\ee
+
+In the same way, the gradient for $b^{5}$ can be computed as:
+
+\be
+\label{eq:compute_specific_bias}
+\frac{\partial l}{\partial b^{5}} = \frac{\partial l}{\partial \textbf{a}_{6}} \times \frac{\partial \textbf{a}_{6}}{\partial b^{5}} = \frac{\partial l}{\partial \textbf{a}_{6,1}} \times \frac{\partial \textbf{a}_{6,1}}{\partial b^{5}} + \frac{\partial l}{\partial \textbf{a}_{6,2}} \times \frac{\partial \textbf{a}_{6,2}}{\partial b^{5}}\:\text{.}
+\ee
 
 \begin{figure}[h]
 	\centering
