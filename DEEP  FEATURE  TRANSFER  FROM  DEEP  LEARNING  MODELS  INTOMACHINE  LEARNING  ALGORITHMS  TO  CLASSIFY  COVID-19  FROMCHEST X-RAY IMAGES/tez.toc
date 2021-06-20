@@ -83,15 +83,15 @@
 \contentsline {subsection}{\numberline {6.1.2}The Analysis of Confusion Matrix}{62}{subsection.6.1.2}%
 \contentsline {subsubsection}{\numberline {6.1.2.1}Sensitivity (True Positive Rate - TPR)}{62}{subsubsection.6.1.2.1}%
 \contentsline {subsubsection}{\numberline {6.1.2.2}Specificity (True Negative Rate - TNR)}{62}{subsubsection.6.1.2.2}%
-\contentsline {subsubsection}{\numberline {6.1.2.3}Precision (Positive Predictive Value - PPV)}{62}{subsubsection.6.1.2.3}%
-\contentsline {subsubsection}{\numberline {6.1.2.4}Accuracy (ACC)}{62}{subsubsection.6.1.2.4}%
-\contentsline {subsubsection}{\numberline {6.1.2.5}F1 Score}{62}{subsubsection.6.1.2.5}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}Precision (Positive Predictive Value - PPV)}{63}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}Accuracy (ACC)}{63}{subsubsection.6.1.2.4}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}F1 Score}{63}{subsubsection.6.1.2.5}%
 \contentsline {subsubsection}{\numberline {6.1.2.6}Area Under the Curve (AUC Score)}{63}{subsubsection.6.1.2.6}%
 \contentsline {section}{\numberline {6.2}Convolutional Neural Network Results}{63}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Machine Learning Results}{72}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Results for $X_{info}$}{72}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Results for $X_{cnn}$}{72}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Results for $X_{all}$}{80}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.3}Machine Learning Results}{73}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Results for $X_{info}$}{73}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Results for $X_{cnn}$}{73}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Results for $X_{all}$}{81}{subsection.6.3.3}%
 \addvspace {-10\p@ }
 \contentsline {chapter}{7. \bf {CONCLUSIONS AND RECOMMENDATIONS}}{89}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Future Work}{91}{section.7.1}%

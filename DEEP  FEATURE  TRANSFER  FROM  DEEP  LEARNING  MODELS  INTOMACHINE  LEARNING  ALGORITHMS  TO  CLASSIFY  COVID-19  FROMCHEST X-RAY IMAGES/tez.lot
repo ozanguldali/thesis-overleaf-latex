@@ -7,47 +7,47 @@
 \contentsline {table}{\numberline {5.5}{\ignorespaces KNN algorithm hyper-parameters to tune.\relax }}{58}{table.caption.44}%
 \contentsline {table}{\numberline {5.6}{\ignorespaces LDA algorithm hyper-parameters to tune.\relax }}{59}{table.caption.45}%
 \contentsline {table}{\numberline {6.1}{\ignorespaces Sample Confusion Matrix.\relax }}{61}{table.caption.46}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces CNN model comparison.\relax }}{70}{table.caption.53}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces The confusion matrix of AlexNet model result with Adam optimizer.\relax }}{71}{table.caption.54}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces The confusion matrix of ResNet-18 model result with AdamW optimizer.\relax }}{71}{table.caption.55}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces The confusion matrix of ResNet-34 model result with AdamW optimizer.\relax }}{71}{table.caption.56}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces The confusion matrix of ResNet-50 model result with Adam optimizer.\relax }}{71}{table.caption.57}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces The confusion matrix of VGG16 model result with AdamW optimizer.\relax }}{71}{table.caption.58}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces The confusion matrix of VGG19 model result with SGD Momentum optimizer.\relax }}{71}{table.caption.59}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces The result of demographic information experiments with the Python system seed as 4.\relax }}{72}{table.caption.60}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces KNN algorithm hyper-parameters for $X_{info}$.\relax }}{72}{table.caption.61}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces Confusion matrices for KNN experiments on demographic information.\relax }}{73}{table.caption.62}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces The result of experiments on $X_{cnn}$ with the Python system seed as 4.\relax }}{74}{table.caption.63}%
-\contentsline {table}{\numberline {6.13}{\ignorespaces SVM algorithm regularized by Ridge hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{75}{table.caption.64}%
-\contentsline {table}{\numberline {6.14}{\ignorespaces SVM algorithm regularized by Lasso hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{75}{table.caption.65}%
-\contentsline {table}{\numberline {6.15}{\ignorespaces LR algorithm hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{75}{table.caption.66}%
-\contentsline {table}{\numberline {6.16}{\ignorespaces LR algorithm regularized by Ridge hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{75}{table.caption.67}%
-\contentsline {table}{\numberline {6.17}{\ignorespaces LR algorithm regularized by Lasso hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{75}{table.caption.68}%
-\contentsline {table}{\numberline {6.18}{\ignorespaces KNN algorithm hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{75}{table.caption.69}%
-\contentsline {table}{\numberline {6.19}{\ignorespaces LDA algorithm hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.70}%
-\contentsline {table}{\numberline {6.20}{\ignorespaces LDA algorithm regularized by Lasso hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.71}%
-\contentsline {table}{\numberline {6.21}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Ridge for $X_{cnn\_ResNet50}$.\relax }}{77}{table.caption.72}%
-\contentsline {table}{\numberline {6.22}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Lasso for $X_{cnn\_ResNet50}$.\relax }}{77}{table.caption.73}%
-\contentsline {table}{\numberline {6.23}{\ignorespaces The confusion matrices and results obtained by LR algorithm for $X_{cnn\_ResNet50}$.\relax }}{77}{table.caption.74}%
-\contentsline {table}{\numberline {6.24}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Ridge for $X_{cnn\_ResNet50}$.\relax }}{78}{table.caption.75}%
-\contentsline {table}{\numberline {6.25}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Lasso for $X_{cnn\_ResNet50}$.\relax }}{78}{table.caption.76}%
-\contentsline {table}{\numberline {6.26}{\ignorespaces The confusion matrices and results obtained by KNN algorithm for $X_{cnn\_ResNet50}$.\relax }}{78}{table.caption.77}%
-\contentsline {table}{\numberline {6.27}{\ignorespaces The confusion matrices and results obtained by LDA algorithm for $X_{cnn\_ResNet50}$.\relax }}{78}{table.caption.78}%
-\contentsline {table}{\numberline {6.28}{\ignorespaces The confusion matrices and results obtained by LDA algorithm regularized with Lasso for $X_{cnn\_ResNet50}$.\relax }}{79}{table.caption.79}%
-\contentsline {table}{\numberline {6.29}{\ignorespaces The result of experiments on $X_{all}$ with the Python system seed as 4.\relax }}{81}{table.caption.80}%
-\contentsline {table}{\numberline {6.30}{\ignorespaces SVM algorithm regularized by Ridge hyper-parameters for $X_{all\_ResNet50}$.\relax }}{82}{table.caption.81}%
-\contentsline {table}{\numberline {6.31}{\ignorespaces SVM algorithm regularized by Lasso hyper-parameters for $X_{all\_ResNet50}$.\relax }}{82}{table.caption.82}%
-\contentsline {table}{\numberline {6.32}{\ignorespaces LR algorithm hyper-parameters for $X_{all\_ResNet50}$.\relax }}{82}{table.caption.83}%
-\contentsline {table}{\numberline {6.33}{\ignorespaces LR algorithm regularized by Ridge hyper-parameters for $X_{all\_ResNet50}$.\relax }}{82}{table.caption.84}%
-\contentsline {table}{\numberline {6.34}{\ignorespaces LR algorithm regularized by Lasso hyper-parameters for $X_{all\_ResNet50}$.\relax }}{82}{table.caption.85}%
-\contentsline {table}{\numberline {6.35}{\ignorespaces KNN algorithm hyper-parameters for $X_{all\_ResNet50}$.\relax }}{82}{table.caption.86}%
-\contentsline {table}{\numberline {6.36}{\ignorespaces LDA algorithm hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.87}%
-\contentsline {table}{\numberline {6.37}{\ignorespaces LDA algorithm regularized by Lasso hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.88}%
-\contentsline {table}{\numberline {6.38}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Ridge for $X_{all\_ResNet50}$.\relax }}{84}{table.caption.89}%
-\contentsline {table}{\numberline {6.39}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Lasso for $X_{all\_ResNet50}$.\relax }}{84}{table.caption.90}%
-\contentsline {table}{\numberline {6.40}{\ignorespaces The confusion matrices and results obtained by LR algorithm for $X_{all\_ResNet50}$.\relax }}{84}{table.caption.91}%
-\contentsline {table}{\numberline {6.41}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Ridge for $X_{all\_ResNet50}$.\relax }}{85}{table.caption.92}%
-\contentsline {table}{\numberline {6.42}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Lasso for $X_{all\_ResNet50}$.\relax }}{85}{table.caption.93}%
-\contentsline {table}{\numberline {6.43}{\ignorespaces The confusion matrices and results obtained by KNN algorithm for $X_{all\_ResNet50}$.\relax }}{85}{table.caption.94}%
-\contentsline {table}{\numberline {6.44}{\ignorespaces The confusion matrices and results obtained by LDA algorithm for $X_{all\_ResNet50}$.\relax }}{85}{table.caption.95}%
-\contentsline {table}{\numberline {6.45}{\ignorespaces The confusion matrices and results obtained by LDA algorithm regularized with Lasso for $X_{all\_ResNet50}$.\relax }}{86}{table.caption.96}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces CNN model comparison.\relax }}{71}{table.caption.53}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces The confusion matrix of AlexNet model result with Adam optimizer.\relax }}{72}{table.caption.54}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces The confusion matrix of ResNet-18 model result with AdamW optimizer.\relax }}{72}{table.caption.55}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces The confusion matrix of ResNet-34 model result with AdamW optimizer.\relax }}{72}{table.caption.56}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces The confusion matrix of ResNet-50 model result with Adam optimizer.\relax }}{72}{table.caption.57}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces The confusion matrix of VGG16 model result with AdamW optimizer.\relax }}{72}{table.caption.58}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces The confusion matrix of VGG19 model result with SGD Momentum optimizer.\relax }}{72}{table.caption.59}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces The result of demographic information experiments with the Python system seed as 4.\relax }}{73}{table.caption.60}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces KNN algorithm hyper-parameters for $X_{info}$.\relax }}{73}{table.caption.61}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces Confusion matrices for KNN experiments on demographic information.\relax }}{74}{table.caption.62}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces The result of experiments on $X_{cnn}$ with the Python system seed as 4.\relax }}{75}{table.caption.63}%
+\contentsline {table}{\numberline {6.13}{\ignorespaces SVM algorithm regularized by Ridge hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.64}%
+\contentsline {table}{\numberline {6.14}{\ignorespaces SVM algorithm regularized by Lasso hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.65}%
+\contentsline {table}{\numberline {6.15}{\ignorespaces LR algorithm hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.66}%
+\contentsline {table}{\numberline {6.16}{\ignorespaces LR algorithm regularized by Ridge hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.67}%
+\contentsline {table}{\numberline {6.17}{\ignorespaces LR algorithm regularized by Lasso hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.68}%
+\contentsline {table}{\numberline {6.18}{\ignorespaces KNN algorithm hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{76}{table.caption.69}%
+\contentsline {table}{\numberline {6.19}{\ignorespaces LDA algorithm hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{77}{table.caption.70}%
+\contentsline {table}{\numberline {6.20}{\ignorespaces LDA algorithm regularized by Lasso hyper-parameters for $X_{cnn\_ResNet50}$.\relax }}{77}{table.caption.71}%
+\contentsline {table}{\numberline {6.21}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Ridge for $X_{cnn\_ResNet50}$.\relax }}{78}{table.caption.72}%
+\contentsline {table}{\numberline {6.22}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Lasso for $X_{cnn\_ResNet50}$.\relax }}{78}{table.caption.73}%
+\contentsline {table}{\numberline {6.23}{\ignorespaces The confusion matrices and results obtained by LR algorithm for $X_{cnn\_ResNet50}$.\relax }}{78}{table.caption.74}%
+\contentsline {table}{\numberline {6.24}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Ridge for $X_{cnn\_ResNet50}$.\relax }}{79}{table.caption.75}%
+\contentsline {table}{\numberline {6.25}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Lasso for $X_{cnn\_ResNet50}$.\relax }}{79}{table.caption.76}%
+\contentsline {table}{\numberline {6.26}{\ignorespaces The confusion matrices and results obtained by KNN algorithm for $X_{cnn\_ResNet50}$.\relax }}{79}{table.caption.77}%
+\contentsline {table}{\numberline {6.27}{\ignorespaces The confusion matrices and results obtained by LDA algorithm for $X_{cnn\_ResNet50}$.\relax }}{79}{table.caption.78}%
+\contentsline {table}{\numberline {6.28}{\ignorespaces The confusion matrices and results obtained by LDA algorithm regularized with Lasso for $X_{cnn\_ResNet50}$.\relax }}{80}{table.caption.79}%
+\contentsline {table}{\numberline {6.29}{\ignorespaces The result of experiments on $X_{all}$ with the Python system seed as 4.\relax }}{82}{table.caption.80}%
+\contentsline {table}{\numberline {6.30}{\ignorespaces SVM algorithm regularized by Ridge hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.81}%
+\contentsline {table}{\numberline {6.31}{\ignorespaces SVM algorithm regularized by Lasso hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.82}%
+\contentsline {table}{\numberline {6.32}{\ignorespaces LR algorithm hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.83}%
+\contentsline {table}{\numberline {6.33}{\ignorespaces LR algorithm regularized by Ridge hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.84}%
+\contentsline {table}{\numberline {6.34}{\ignorespaces LR algorithm regularized by Lasso hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.85}%
+\contentsline {table}{\numberline {6.35}{\ignorespaces KNN algorithm hyper-parameters for $X_{all\_ResNet50}$.\relax }}{83}{table.caption.86}%
+\contentsline {table}{\numberline {6.36}{\ignorespaces LDA algorithm hyper-parameters for $X_{all\_ResNet50}$.\relax }}{84}{table.caption.87}%
+\contentsline {table}{\numberline {6.37}{\ignorespaces LDA algorithm regularized by Lasso hyper-parameters for $X_{all\_ResNet50}$.\relax }}{84}{table.caption.88}%
+\contentsline {table}{\numberline {6.38}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Ridge for $X_{all\_ResNet50}$.\relax }}{85}{table.caption.89}%
+\contentsline {table}{\numberline {6.39}{\ignorespaces The confusion matrices and results obtained by SVM algorithm regularized with Lasso for $X_{all\_ResNet50}$.\relax }}{85}{table.caption.90}%
+\contentsline {table}{\numberline {6.40}{\ignorespaces The confusion matrices and results obtained by LR algorithm for $X_{all\_ResNet50}$.\relax }}{85}{table.caption.91}%
+\contentsline {table}{\numberline {6.41}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Ridge for $X_{all\_ResNet50}$.\relax }}{86}{table.caption.92}%
+\contentsline {table}{\numberline {6.42}{\ignorespaces The confusion matrices and results obtained by LR algorithm regularized with Lasso for $X_{all\_ResNet50}$.\relax }}{86}{table.caption.93}%
+\contentsline {table}{\numberline {6.43}{\ignorespaces The confusion matrices and results obtained by KNN algorithm for $X_{all\_ResNet50}$.\relax }}{86}{table.caption.94}%
+\contentsline {table}{\numberline {6.44}{\ignorespaces The confusion matrices and results obtained by LDA algorithm for $X_{all\_ResNet50}$.\relax }}{86}{table.caption.95}%
+\contentsline {table}{\numberline {6.45}{\ignorespaces The confusion matrices and results obtained by LDA algorithm regularized with Lasso for $X_{all\_ResNet50}$.\relax }}{87}{table.caption.96}%

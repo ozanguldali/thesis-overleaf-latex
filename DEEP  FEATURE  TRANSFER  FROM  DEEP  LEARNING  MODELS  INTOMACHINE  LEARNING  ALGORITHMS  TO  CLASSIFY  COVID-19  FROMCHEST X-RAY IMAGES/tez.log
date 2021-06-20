@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.15)  9 JUN 2021 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.15)  20 JUN 2021 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2186,147 +2186,139 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) (./ch6.tex [58] [59] [60
 
 ]
-Overfull \vbox (14.49998pt too high) detected at line 25
+Overfull \vbox (14.49998pt too high) detected at line 26
  []
 
-[61] [62]
-<fig/alexnet.png, id=1549, 722.19812pt x 715.17188pt>
+[61] [62] [63]
+<fig/alexnet.png, id=1557, 722.19812pt x 715.17188pt>
 File: fig/alexnet.png Graphic file (type png)
 <use fig/alexnet.png>
-Package pdftex.def Info: fig/alexnet.png  used on input line 109.
+Package pdftex.def Info: fig/alexnet.png  used on input line 126.
 (pdftex.def)             Requested size: 722.19635pt x 715.17012pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/resnet18.png, id=1550, 712.16063pt x 714.67pt>
+<fig/resnet18.png, id=1558, 712.16063pt x 714.67pt>
 File: fig/resnet18.png Graphic file (type png)
 <use fig/resnet18.png>
-Package pdftex.def Info: fig/resnet18.png  used on input line 117.
+Package pdftex.def Info: fig/resnet18.png  used on input line 134.
 (pdftex.def)             Requested size: 712.15889pt x 714.66824pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/resnet34.png, id=1551, 711.15688pt x 713.66624pt>
+<fig/resnet34.png, id=1559, 711.15688pt x 713.66624pt>
 File: fig/resnet34.png Graphic file (type png)
 <use fig/resnet34.png>
-Package pdftex.def Info: fig/resnet34.png  used on input line 125.
+Package pdftex.def Info: fig/resnet34.png  used on input line 142.
 (pdftex.def)             Requested size: 711.15514pt x 713.66449pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/resnet50.png, id=1552, 711.65875pt x 712.16063pt>
+<fig/resnet50.png, id=1560, 711.65875pt x 712.16063pt>
 File: fig/resnet50.png Graphic file (type png)
 <use fig/resnet50.png>
-Package pdftex.def Info: fig/resnet50.png  used on input line 133.
+Package pdftex.def Info: fig/resnet50.png  used on input line 150.
 (pdftex.def)             Requested size: 711.65701pt x 712.15889pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/vgg16.png, id=1553, 713.66624pt x 711.65875pt>
+<fig/vgg16.png, id=1561, 713.66624pt x 711.65875pt>
 File: fig/vgg16.png Graphic file (type png)
 <use fig/vgg16.png>
-Package pdftex.def Info: fig/vgg16.png  used on input line 141.
+Package pdftex.def Info: fig/vgg16.png  used on input line 158.
 (pdftex.def)             Requested size: 713.66449pt x 711.65701pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/vgg19.png, id=1554, 713.16437pt x 712.16063pt>
+<fig/vgg19.png, id=1562, 713.16437pt x 712.16063pt>
 File: fig/vgg19.png Graphic file (type png)
 <use fig/vgg19.png>
-Package pdftex.def Info: fig/vgg19.png  used on input line 149.
+Package pdftex.def Info: fig/vgg19.png  used on input line 166.
 (pdftex.def)             Requested size: 713.16263pt x 712.15889pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[63] [64 <./fig/alexnet.png>] [65 <./fig/resnet18.png>] [66 <./fig/resnet34.png
->] [67 <./fig/resnet50.png>] [68 <./fig/vgg16.png>] [69 <./fig/vgg19.png>]
-Overfull \hbox (65.15744pt too wide) in paragraph at lines 163--186
+[64] [65 <./fig/alexnet.png>] [66 <./fig/resnet18.png>] [67 <./fig/resnet34.png
+>] [68 <./fig/resnet50.png>] [69 <./fig/vgg16.png>] [70 <./fig/vgg19.png>]
+Overfull \hbox (65.15744pt too wide) in paragraph at lines 180--203
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 54.67043pt on input line 186.
+LaTeX Warning: Float too large for page by 54.67043pt on input line 203.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[70] [71
+[71] [72
 
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 287.
+(hyperref)                removing `math shift' on input line 304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 287.
+(hyperref)                removing `subscript' on input line 304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 287.
+(hyperref)                removing `math shift' on input line 304.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 343.
+(hyperref)                removing `math shift' on input line 360.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 343.
+(hyperref)                removing `subscript' on input line 360.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 343.
+(hyperref)                removing `math shift' on input line 360.
 
-[72] [73]
+[73] [74]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 351.
+               Default added (so using `tbp') on input line 368.
 
 
-Overfull \hbox (37.0186pt too wide) in paragraph at lines 355--370
+Overfull \hbox (37.0186pt too wide) in paragraph at lines 372--387
  [][] 
  []
 
-[74]
+[75]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[75
+[76
 
 
-] [76]
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 469--479
+] [77]
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 486--496
  [][] 
  []
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 488--498
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 505--515
  [][] 
  []
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 507--517
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 524--534
  [][] 
  []
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 526--536
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 545--555
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 543--553
  [][] 
  []
 
@@ -2334,7 +2326,7 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 545--555
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 564--574
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 562--572
  [][] 
  []
 
@@ -2342,7 +2334,7 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 564--574
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 583--593
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 581--591
  [][] 
  []
 
@@ -2350,79 +2342,79 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 583--593
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 602--612
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 600--610
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[77
+
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 619--629
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[78
 
 ]
 
-LaTeX Warning: Text page 78 contains only floats.
+LaTeX Warning: Text page 79 contains only floats.
 
-[78] [79]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 616.
-
+[79] [80]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 616.
+(hyperref)                removing `math shift' on input line 633.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 616.
+(hyperref)                removing `subscript' on input line 633.
 
-[80
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 633.
+
+[81
 
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 625.
+               Default added (so using `tbp') on input line 642.
 
 
-Overfull \hbox (37.0186pt too wide) in paragraph at lines 629--644
+Overfull \hbox (37.0186pt too wide) in paragraph at lines 646--661
  [][] 
  []
 
-[81]
+[82]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[82
+[83
 
 
-] [83]
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 743--753
+] [84]
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 760--770
  [][] 
  []
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 762--772
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 779--789
  [][] 
  []
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 781--791
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 798--808
  [][] 
  []
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 800--810
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 819--829
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 817--827
  [][] 
  []
 
@@ -2430,7 +2422,7 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 819--829
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 838--848
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 836--846
  [][] 
  []
 
@@ -2438,7 +2430,7 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 838--848
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 857--867
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 855--865
  [][] 
  []
 
@@ -2446,34 +2438,40 @@ Overfull \hbox (37.00916pt too wide) in paragraph at lines 857--867
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (37.00916pt too wide) in paragraph at lines 876--886
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 874--884
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[84
+
+Overfull \hbox (37.00916pt too wide) in paragraph at lines 893--903
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[85
 
 ]
 
-LaTeX Warning: Text page 85 contains only floats.
+LaTeX Warning: Text page 86 contains only floats.
 
-[85] [86]
-Underfull \hbox (badness 2772) in paragraph at lines 893--894
+[86] [87]
+Underfull \hbox (badness 2772) in paragraph at lines 910--911
 []\T1/ptm/m/n/12 demographic in-for-ma-tion sup-port only boosts the per-for-ma
 nce on lo-gis-tic
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 894--895
+Underfull \hbox (badness 1215) in paragraph at lines 911--912
 []\T1/ptm/m/n/12 penalty ap-proach only in-creases the suc-cess on lin-ear dis-
 crim-i-nant anal-y-sis
  []
 
-) (./ch7.tex [87
-
-] [88
+) (./ch7.tex [88
 
 ]
 Underfull \hbox (badness 1571) in paragraph at lines 7--8
@@ -2481,7 +2479,9 @@ Underfull \hbox (badness 1571) in paragraph at lines 7--8
 ost gen-er-al-ized
  []
 
-[89]
+[89
+
+]
 Underfull \hbox (badness 2318) in paragraph at lines 22--23
 []\T1/ptm/m/n/12 the best re-sult ob-tained from the com-bined fea-tures of de-
 mo-graphic
@@ -2865,10 +2865,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 30178 strings out of 480608
- 540852 string characters out of 5903630
- 969862 words of memory out of 5000000
- 44829 multiletter control sequences out of 15000+600000
+ 30182 strings out of 480608
+ 540941 string characters out of 5903630
+ 970938 words of memory out of 5000000
+ 44831 multiletter control sequences out of 15000+600000
  604211 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,18n,77p,1845b,820s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2887,10 +2887,10 @@ ol/usyr.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pf
 b></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
 ve/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tez.pdf (141 pages, 8391852 bytes).
+Output written on tez.pdf (141 pages, 8393166 bytes).
 PDF statistics:
- 2028 PDF objects out of 2073 (max. 8388607)
- 1746 compressed objects within 18 object streams
- 443 named destinations out of 1000 (max. 500000)
+ 2031 PDF objects out of 2073 (max. 8388607)
+ 1749 compressed objects within 18 object streams
+ 445 named destinations out of 1000 (max. 500000)
  1074 words of extra memory for PDF output out of 10000 (max. 10000000)
 
