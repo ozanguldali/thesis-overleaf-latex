@@ -29,26 +29,26 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Logistic sigmoid function with different scaling w values. \relax }}{43}{figure.caption.28}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces A KNN example illustration for detecting the class of the green sample.}}{47}{figure.caption.31}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces LDA process for fixed and varying covariances.}}{50}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data set samples.\relax }}{54}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Image labeled as COVID-19. }}}{54}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Image labeled as non-COVID-19.}}}{54}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Image transformation steps - Test COVID-19 sample.\relax }}{54}{figure.caption.35}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original (826×768)}}}{54}{figure.caption.35}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resized, square cropped and gray-scaled}}}{54}{figure.caption.35}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Normalized}}}{54}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces An original non-COVID-19 and sample from train data set and position augmentations applied.\relax }}{56}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original Sample }}}{56}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Horizontal flipped}}}{56}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vertical flipped}}}{56}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {90 degrees rotated}}}{56}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {180 degrees rotated}}}{56}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {270 degrees rotated}}}{56}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces The sample visualization representing one iteration on ResNet-50 architecture and class probability result for COVID-19 labeled data from our dataset. The higher resolution version of image is available at \leavevmode {\color {blue}\href {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}{\url {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}}}\relax }}{59}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \leavevmode {\color {purple}Modified classification blocks.}\relax }}{60}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Feature maps where $d_{cnn} = 1000$, $d_{info} = 2$, and $d_{all} = d_{cnn} + d_{info} = 1002$.\relax }}{61}{figure.caption.41}%
-\contentsline {figure}{\numberline {6.1}{\ignorespaces AlexNet model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{71}{figure.caption.47}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces ResNet-18 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{72}{figure.caption.48}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces ResNet-34 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{73}{figure.caption.49}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ResNet-50 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{74}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces VGG16 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{75}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces VGG19 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{76}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data set samples.\relax }}{55}{figure.caption.34}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Image labeled as COVID-19. }}}{55}{figure.caption.34}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Image labeled as non-COVID-19.}}}{55}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Image transformation steps - Test COVID-19 sample.\relax }}{56}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original (826×768)}}}{56}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resized, square cropped and gray-scaled}}}{56}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Normalized}}}{56}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces An original non-COVID-19 and sample from train data set and position augmentations applied.\relax }}{57}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original Sample }}}{57}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Horizontal flipped}}}{57}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vertical flipped}}}{57}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {90 degrees rotated}}}{57}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {180 degrees rotated}}}{57}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {270 degrees rotated}}}{57}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The sample visualization representing one iteration on ResNet-50 architecture and class probability result for COVID-19 labeled data from our dataset. The higher resolution version of image is available at \leavevmode {\color {blue}\href {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}{\url {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}}}\relax }}{61}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \leavevmode {\color {purple}Modified classification blocks.}\relax }}{62}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Feature maps where $d_{cnn} = 1000$, $d_{info} = 2$, and $d_{all} = d_{cnn} + d_{info} = 1002$.\relax }}{63}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces AlexNet model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{73}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces ResNet-18 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{74}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces ResNet-34 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{75}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ResNet-50 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{76}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces VGG16 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{77}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces VGG19 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{78}{figure.caption.52}%
