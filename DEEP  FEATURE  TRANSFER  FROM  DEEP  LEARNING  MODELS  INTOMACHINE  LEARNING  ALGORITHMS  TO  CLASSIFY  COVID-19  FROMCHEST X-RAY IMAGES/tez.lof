@@ -1,9 +1,54 @@
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Model structures.\relax }}{2}%
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Advanced Structures.\relax }}{6}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Neuron cell, adapted from (\c {C}etin, 2003).\relax }}{10}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces For a multi-line figure captions, it is important that all the lines of the caption are aligned.\relax }}{11}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Figure captions must be ended with a full stop.\relax }}{13}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Landscape-oriented, full-page figure.\relax }}{14}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces For a multi-line figure captions, it is important that all the lines of the caption are aligned.\relax }}{20}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces For a multi-line figure captions, it is important that all the lines of the caption are aligned.\relax }}{24}%
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Example table in chapter 6.\relax }}{28}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Hand mit Ringen (Hand with Rings): the print of Wilhelm Röntgen's first medical X-ray of his wife's hand \cite {HandMitRingen}.\relax }}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Examples for COVID-19 chest X-rays filmed with PA, AP, AP-Supine, and Lateral projections, respectively.}}{11}{figure.caption.7}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PA projection}}}{11}{figure.caption.7}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {AP projection}}}{11}{figure.caption.7}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {AP-Supine projection}}}{11}{figure.caption.7}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {L projection}}}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sample Neuron.}}{13}{figure.caption.8}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Neuron with two variables}}}{13}{figure.caption.8}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Formula for the output of neuron on (a)}}}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration of under-fitting, well-fitting, and over-fitting of models to the data.}}{16}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A pseudo-code for SGD with momentum optimization \cite {weight_decay_regularization}.\relax }}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Pseudo-codes for Adam and AdamW optimization algorithms \cite {weight_decay_regularization}.\relax }}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces An example for a simple CNN architecture.}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Activation map construction with a filter window size of \leavevmode {\color {purple}$4 \times 4$} and stride value of $2$.\relax }}{23}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Maximum pooling operation sample with $2 \times 2$ window and stride value of 2.}}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces (a) A standard neural network, (b) A neural network after applying drop-out\cite {dropout_article}.\relax }}{25}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The usage of a full-connected layer for a binary classifier.}}{26}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Different fine-tuning strategies on a pre-trained model.}}{27}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Deep feature extraction from CNN models and using them in machine learning models \cite {A_novelCNNModel}.\relax }}{28}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Illustration of AlexNet architecture with a size of $224 \times 224 \times 3$ input image and 1000 class prediction support.\cite {AlexNet}.\relax }}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces An illustration for residual block. Here, $a^{[l]}$ is the starting activation layer and $a^{[l+2]}$ is the fed activation layer.}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces The architectures of ResNet-18, ResNet-34, and ResNet-50 \cite {ResNet}.\relax }}{31}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces An illustration of VGG architectures.}}{32}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Sample machine learning road map.\relax }}{33}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces (a) Clustering problem, (b) Classification problem, and (c) Regression problem \cite {parallel_linear_algebra}.\relax }}{34}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces K-fold cross-validation.}}{35}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A Hyper-plane and margins of an SVM for a binary classification problem.}}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The dual and primal problems, and the duality gap between their extreme points.}}{41}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Logistic sigmoid function with different scaling w values. \relax }}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces A KNN example illustration for detecting the class of the green sample.}}{47}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces LDA process for fixed and varying covariances.}}{50}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data set samples.\relax }}{54}{figure.caption.34}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Image labeled as COVID-19. }}}{54}{figure.caption.34}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Image labeled as non-COVID-19.}}}{54}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Image transformation steps - Test COVID-19 sample.\relax }}{54}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original (826×768)}}}{54}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resized, square cropped and gray-scaled}}}{54}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Normalized}}}{54}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces An original non-COVID-19 and sample from train data set and position augmentations applied.\relax }}{56}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original Sample }}}{56}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Horizontal flipped}}}{56}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vertical flipped}}}{56}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {90 degrees rotated}}}{56}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {180 degrees rotated}}}{56}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {270 degrees rotated}}}{56}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The sample visualization representing one iteration on ResNet-50 architecture and class probability result for COVID-19 labeled data from our dataset. The higher resolution version of image is available at \leavevmode {\color {blue}\href {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}{\url {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}}}\relax }}{59}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \leavevmode {\color {purple}Modified classification blocks.}\relax }}{60}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Feature maps where $d_{cnn} = 1000$, $d_{info} = 2$, and $d_{all} = d_{cnn} + d_{info} = 1002$.\relax }}{61}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces AlexNet model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{71}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces ResNet-18 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{72}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces ResNet-34 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{73}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ResNet-50 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{74}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces VGG16 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{75}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces VGG19 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{76}{figure.caption.52}%
