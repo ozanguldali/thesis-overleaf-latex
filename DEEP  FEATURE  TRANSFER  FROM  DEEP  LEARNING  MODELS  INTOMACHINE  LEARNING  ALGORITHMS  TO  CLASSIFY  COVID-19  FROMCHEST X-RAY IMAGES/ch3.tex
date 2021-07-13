@@ -5,29 +5,33 @@
 
 In this section, first of all, we provide information on the basics of deep learning algorithms, and then we mention the loss function, and the optimization methods used to train deep learning algorithms. We conclude the section with the basics of convolutional neural networks, the CNN models used in the thesis, and the transfer learning concept.
 
-\begin{figure}[h]
-	\centering
-	\subfigure[Neuron with two variables]{\label{fig:basic_nn_a}\includegraphics[width=.8\linewidth]{fig/NNs_2_variables.png}}
-	\subfigure[Formula for the output of neuron on (a)]{\label{fig:basic_nn_b}\includegraphics[width=.8\linewidth]{fig/NNs_formula_two_variables.png}}
-	\vspace*{1mm}
-	\captionfootnotemark{Sample Neuron.}
-	\label{basic_neuron}
-\end{figure}
-\footnotetext{Retrieved from GitHub: \hyperrefurl{https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/} on March 28, 2021.}
-
 \section{The Basics of Deep Learning}
 
 Here we list basic terminologies associated with deep learning algorithms.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=.8\linewidth]{fig/NNs_2_variables.png}
+\captionfootnotemark{A simple neural network with two neurons.}
+\label{fig:basic_neuron}
+\end{figure}
+\footnotetext{Retrieved from GitHub: \hyperrefurl{https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/} on March 28, 2021.}
+
 \begin{itemize}
   
-\item \textbf{Neural Network}: \textcolor{purple}{A neural network is a learning framework for machines using a collection of functions over hidden layers to understand and translate an input data into a desired output. For a given input data, after the input layer reads the data, the hidden layers extract and transform the information and feed the output layer with them. The output layer is the final layer and it is used to obtain the outputs of one iteration of network in desired format. The main inspiration of neural networks is the human brain structure.}
-  
-\item \textbf{Nodes (Neurons) and Links}:  \textcolor{purple}{Neural networks are made of nodes (neurons). The connections between the layer nodes are called as links. Each link has the weight and bias parameter it carries between neurons. Nodes receives the parameters of incident links, process them, and produces an output.}
-  
-\item \textbf{Weight and Bias}: \textcolor{purple}{Weight and bias terms are learnable parameters related to input data, and must be updated to reach the optimal cost value. On the first iteration, they can be taken as zeros or a random initialization can be used. Both of them are transformed from input nodes through output nodes over the nodes of hidden layers via links in a neural network. Some sources includes the bias term into the weight, and only use the weight value.}
+\item \textbf{Neural Network}: A neural network is a learning framework for machines using a collection of functions over hidden layers to understand and translate an input data into a desired output. For a given input data, after the input layer reads the data, the hidden layers extract and transform the information and feed the output layer with them. The output layer is the final layer and it is used to obtain the outputs of one iteration of network in desired format. The main inspiration of neural networks is the human brain structure. A simple example for a neural network consisting of two neurons can be seen in Figure~\ref{fig:basic_neuron}, and the formulation for the output in this neural network is:
 
-\item \textcolor{purple}{\textbf{Feed-forward and Back-propagation}: Basically, a neural network has no loops or cyclic links over nodes is in the group of feed-forward networks. The direction of information flow is straight-forward. Input layer handles the input data, and the outputs of input layer goes through the hidden layer as input. There may be one or several number of hidden layer, and the output of each is the input of the next hidden layer. Finally, the output of last hidden layer feeds the output layer, and the output nodes forward their outputs to the loss function. During this process, the weights and bias values do not change. To update and find the most appropriate weight and bias values, back-propagation is used. To reach the optimal loss value, on each iteration of training, the negative gradient of the loss function is used to update the weight and bias terms. On the first iteration, this gradients are considered as zero or a random initialization is used. More information and examples can be found in Section~\ref{sec:basics_of_cnn}.}
+\be 
+y = \textbf{W}^{T} \textbf{x} + b \:,
+\ee
+ 
+where $\textbf{x} \in \setsymbol{R}^{2}$ is the input vector, $\textbf{W} \in \setsymbol{R}^{2}$ is the weight vector, $b \in \setsymbol{R}$ is the bias term, and $y \in \setsymbol{R}$ is the scalar output.
+ 
+\item \textbf{Nodes (Neurons) and Links}:  Neural networks are made of nodes (neurons). The connections between the layer nodes are called as links. Each link has weight and bias parameters which are carried over neurons. Nodes receives the parameters of incident links, process them, and produces an output.
+  
+\item \textbf{Weight and Bias}: Weight and bias terms are learnable parameters related to input data, and must be updated iteratively to reach the optimal cost value. At the first iteration, they can be taken as zeros or a random initialization can be used. Both of them are transformed from input nodes through output nodes over the nodes of hidden layers via links in a neural network. Some sources includes the bias term into the weight, and only use the weight value.
+
+\item \textbf{Feed-forward and Back-propagation}: Basically, a neural network which has no loops or cyclic links over nodes considered as a group of feed-forward networks. The direction of information flow is straight-forward. Input layer handles the input data, and the outputs of input layer goes through the hidden layer as input. There may be one or several number of hidden layers, and the output of each is the input of the next hidden layer. Finally, the output of last hidden layer feeds the output layer, and the output nodes forward their outputs to the loss function. During this process, the weights and bias values do not change. To update and find the most appropriate weight and bias values, back-propagation is used. To reach the optimal loss value, at each iteration of training, the negative gradient of the loss function is used to update the weight and bias terms. At the first iteration, this gradients are considered as zero or a random initialization is used. More information and examples can be found in Section~\ref{sec:basics_of_cnn}.
 
 \item \textbf{Epoch}: An epoch is an iteration when the train data passes forward and backward through the whole neural network only once. Generally, the train data passes through the whole network multiple times to optimize the learning process.
 
@@ -39,7 +43,8 @@ Here we list basic terminologies associated with deep learning algorithms.
   
 \item \textbf{Test Data and Testing}: The data group reserved to be used in testing process is called as test data. The ratio of the size of test data to the whole data is generally determined as 2:10 or 3:10. The test data must be strictly separated from train data, and should be only used on testing process. The training process should not see any of test data. Testing process is usually only applied at the end of all epochs. However, when the train data is not feasible to be divided into validation data, at the end of each epoch testing process may be applied on test data. This method is also used to determine the over-fitting and stop point.
     
-\item \textbf{Under-fitting and Over-fitting}: \textcolor{purple}{A learning algorithm is appeared to have under-fitting when it cannot capture or fit the data well. Even the metrics of training process are not sufficient on the under-fitting situation, since the learnable parameters are not yet optimized to reach a satisfactory loss value. On the other hand, when the model fits on the train data perfectly, it might have started to memorize the train data and may not learn something new from the data. Therefore, even though training metrics are nearly perfect, the testing metrics in the opposite direction of what is desired can be seen. The main reason is that the learnable parameters were directly adjusted for train data and not feasible for test data anymore. This situation is called as over-fitting. A validation set can be used to control the over-fitting by periodically checking the metrics of a data out of train set, while trying to rise above the under-fitting. By that way, a well-fitting or appropriate-fitting may be caught. The illustrations over three examples can be seen in the Figure~\ref{fig:underfitting_overfitting}.}
+\item \textbf{Under-fitting and Over-fitting}: A learning algorithm may have under-fitting problem when it cannot capture or fit the data well. Under-fitting problem results in insufficient metrics during the training process since the learnable parameters are not optimized enough to reach at a satisfactory loss value. On the other hand, when the model fits the train data perfectly, it might have started to memorize the train data and may not learn something new from the data. Therefore, even though training metrics are nearly perfect, the testing metrics in the opposite direction of what is desired can be seen. The main reason is that the learnable parameters were directly adjusted for train data and not feasible for test data anymore. This situation is called as over-fitting. A validation set can be used to control the over-fitting by periodically checking the metrics of a data out of train set, while trying to rise above the under-fitting. By that way, a well-fitting or appropriate-fitting may be caught. The illustrations for three situations can be seen in the Figure~\ref{fig:underfitting_overfitting}.
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{fig/underfitting_overfitting.png}
@@ -55,7 +60,7 @@ Here we list basic terminologies associated with deep learning algorithms.
 
 Loss function is the function that represents the error between true and predicted values which can be called as the cost of the problem to be optimized.
 
-\textcolor{purple}{The cross-entropy loss function is one of the most commonly used loss functions to measure the performance of a classifier. The function computes the probability values of input to belonging into each class by log-Softmax loss function \cite{logsoftmax} and generates the cost value by negative log-likelihood loss function \cite{negative-ll}. Here the loss value increases together with the divergence between the grand-truth label and how likely this label is estimated.}
+The cross-entropy loss function is one of the most commonly used loss functions to measure the performance of a classifier. The function calculates the cost through the negative log-likelihood function \cite{negative-ll} which uses log class probability values computed by log-Softmax function \cite{logsoftmax}. Here the loss value increases together with the divergence between the grand-truth label and how likely this label is estimated.
 
 The cross-entropy loss function f, as a function of weights, is defined as given below:
 
@@ -76,11 +81,11 @@ where $y$ is the binary indicator variable with two class labels $1$ and $0$, wh
 \section{The Basics of Optimization Methods}
 \label{sec:CH3_the_basics_of_optimization}
 
-Various optimization methods can be used for reducing the losses and reaching more accurate predictions. \textcolor{purple}{The weights are initialized and updated at each training epoch. The initialization strategies may vary depending on the neural network architecture. However, it is always aimed to achieve the most satisfying results by using some optimization algorithms called as optimizers.}
+Various optimization methods can be used for reducing the losses and reaching more accurate predictions. The weights are initialized and updated at each training epoch. The initialization strategies may vary depending on the neural network architecture. However, it is always aimed to achieve the most satisfying results by using some optimization algorithms called as optimizers.
 
 \subsection{Stochastic Gradient Descent with Momentum  Optimization Algorithm}
 
-\textcolor{purple}{Stochastic gradient descent (SGD) can be considered as a stochastic approximation of gradient descent optimization \cite{gradient_descent_algorithms} and is an iterative method for optimizing an objective function with suitable smoothness properties.} The momentum remembers the weight update at each iteration and determines the next update as a linear combination of the gradient and the previous update \cite{SGD_Momentum}. An example for a pseudo-code for SGD with momentum optimization is given in Figure~\ref{fig:sgd_momentum}. The weight parameter $\theta$ is denoted by $\textbf{x}$ in the figure.
+Stochastic gradient descent (SGD) can be considered as a stochastic approximation of gradient descent optimization \cite{gradient_descent_algorithms} and is an iterative method for optimizing an objective function with suitable smoothness properties. The momentum remembers the weight update at each iteration and determines the next update as a linear combination of the gradient and the previous update \cite{SGD_Momentum}. An example for a pseudo-code for SGD with momentum optimization is given in Figure~\ref{fig:sgd_momentum}. The weight parameter $\theta$ is denoted by $\textbf{x}$ in the figure.
 
 \begin{figure}[h]
 	\centering
@@ -97,7 +102,7 @@ Adaptive moment estimation (Adam) is an optimization algorithm that uses the run
 
 Adam decoupled weight decay optimization algorithm (AdamW) does not use the regularization as the normalized by square root of second moment vector. Thus, it is only proportional to the weight itself \cite{Adam}. An example for a pseudo-code for AdamW optimization is given in Figure~\ref{fig:adam_and_adamw}. The weight parameter $\theta$ is denoted by $\textbf{x}$ in the figure.
 
-\textcolor{purple}{The main difference of Adam and AdamW, as seen in Figure~\ref{fig:adam_and_adamw}, is that, the weight decay is directly applied to the gradient of loss function on Adam, while it is decoupled on AdamW. Hence, the weight decay affects moment vectors and appears both in numerator and denominator during weight parameter update. Furthermore, since it is in multiplication with learning rate parameter, the fine-tuning of learning rate and weight decay values become dependent to each other. On the other hand, weight decay is only applied on the step of weight parameter update, and take a separated charge during this update on AdamW.}
+The main difference of Adam and AdamW, as given in Figure~\ref{fig:adam_and_adamw}, is that, the weight decay is directly applied to the gradient of loss function on Adam, while it is decoupled on AdamW. Hence, the weight decay affects moment vectors and appears both in numerator and denominator during weight parameter update. Furthermore, since it is in multiplication with learning rate parameter, the fine-tuning of learning rate and weight decay values become dependent to each other. On the other hand, weight decay is only applied on the step of weight parameter update, and take a separated charge during this update on AdamW.
 
 \begin{figure}[h]
 	\centering
@@ -125,31 +130,28 @@ Basically, a CNN model consists of three main layers: 1) An input layer, 2) hidd
 \footnotetext{Retrieved from: \hyperrefurl{https://www.jeremyjordan.me/convolutional-neural-networks/} on March 31, 2021.}
 
 
-The structure of CNNs comports with the structure of feed-forward networks where the information goes through network in forward direction only. Back-propagation algorithm is commonly used to feed and train a feed-forward network. \textcolor{purple}{The algorithm orders to compute the gradients in weight space of a feed-forward network with respect to the loss function f(\textbf{$\theta$}). The weight matrix is defined as $\textbf{W} =(\theta_{1}^{T}, \dots ,\theta_{n^{(i)}}^{T}) \in \setsymbol{R}^{n^{(i)}} \times m^{(i)}$ where $n^{(i)}$ and $m^{(i)}$ are the number of inputs for $i^{th}$ layer and the size of each input in this layer respectively. Then the weight space is updated with these gradients by the chosen optimizer such as SGD momentum, Adam or AdamW. The gradient of objective loss function $f(\textbf{$\theta$})$ at a fixed weight vector \textbf{$\theta_{t}$} is computed via directional derivatives and chain rule, and represented by $\nabla f(\textbf{$\theta_{t}$})$.}
+The structure of CNNs comports with the structure of feed-forward networks where the information goes through network in forward direction only. Back-propagation algorithm is commonly used to feed and train a feed-forward network. The algorithm orders to compute the gradients in weight space of a feed-forward network with respect to the loss function f(\textbf{$\theta$}). The weight matrix is defined as $\textbf{W} =(\theta_{1}^{T}, \dots ,\theta_{n^{(i)}}^{T}) \in \setsymbol{R}^{n^{(i)}} \times m^{(i)}$ where $n^{(i)}$ and $m^{(i)}$ are the number of inputs for $i^{th}$ layer and the size of each input in this layer respectively. Then the weight space is updated with these gradients by the chosen optimizer such as SGD momentum, Adam, or AdamW. The gradient of objective loss function $f(\textbf{$\theta$})$ at a fixed weight vector \textbf{$\theta_{t}$} is computed via directional derivatives and chain rule, and represented by $\nabla f(\textbf{$\theta_{t}$})$.
 
-\textcolor{purple}{Let's consider the simple CNN architecture given in Figure~\ref{fig:basic_cnn_sample} with each layer is denoted by    
+Let's consider a simple CNN architecture illustrated in Figure~\ref{fig:basic_cnn_sample} with each layer is denoted by    
 $\textbf{a}^{(i)}$,  where $i=1,2, \ldots, 6$. Assume there exists $n$ number of $x_{i}$ initial input nodes, where $\textbf{x} = \textbf{a}^{(1)} = (x_{1}, \dots , x_{n})$ is an n-dimensional input layer vector. 
-Furthermore, the layers $\textbf{a}^{(i)}$, with $i=2, \ldots, 5$, are the hidden layers. For instance, $\textbf{a}^{(3)} = (a_{1}^{(3)}, a_{2}^{(3)}, a_{3}^{(3)}, a_{4}^{(3)})$ and $\textbf{a}^{(5)} = (a_{1}^{(5)}, a_{2}^{(5)}, a_{3}^{(5)})$. Lastly, the output layer feeding the loss function is $\textbf{a}^{(6)} = (a_{1}^{(6)}, a_{2}^{(6)})$, and the output $y$ value is determined by computing the class probabilities from $\textbf{a}^{(6)}$.}
+Furthermore, the layers $\textbf{a}^{(i)}$, with $i=2, \ldots, 5$, are the hidden layers. For instance, $\textbf{a}^{(3)} = (a_{1}^{(3)}, a_{2}^{(3)}, a_{3}^{(3)}, a_{4}^{(3)})$ and $\textbf{a}^{(5)} = (a_{1}^{(5)}, a_{2}^{(5)}, a_{3}^{(5)})$. Lastly, the output layer feeding the loss function is $\textbf{a}^{(6)} = (a_{1}^{(6)}, a_{2}^{(6)})$, and the output $y$ value is determined by computing the class probabilities from $\textbf{a}^{(6)}$.
  
-\textcolor{purple} { Then the gradient of $f$ at constant $\theta_{t}$ is constructed as: }
+Then the gradient of $f$ at $\theta_{t}$ is evaluated as:
 
-\be
-\textcolor{purple} { 
+\begin{equation}
 \nabla f (\theta_{t}) = 
     \begin{bmatrix}
         \frac { \partial f (\theta_{t})} {\partial \theta_{1}}\\
         \vdots \\
         \frac { \partial f (\theta_{t})} {\partial \theta_{n}}
-    \end{bmatrix}.
-}
-\ee
+    \end{bmatrix}.    
+\end{equation} 
 
 \begin{comment}
     \textcolor{red}{Then, using directional derivatives and chain rule can be illustrated in Figure~\ref{fig:compute_gradient}.
     Bu figuru sen mi cizdin? a1, a61, a2 de a6,2 olmali sanirim yukaridaki paragrafa bakarsak. bir de denklemi, denklem olarak ifade edersen, figur yerine iyi olur gibime geldi. i=1,2,..,n. n kullandım cunku CNN mimarsini gosteren figurde x katmani 1,..n. bir de figurde y bold ama denklemde bold degil.hangisi daha dogru acaba?}
-    
-    
-    \begin{figure}[h]
+
+\begin{figure}[h]
     	\centering
     	\includegraphics[width=.6\linewidth]{fig/gradient_example.png}
     	\vspace*{1mm}
@@ -158,51 +160,59 @@ Furthermore, the layers $\textbf{a}^{(i)}$, with $i=2, \ldots, 5$, are the hidde
     \end{figure}
 \end{comment}
 
-\textcolor{purple}{The gray nodes in CNN architecture given in Figure~\ref{fig:basic_cnn_sample} are bias terms. Assume that the objective loss function is cross-entropy loss function $f$ and our hypothesis function is to create a CNN architecture in the form $h_{i}: \setsymbol{R}^{k^{(i)}} \rightarrow \setsymbol{R}^{t^{(i)}}$, where $k^{(i)}$ and $t^{(i)}$ vary according to the corresponding layer. Then define $\textbf{a}^{(i)} = h_{i}(\textbf{W}^{(i)} \textbf{a}^{(i-1)} + b^{(i)})$ for each $i^{th}$ layer, where $\textbf{W}^{(i)}$ represents the weights of links from $i^{th}$ to $(i+1)^{th}$ layers, and $b^{(i)}$ is the bias term accompanying to these weights. Moreover, let us denote the weight of the link between the $j^{th}$ node of $i^{th}$ layer and the $z^{th}$ node of $(i+1)^{th}$ layer as $\textbf{W}_{j,z}^{(i)}$. We obtain the backward pass of our loss function with respect to the first weight matrix and bias terms by chain rule as follows:}
+The gray nodes in CNN architecture given in Figure~\ref{fig:basic_cnn_sample} are bias terms. Assume that the objective loss function is the cross-entropy loss function $f$ and our hypothesis function is to create a CNN architecture in the form $h_{i}: \setsymbol{R}^{k^{(i)}} \rightarrow \setsymbol{R}^{t^{(i)}}$, where $k^{(i)}$ and $t^{(i)}$ vary according to the corresponding layer. Then define $\textbf{a}^{(i)} = h_{i}(\textbf{W}^{(i)} \textbf{a}^{(i-1)} + b^{(i)})$ for each $i^{th}$ layer, where $\textbf{W}^{(i)}$ represents the weights of links from $i^{th}$ to $(i+1)^{th}$ layers, and $b^{(i)}$ is the bias term accompanying to these weights. Moreover, let us denote the weight of the link between the $j^{th}$ node of $i^{th}$ layer and the $z^{th}$ node of $(i+1)^{th}$ layer as $\textbf{W}_{j,z}^{(i)}$. We obtain the backward pass of our loss function with respect to the first weight matrix and bias terms by chain rule, respectively, as follows:
 
-\textcolor{purple} { 
-\be
+
+%\be
+\begin{equation}
 \label{eq:compute_dl/dW}
 \frac{\partial f}{\partial \textbf{W}^{(1)}} = \frac{\partial f}{\partial \textbf{a}^{(6)}}  \frac{\partial \textbf{a}^{(6)}}{\partial \textbf{a}^{(5)}}  \frac{\partial \textbf{a}^{(5)}}{\partial \textbf{a}^{(4)}}  \frac{\partial \textbf{a}^{(4)}}{\partial \textbf{a}^{(3)}}  \frac{\partial \textbf{a}^{(3)}}{\partial \textbf{a}^{(2)}}  \frac{\partial \textbf{a}^{(2)}}{\partial \textbf{W}
 ^{(1)}}\:\text{, and}
-\ee
-}
+\end{equation} 
+%\ee
 
-\textcolor{purple} { 
-\be
+
+
+%\be
+\begin{equation}
 \label{eq:compute_dl/db}
 \frac{\partial f}{\partial b^{(1)}} = \frac{\partial f}{\partial \textbf{a}^{(6)}}  \frac{\partial \textbf{a}^{(6)}}{\partial \textbf{a}^{(5)}}  \frac{\partial \textbf{a}^{(5)}}{\partial \textbf{a}^{(4)}}  \frac{\partial \textbf{a}^{(4)}}{\partial \textbf{a}^{(3)}}  \frac{\partial \textbf{a}^{(3)}}{\partial \textbf{a}^{(2)}}  \frac{\partial \textbf{a}^{(2)}}{\partial b^{(1)}}\:\text{.}
-\ee
-}
+\end{equation} 
+%\ee
 
-\textcolor{purple} { 
+
+
 %Here, each partial derivative is computed as shown in Figure~\ref{fig:compute_gradient}. 
-For instance, if the forward pass connection between $\textbf{a}_{2}^{(4)}$ and $\textbf{a}_{1}^{(5)}$ is $W^{(4)}_{2,1}$, we use the directional derivative rule while computing $\frac{\partial f}{\partial \textbf{a}^{(6)}}$ for the backward pass gradient to update $W^{(4)}_{2,1}$ value as: }
+For instance, if the forward pass connection between $\textbf{a}_{2}^{(4)}$ and $\textbf{a}_{1}^{(5)}$ is $W^{(4)}_{2,1}$, we use the directional derivative rule while computing $\frac{\partial f}{\partial \textbf{a}^{(6)}}$ for the backward pass gradient to update $W^{(4)}_{2,1}$ value as: 
 
-\textcolor{purple} { 
-\be
+
+%\be
+\begin{equation}
 \label{eq:compute_specific_weight}
 \frac{\partial f}{\partial W^{(4)}_{2,1}} = \frac{\partial f}{\partial \textbf{a}^{(6)}} \frac{\partial \textbf{a}^{(6)}}{\partial \textbf{a}_{1}^{(5)}}  \frac{\partial \textbf{a}_{1}^{(5)}}{\partial W^{(4)}_{2,1}} = \Big ( \frac{\partial f}{\partial \textbf{a}_{1}^{(6)}}  \frac{\partial \textbf{a}_{1}^{(6)}}{\partial \textbf{a}_{1}^{(5)}} + \frac{\partial f}{\partial \textbf{a}_{2}^{(6)}} \frac{\partial \textbf{a}_{2}^{(6)}}{\partial \textbf{a}_{1}^{(5)}} \Big )  \frac{\partial \textbf{a}_{1}^{(5)}}{\partial W^{(4)}_{2,1}} \:\text{.}
-\ee
-}
+\end{equation} 
+%\ee
 
-\textcolor{purple} { In the same way, the gradient for $b^{(5)}$ can be computed as: }
 
-\textcolor{purple} { 
-\be
+In the same way, the gradient for $b^{(5)}$ can be computed as: 
+
+
+%\be
+\begin{equation}
 \label{eq:compute_specific_bias}
 \frac{\partial f}{\partial b^{(5)}} = \frac{\partial f}{\partial \textbf{a}^{(6)}}  \frac{\partial \textbf{a}^{(6)}}{\partial b^{(5)}} = \frac{\partial f}{\partial \textbf{a}_{1}^{(6)}}  \frac{\partial \textbf{a}_{1}^{(6)}}{\partial b^{(5)}} + \frac{\partial f}{\partial \textbf{a}_{2}^{(6)}}  \frac{\partial \textbf{a}_{2}^{(6)}}{\partial b^{(5)}}\:\text{.}
-\ee
-}
+\end{equation} 
+%\ee
+
 
 
 \subsection{Convolutional Layer}
 
-Convolutional layer is the building block of CNN architectures and is used to reveal the distinctive features of input data. A convolution layer includes one or multiple windows named as filter (or kernel) that can be of different sizes such as $2 \times 2$, $3\times3$ etc. \textcolor{purple}{The coefficients that filters include change on each iteration during the training of a CNN. This coefficients and their updates are used to detect the significant and learnable parts of the data.}
+Convolutional layer is the building block of CNN architectures and is used to reveal the distinctive features of input data. A convolution layer includes one or multiple windows named as filter (or kernel) that can be of different sizes such as $2 \times 2$, $3\times3$ etc. The coefficients, which are included in filters, change on each iteration during the training of a CNN. This coefficients and their updates are used to detect the significant and learnable parts of the data.
 
 Filtering is started to be applied from the upper left corner of the image and keeps moving towards the right. When there are no cells left to be scanned on the right, it continues from the lower cells as before. At each step, the filter and the corresponding area of input matrix are multiplied by element-wise. The step length of scanning process is called as stride. The default stride value is 1; however, different stride values may be used depending on the input data and CNN architecture. If the stride is set as $s$, then the kernel window move by jumping $s$ cells. 
 
-\textcolor{purple}{Sometimes, an inconsistency between filter, stride and input layer sizes can be seen while trying to use desired convolutional layer. In this situation, the edges of input matrix may be filled by zeros. These process is called as padding. If the padding value is set as $p$, the $p$ cells with zero values are added to the edges of input matrix. This method can be also used to pay attention to the edges and corners of original input matrix.}
+Sometimes, an inconsistency between filter, stride, and input layer sizes can be seen while trying to use desired convolutional layer. In this situation, the edges of input matrix may be filled by zeros. These process is called as padding. If the padding value is set as $p$, the $p$ cells with zero values are added to the edges of input matrix. This method can be also used to pay attention to the edges and corners of original input matrix.
 
 The various filters can be applied onto the input data to reveal low and high-level feature maps. After convolution, the size of the input data changes depending on the filter (or kernel), stride, and padding choices. The outputs of the convolution layers are called activation maps.
 
@@ -214,7 +224,7 @@ The Figure~\ref{conv_layer} gives a summary about how activation map is construc
 	\centering
 	\includegraphics[width=\linewidth]{fig/conv_layer.png}
 	\vspace*{2mm}
-	\caption{Activation map construction with a filter window size of  \textcolor{purple}{$4 \times 4$} and stride value of $2$.}
+	\caption{Activation map construction with a filter window size of  $4 \times 4$ and stride value of $2$.}
 	\label{conv_layer}
 \end{figure}
 
@@ -333,7 +343,7 @@ In this section, the state-of-the-art CNN models used in this thesis are introdu
 
 \subsection{AlexNet}
 
-The AlexNet architecture was developed by Krizhevsky et al. \cite{AlexNet} for the object recognition problem. This model was trained with the ILSVRC 2012 ImageNet \cite{imagenet} dataset, achieved high performance results, and won the first place in the ImageNet competition in 2012. There are $9$ layers in total in the AlexNet architecture. Following the input layer, there are five convolution layers which use filters of size of $11 \times 11$ with a stride value of $4$, where some layers are supported by the maximum pooling layers as shown in Figure~\ref{fig:alexnet_arch}. \textcolor{purple}{The remaining three layers are the fully-connected layers which have the sizes of $2048$, $2048$ and the number of classes in order. In Figure~\ref{fig:alexnet_arch}, the number of classes are considered as 1000; thus, the last fully-connected layer has the size of $1000$.  The ReLU activation function is used after each convolution and fully-connected layer. The number of filters used increases as going deeper into the model.}
+The AlexNet architecture was developed by Krizhevsky et al. \cite{AlexNet} for the object recognition problem. This model was trained with the ILSVRC 2012 ImageNet \cite{imagenet} dataset, achieved high performance results, and won the first place in the ImageNet competition in 2012. There are $9$ layers in total in the AlexNet architecture. Following the input layer, there are five convolution layers which use filters of size of $11 \times 11$ with a stride value of $4$, where some layers are supported by the maximum pooling layers as shown in Figure~\ref{fig:alexnet_arch}. The remaining three layers are the fully-connected layers which have the sizes of $2048$, $2048$, and the number of classes, respectively. In Figure~\ref{fig:alexnet_arch}, the number of classes are considered as 1000; thus, the last fully-connected layer has the size of $1000$.  The ReLU activation function is used after each convolution and fully-connected layer. The number of filters used increases as going deeper into the model.
 
 \begin{figure}[h]
     \centering
@@ -344,7 +354,7 @@ The AlexNet architecture was developed by Krizhevsky et al. \cite{AlexNet} for t
 
 \subsection{Residual Neural Networks}
 
-The residual neural network (ResNet) architectures was proposed by He et al. \cite{ResNet} to avoid vanishing and exploding gradient problems by using residual blocks which is a simple connection which takes the activation from one layer and feeds it to another layer in much deeper. This model resulted in high performance results on ILSVRC 2015 ImageNet \cite{imagenet} data set and won the 1st place on the corresponding task. \textcolor{purple}{In the Figure~\ref{fig:residual_block}, it can be seen that the leftest node feeds middle layer, which is its next, and supports the middle layer while feeding the rightest layer.}
+The residual neural network (ResNet) architectures was proposed by He et al. \cite{ResNet} to avoid vanishing and exploding gradient problems by using residual blocks which is a simple connection which takes the activation from one layer and feeds it to another layer in much deeper. This model resulted in high performance results on ILSVRC 2015 ImageNet \cite{imagenet} data set and won the 1st place on the corresponding task. In the Figure~\ref{fig:residual_block}, it can be seen that the layer $a^{[l]}$ feeds two subsequent layers, namely, $a^{[l+1]}$ and $a^{[l+2]}$.
 
 \begin{figure}[h]
     \centering
@@ -358,15 +368,15 @@ Depending on the number of layers, there are a variety of special ResNet archite
 
 \subsubsection*{\textit{ResNet-18}}
 
-The first convolution layer includes a filter with a size of $7 \times 7$ and scans with a stride value of 2, then maximum pooling is applied with a $2 \times 2$ window along with a stride value of 2. Afterwards, 8 residual blocks, where each includes 2 convolutional layers with $3 \times 3$ filters, come. Hence, there exists 16 convolutional layers inside of residual blocks. \textcolor{purple}{After the residual blocks, there is an average pooling following a fully-connected layer with neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:resnet_archs}.}
+The first convolution layer includes a filter with a size of $7 \times 7$ and scans with a stride value of 2, then maximum pooling is applied with a $2 \times 2$ window along with a stride value of 2. Afterwards, 8 residual blocks, where each includes 2 convolutional layers with $3 \times 3$ filters, come. Hence, there exists 16 convolutional layers inside of residual blocks. After the residual blocks, there is an average pooling following a fully-connected layer with neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:resnet_archs}.
 
 \subsubsection*{\textit{ResNet-34}}
 
-The first convolution layer includes a $7 \times  7$ filter and scans with a stride value of 2, then maximum pooling is applied with $2 \times  2$ window and stride value of 2. Afterwards, 16 residual blocks, such that each of them includes 2 convolutional layers with $3 \times 3$ filters, come. That is, there exists 32 convolutional layers inside of residual blocks. \textcolor{purple}{After the residual blocks, there is an average pooling following a fully-connected layer with neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:resnet_archs}.}
+The first convolution layer includes a $7 \times  7$ filter and scans with a stride value of 2, then maximum pooling is applied with $2 \times  2$ window and stride value of 2. Afterwards, 16 residual blocks, such that each of them includes 2 convolutional layers with $3 \times 3$ filters, come. That is, there exists 32 convolutional layers inside of residual blocks. After the residual blocks, there is an average pooling following a fully-connected layer with neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:resnet_archs}.
 
 \subsubsection*{\textit{ResNet-50}}
 
-The first convolution layer includes a $7 \times 7$ filter and scans with a stride value of 2, then maximum pooling is applied with  $2 \times 2 $ window and stride as 2. Afterwards, 16 residual blocks, such that each of them includes 3 convolutional layers with $1 \times 1$, $3 \times 3$ and $1 \times 1$ filters in order, come. That is, there exists 48 convolutional layers inside of residual blocks. \textcolor{purple}{After the residual blocks, there is an average pooling following a fully-connected layer with neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:resnet_archs}.}
+The first convolution layer includes a $7 \times 7$ filter and scans with a stride value of 2, then maximum pooling is applied with  $2 \times 2 $ window and stride as 2. Afterwards, 16 residual blocks, such that each of them includes 3 convolutional layers with $1 \times 1$, $3 \times 3$ and $1 \times 1$ filters in order, come. That is, there exists 48 convolutional layers inside of residual blocks. After the residual blocks, there is an average pooling following a fully-connected layer with neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:resnet_archs}.
  
 \begin{figure}[h]
     \centering
@@ -379,7 +389,7 @@ The first convolution layer includes a $7 \times 7$ filter and scans with a stri
 
 \subsection{Visual Geometry Group}
 
-Simonyan and Zisserman \cite{VGG} proposed a very profound architecture for the problem of image recognition. It is aimed to achieve higher classification performance by using a small size filter and increasing the depth of the model. This model was trained with the ILSVRC 2012  ImageNet \cite{imagenet} dataset and achieved high success results. This study has showed the importance of depth in image description models. \textcolor{purple}{The two types of Visual Geometry Group (VGG) architectures explained below can be seen in Figure~\ref{fig:vgg16_vgg19_archs}. In the figure, the number of classes are considered as 1000.}
+Simonyan and Zisserman \cite{VGG} proposed a very profound architecture for the problem of image recognition. It is aimed to achieve higher classification performance by using a small size filter and increasing the depth of the model. This model was trained with the ILSVRC 2012  ImageNet \cite{imagenet} dataset and achieved high success results. This study has showed the importance of depth in image description models. The two types of Visual Geometry Group (VGG) architectures explained below can be seen in Figure~\ref{fig:vgg16_vgg19_archs}. In the figure, the number of classes are considered as 1000.
 
 \begin{figure}[h]
     \centering
@@ -391,8 +401,8 @@ Simonyan and Zisserman \cite{VGG} proposed a very profound architecture for the 
 
 \subsubsection*{\textit{VGG16}}
 
-The model architecture starts with an input layer, and there are following 12 convolution layers using $3 \times 3$ filters. There are a total of 5 maximum pooling layers used after some convolution layers. In maximum pooling, $2 \times 2$ windows were used with stride as 2. \textcolor{purple}{After the convolution layers, there are three fully-connected layers such that the first two of which have 4096 neurons and the last one has neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:vgg16_vgg19_archs}.} The ReLU activation function was used after all the hidden layers.
+The model architecture starts with an input layer, and there are following 12 convolution layers using $3 \times 3$ filters. There are a total of 5 maximum pooling layers used after some convolution layers. In maximum pooling, $2 \times 2$ windows were used with stride as 2. After the convolution layers, there are three fully-connected layers such that the first two of which have 4096 neurons and the last one has neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:vgg16_vgg19_archs}. The ReLU activation function was used after all the hidden layers.
 
 \subsubsection*{\textit{VGG19}}
 
-The model architecture starts with an input layer, and there are following 14 convolution layers using $3 \times 3$ filters. There are a total of 5 maximum pooling layers used after some convolution layers. In maximum pooling, $2 \times 2$ windows were used with stride as 2. \textcolor{purple}{After the convolution layers, there are three fully-connected layers such that the first two of which have 4096 neurons and the last one has neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:vgg16_vgg19_archs}.} The ReLU activation function was used after all the hidden layers.
+The model architecture starts with an input layer, and there are following 14 convolution layers using $3 \times 3$ filters. There are a total of 5 maximum pooling layers used after some convolution layers. In maximum pooling, $2 \times 2$ windows were used with stride as 2. After the convolution layers, there are three fully-connected layers such that the first two of which have 4096 neurons and the last one has neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:vgg16_vgg19_archs}. The ReLU activation function was used after all the hidden layers.

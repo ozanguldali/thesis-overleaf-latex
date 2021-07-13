@@ -25,7 +25,7 @@ The goal of machine learning (ML) is to learn from available data or experiences
     \item testing the model to evaluate the performance of trained model on unseen test data.
 \end{itemize}
 
-The majority of the problems in ML classified as either supervised or unsupervised learning approaches. \textcolor{purple}{Clustering as an example for unsupervised learning, and classification and regression as two examples for supervised learning are given in Figure~\ref{clustering_classification_regression}.}
+The majority of the problems in ML classified as either supervised or unsupervised learning approaches. Clustering as an example for unsupervised learning, and classification and regression as two examples for supervised learning are given in Figure~\ref{clustering_classification_regression}.
 
 \begin{figure}[h]
 	\centering
@@ -42,7 +42,7 @@ The task in this thesis includes a data set where each datum has its true label 
 
 \subsection{Unsupervised Learning}
 
-The problems having data with unknown true values are solved by unsupervised learning. \textcolor{purple}{Some data sets can be deliberately left unlabeled since it is too hard to label the data and requires too much time, expert people, or special devices to label. On the other hand, not all problems needs to be classified, there are problems that only needs to be grouped. Clustering tasks are constructed on these kind of data sets and solved by unsupervised learning.}
+The problems having data with unknown true values are solved by unsupervised learning. Some data sets can be deliberately left unlabeled since it is too hard to label the data and requires too much time, expert people, or special devices to label. On the other hand, not all problems needs to be classified, there are problems that only needs to be grouped. Clustering tasks are constructed on these kind of data sets and solved by unsupervised learning.
 
 \section{Cross-Validation}
 
@@ -197,8 +197,6 @@ loss_{squared\_hinge}(\textbf{w}, b) = \sum_{i=1}^{n} (\max(0, 1 - (\textbf{w}^{
 
 The constrained optimization problem of SVM is derived as:
 
-\textcolor{red}{yukarida maximization dedin, simdi minimization, bir sonraki denklem de yine max. dilersen hep maksimizasyondan bahsetten, cunku denkleme bakarak minimize mi etmeliyiz, maksimize mi pek anlasilmiyor. \textbf{Ozan:} yukarıdaki hinge ve squared hinge loss'larının tanımları o şekilde olduğu için max'lı yazdım. Primal ve dual problem olarak adlandırılan problemler de equationlarda belirttiğim gibi veriliyorlar hep. Nasıl ve neden bu şekilde yazıldıklarının ayrıntısı için referans vermiştim.}
-
 \be
 \label{eq:primal_svm}
 \min_{w}\ell(\textbf{w})= \min_{w} \frac{\norm{\textbf{w}}_{2}^{2}}{2} \quad \text{such that} \:\:
@@ -212,17 +210,17 @@ The equation (\ref{eq:primal_svm}) is called as the primal problem. By using the
 \max_{\alpha}\Lag(\alpha) = \max_{\alpha} \sum_{i=1}^{n}\alpha_{i} - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_{i}\alpha_{j}\:y^{i}y^{i}\:{\textbf{x}^{i}}^{T}\textbf{x}^{j}\quad \text{such that} \:\:\sum_{i=1}^{n}\alpha_{i}y^{i} = 0,
 \ee
 
-\textcolor{purple}{where $\Lag$ is the lagrange function, $\textbf{x}_{i}$ and $y_{i}$ are a p-dimensional real valued feature vector and its label, that is -1 or +1, respectively, and $n$ is the number of samples.}
+where $\Lag$ is the lagrange function, $\textbf{x}_{i}$ and $y_{i}$ are a p-dimensional real valued feature vector and its label, that is -1 or +1, respectively, and $n$ is the number of samples.
 
-\textcolor{purple}{
-An optimization problem can be handle in two perspectives which are the primal problem as the minimization problem and the dual problem as the maximization problem. This kind of optimization problems includes a duality value called as duality gap which is the difference between the lower bound of primal problem and the upper bound of dual problem:}
+
+An optimization problem can be handled in two perspectives which are the primal problem as a minimization problem and the dual problem as a maximization problem. This kind of optimization problems includes a duality value called as duality gap which is the difference between the lower bound of primal problem and the upper bound of dual problem:
 
 \be
 \text{duality gap} = \text{lower bound}_{\text{primal}} - \text{upper bound}_{\text{dual}}\:.
 \ee
 
-\textcolor{purple}{
-If $\text{duality gap} = 0$, it is called as strong duality. That is the solution found from either dual or primal problem is the optimal solution of original optimization problem. However, if $\text{duality gap} > 0$, it is called as weak duality and one can try to reduce the duality to zero by using constraints. In that case, the solution of original optimization problem is not the best; but, it can be still used depending on the cost value and tolerance. The illustration of dual and primal problems and duality gap can be viewed in Figure~\ref{fig:duality_gap}.}
+
+If $\text{duality gap} = 0$, it is called as strong duality. That is the solution found from either dual or primal problem is the optimal solution of original optimization problem. However, if $\text{duality gap} > 0$, it is called as weak duality and one can try to reduce the duality to zero by using constraints. In that case, the solution of original optimization problem is not the best; but, it can be still used depending on the cost value and tolerance. The illustration of dual and primal problems and duality gap can be viewed in Figure~\ref{fig:duality_gap}.
 
 \begin{figure}[h]
 	\centering
@@ -236,17 +234,18 @@ If $\text{duality gap} = 0$, it is called as strong duality. That is the solutio
 Further details on constraint optimization of SVM, primal and dual problems and their solutions can be found at  \cite[pg.~13-19]{svm_book}.
 
 \subsubsection*{\textit{Penalty Terms}}
-\textcolor{purple}{To decrease the effects of original constraints of SVM problems, and construct more feasible hyper-planes regarding to outlier samples, we use penalty terms adding to original SVM problems. Here $\lambda$ always refers to the regularization parameter, which is a new hyper-parameter to tune, during this subsection.}
+To decrease the effects of original constraints of SVM problems and construct more feasible hyper-planes regarding to outlier samples, we use penalty terms adding to original SVM problems. Here $\lambda$ always refers to the regularization parameter which is a new hyper-parameter to be tuned during this subsection.
+
 \begin{itemize}
-    \item \textbf{L2 Regularizer:} According to \cite[pg.~2054-2059]{svm_penalty}, let first recall the primal form of SVM optimization problem in equation (\ref{eq:primal_svm}). We can modify the problem as:
-    \textcolor{purple}{
+    \item \textbf{L2 Regularizer:} According to Koshiba and  Abe \cite[pg.~2054-2059]{svm_penalty}, let's first recall the primal form of SVM optimization problem in equation (\ref{eq:primal_svm}). We can modify the problem as:
+   
     \be
     \label{eq:l2_svm_primal}
-    \min_{\textbf{w}, b} \sum_{i=1}^{n} loss(\textbf{w}, b) + \lambda \frac{\norm{\textbf{w}}_{2}^{2}}{2} ,
+    \min_{\textbf{w}, b} \sum_{i=1}^{n} loss(\textbf{w}, b) + \lambda \frac{\norm{\textbf{w}}_{2}^{2}}{2},
     \ee
-    }
+   
     
-    \textcolor{purple}{where the loss function can be either hinge or squared hinge loss function.}
+ where the loss function can be either hinge or squared hinge loss function.
     
     Then, the corresponding dual problem can be obtained as:
     \be
@@ -256,7 +255,7 @@ Further details on constraint optimization of SVM, primal and dual problems and 
     where $\alpha_{i}$ is the lagrange multiplier given in the equation (\ref{eq:dual_svm}) and $\delta_{ij}$ is the Kronecker’s delta function such that it returns $1$ for $i=j$, and $0$ otherwise.
     
     \item \textbf{L1 Regularizer:}
-    As stated in \cite[pg.~2054-2059]{svm_penalty}, L1 regularization is only applicable for the linear SVM problem. The L1 penalized SVM optimization problem is given by the following equation where the $loss(\textbf{w}, b)$ is either hinge or squared hinge loss function:
+    As stated in Koshiba and  Abe \cite[pg.~2054-2059]{svm_penalty}, L1 regularization is only applicable for the linear SVM problem. The L1 penalized SVM optimization problem is given by the following equation where the $loss(\textbf{w}, b)$ is either hinge or squared hinge loss function:
     \be
     \label{eq:l1_svm_primal}
     \min_{\textbf{w}, b} \sum_{i=1}^{n} loss(\textbf{w}, b) + \lambda  \norm{\textbf{w}}_{1}\:.
@@ -319,7 +318,7 @@ In the logistic regression model, each sample $\textbf{x} \in \setsymbol{R}^{d}$
 Pr(\textbf{x}) = \frac{1}{ 1 + e^{-(\textbf{w}^{T}\textbf{x}+b)} }\:,
 \ee
 
-where $\textbf{w} \in \setsymbol{R}^{d}$ is the weight parameter tuning the scaling, and $b \in \setsymbol{R}$ is the bias term tuning the shifting in logistic sigmoid function. In the Figure~\ref{logistic_function}, the behaviours of sigmoid function for different $\textbf{w}$ values are given. \textcolor{purple}{Note that, in this figure, the dimensions of samples and weights are one, i.e. $d = 1$.}
+where $\textbf{w} \in \setsymbol{R}^{d}$ is the weight parameter tuning the scaling, and $b \in \setsymbol{R}$ is the bias term tuning the shifting in logistic sigmoid function. In the Figure~\ref{logistic_function}, the behaviours of sigmoid function for different $\textbf{w}$ values are given. Note that, in this figure, the dimensions of samples and weights are one, i.e. $d = 1$.
 
 \begin{figure}[h]
 	\centering
@@ -343,11 +342,9 @@ Here, the ratio $\frac{Pr(\textbf{x})}{1 - Pr(\textbf{x})}$ is called as odds, a
 For simplicity, let's define $z = \textbf{w}^{T}\textbf{x}+b$. Then, we have the following constraints:
 
 \begin{itemize}
-    \item if $y = 1$, we want $Pr(z) \approx 1$, i.e $z >> 0$, and
-    \item if $y = 0$, we want $Pr(z) \approx 0$, i.e $z << 0$.
+    \item if $y = 1$, we want $Pr(z) \approx 1$, i.e. $z >> 0$, and
+    \item if $y = 0$, we want $Pr(z) \approx 0$, i.e. $z << 0$.
 \end{itemize}
-
-\textcolor{red}{>> bu ne demek? \textbf{Ozan:} "çok çok büyüktür"}
 
 Now, we can construct the natural logarithm of the loss function for a sample pair $(\textbf{x}^{i}, y^{i})$ for $i \in \{1, ..., n\}$ as follows:
 
@@ -356,22 +353,16 @@ Now, we can construct the natural logarithm of the loss function for a sample pa
 loss^{i}(\textbf{w}, b) = -y\ln(Pr(z^{i}))  + (1-y)\ln(1-Pr(z^{i})).
 \end{equation}
 
-\textcolor{red}{lossun icine bias niye girdi?yukarıda max l(w) yapmisttin svm de. \textbf{Ozan:} svm'de de hep loss(w,b) olarak yazdım. sadece primal problemde sadece w bulunuyor, orada da primal problemin oluşturulma amacı tek değişkenli loss oluşturmak. Burada da 4.25'in sağ tarafında yer alan z, w ve b'nin functionı olduğu için loss(w,b) olmak zorunda.}
-
-
 Consequently, the optimization problem is yielded as:
 
-\textcolor{purple}{
 \begin{equation}
 \label{lr_optimization} 
 \min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i}(\textbf{w}, b).
 \end{equation}
-}
 
 \subsubsection*{\textit{Penalty Terms}}
-\textcolor{purple}{To take the loss function under control by a constraint while constructing the logistic curve separating classes, penalty terms are used.} Here $\lambda$ always refers to the regularization parameter during this subsection.
+To take the loss function under control by a constraint while constructing the logistic curve separating classes, penalty terms are used. Here $\lambda$ always refers to the regularization parameter during this subsection.
 
-\textcolor{purple}{
 \begin{itemize}
     \item \textbf{L2 Regularizer:}
         \begin{equation}
@@ -384,7 +375,7 @@ Consequently, the optimization problem is yielded as:
         \min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i} + \lambda \norm{w}_{1}.
         \end{equation}
 \end{itemize}
-}
+
 
 \subsubsection*{\textit{Optimizers}}
 
@@ -499,9 +490,9 @@ A discriminant function $g(\textbf{x})$ from $\setsymbol{R}^{d}$ to $\setsymbol{
     g_{i}(\textbf{x}) = Pr(c_{i} | \textbf{x}) = \frac{Pr(\textbf{x}|c_{i}) Pr(c_{i})}{Pr(\textbf{x})}, 
 \ee
 
-where $Pr(\textbf{x}|c_{i})$ is the likelihood of observing $\textbf{x}$ given class $c_{i}$, $Pr(c_{i})$ is the prior probability of belonging to class $c_{i}$, $Pr(\textbf{x})$ is the marginal likelihood of observing $\textbf{x}$, \textcolor{purple}{and $i = 1, \dots, k$. Here, we discard the $Pr(\textbf{x})$ since observing $\textbf{x}$ is independent of class.}
+where $Pr(\textbf{x}|c_{i})$ is the likelihood of observing $\textbf{x}$ given class $c_{i}$, $Pr(c_{i})$ is the prior probability of belonging to class $c_{i}$, $Pr(\textbf{x})$ is the marginal likelihood of observing $\textbf{x}$, and $i = 1, \dots, k$. Here, we discard the $Pr(\textbf{x})$ since observing $\textbf{x}$ is independent of class.
 
-We can also take the logarithm of $g(\textbf{x})$ in equation~(\ref{eq:prob_x_to_ci}) since it is monotonically increasing. \textcolor{purple}{Let us re-define the probability function $g_{i}(\textbf{x})$ as:}
+We can also take the logarithm of $g(\textbf{x})$ in equation~(\ref{eq:prob_x_to_ci}) since it is monotonically increasing. For parsimony of notations, let us re-define the probability function $g_{i}(\textbf{x})$ as:
 
 \be
 \label{eq:log_g}
@@ -522,9 +513,8 @@ By inserting equation (\ref{eq:normal_distribution}) into equation (\ref{eq:log_
 g_{i}(\textbf{x}) = -\frac{1}{2}(\textbf{x} - \textbf{$\mu$}_{i})^{T}{\textbf{$\Sigma$}_{i}}^{-1}(\textbf{x} - \textbf{$\mu$}_{i}) -\frac{d}{2}\ln(\frac{\pi}{2}) -\frac{1}{2}\ln|\textbf{$\Sigma$}_{i}| + \ln(Pr(c_{i}))\:.
 \ee
 
-Finally, since $\frac{d}{2}\ln(\frac{\pi}{2})$ is constant, we obtain the linear discriminant function for class $i$ as:  \textcolor{red}{genelde i indisini number of samples icin kullandin, ama burada class sayisini indeksliyor. dogru anliyor muyum? \textbf{Ozan:} Evet, yukarıda bunu belirten ifadeler ekledim.}
+Finally, since $\frac{d}{2}\ln(\frac{\pi}{2})$ is constant, we obtain the linear discriminant function for class $i$ as:
 
-\textcolor{red}{g(x) logaritması alinmis ifade mi, degil mi dikkatli kullan lutfen, ona gore asagidaki ifadelere tekrar bakiver. \textbf{Ozan:} ben bir çelişki göremedim hocam, siz fark ettiyseniz tartışabiliriz.}
 \be
 \label{eq:linear_disc_func}
 g_{i}(\textbf{x}) = -\frac{1}{2}(\textbf{x} - \textbf{$\mu$}_{i})^{T}{\textbf{$\Sigma$}_{i}}^{-1}(\textbf{x} - \textbf{$\mu$}_{i}) -\frac{1}{2}\ln|\textbf{$\Sigma$}_{i}| + \ln(Pr(c_{i}))\:.
@@ -535,7 +525,7 @@ This linear discriminant function outputs the likelihood of $\textbf{x}$ to be i
 There are two presumptive cases on the linear discriminant function which are given below: 
 
 \begin{itemize}
-    \item \textbf{$\textbf{$\Sigma$}_{i} = \sigma^{2}I$:} All features have different means, but the same covariance matrix for mathematical convenience. \textcolor{purple}{By replacing $\textbf{$\Sigma$}_{i}$ with $\sigma^{2}I$, we yield the discriminant function as in equation (\ref{linear_disc_func_case1}).}
+    \item \textbf{$\textbf{$\Sigma$}_{i} = \sigma^{2}I$:} All features have different means, but the same covariance matrix for mathematical convenience. By replacing $\textbf{$\Sigma$}_{i}$ with $\sigma^{2}I$, we yield the discriminant function as follows.
 
     \begin{flalign}
         \label{linear_disc_func_case1}
