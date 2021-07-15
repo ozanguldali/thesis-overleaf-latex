@@ -119,9 +119,9 @@ where $M_{c_{1}},\:\:M_{c_{2}},\:\:n_{c_{1}}\:\:\text{and}\:\:n_{c_{2}}$ refer t
 
 \section{Convolutional Neural Network Results}
 
-Here, we report the results of Convolutional neural network experiments explained in Section~\ref{sec:CH5_cnn_experiments}. As stated, AlexNet, ResNet-18, ResNet-34, ResNet-50, VGG-16, and VGG-19 architectures were trained by initialized with their pre-trained weights, and three different optimizers such that SGD with momentum, Adam, and AdamW were used to optimize the cross-entropy loss function. The accuracy and loss curves for three different optimizers on train and validation processes can be viewed on Figures~\ref{fig:alexnet_plots}-\ref{fig:vgg19_plots} where the horizontal axis represents the number of epochs. The plots were created by TensorBoard platform prepared with the Python TensorFlow package version 2.3.1. Additional required package versions are as follows: 1) TensorFlow Addons with the version of 0.11.2, 2) TensorFlow Estimator with the version of 2.3.0, 3) TensorFlow Hub with the version of 0.10.0, and 4) TensorFlow Probability with the version of 0.10.0.
+Here, we report the results of convolutional neural network experiments explained in Section~\ref{sec:CH5_cnn_experiments}. As stated earlier, AlexNet, ResNet-18, ResNet-34, ResNet-50, VGG-16, and VGG-19 architectures, initialized with their pre-trained weights, were trained and three different optimizers such that SGD with momentum, Adam, and AdamW were used to optimize the cross-entropy loss function. The accuracy and loss curves for each architecture with three different optimizers on train and validation processes can be viewed on Figures~\ref{fig:alexnet_plots}-\ref{fig:vgg19_plots} where the horizontal axis represents the number of epochs. The plots were created by \verb|TensorBoard| platform prepared with the \verb|Python| \verb|TensorFlow| package version 2.3.1. Additional required package versions are as follows: 1) \verb|TensorFlow Addons| with the version of 0.11.2, 2) \verb|TensorFlow Estimator| with the version of 2.3.0, 3) \verb|TensorFlow Hub| with the version of 0.10.0, and 4) \verb|TensorFlow Probability| with the version of 0.10.0.
 
-The results can be also seen in Table~\ref{tab:cnn_result_table} including accuracy, sensitivity, specificity, precision and F1 score values, and loss values for last train epoch and test run. We obtained the best result from ResNet-50 model after $9^{th}$ train epoch in 7 minutes with the accuracy, sensitivity, specificity, precision, F1 score and AUC score of 92.16\%, 0.9216, 0.9215, 0.9216, 0.9216, 0.9215 respectively, and the loss of $9^{th}$ train epoch and validation as 0.0223 and 1.3687. \textcolor{purple}{On the other hand, VGG19 is the model that achieves its best at third epoch with Adam optimizer. Moreover, AlexNet model stands out with its stable metric values, which are always around 0.90, for all experimented optimizers. At the angle of last train loss and test loss, VGG16 with AdamW optimizer has the minimum last train loss as 0.0057 and the minimum test loss as 0.0831. ResNet-18 and ResNet-34 models achieved metric values around 0.90; however, they could not reach to ResNet-50 model whose architecture is more deeper than them. Lastly, it is clear that there can be no generalization about optimizers such that one optimizer is always better than other or vice versa.}
+The results including accuracy, sensitivity, specificity, precision and F1 score values, and loss values for the last train epoch and test run can be seen in Table~\ref{tab:cnn_result_table}. We obtained the overall best result from ResNet-50 model after $9^{th}$ train epoch in 7 minutes with the accuracy, sensitivity, specificity, precision, F1 score and AUC score of 92.16\%, 0.9216, 0.9215, 0.9216, 0.9216, 0.9215 respectively, and the loss of $9^{th}$ train epoch and validation as 0.0223 and 1.3687. On the other hand, VGG19 was the model that achieved its best at third epoch with Adam optimizer. Moreover, AlexNet model stand out with its stable metric values, which were always around 0.90, for all experimented optimizers. In terms of last train loss and test loss, VGG16 with AdamW optimizer had the minimum last train loss as 0.0057 and the minimum test loss as 0.0831. ResNet-18 and ResNet-34 models achieved metric values around 0.90; however, they could not reach to ResNet-50 model whose architecture is more deeper than them. Lastly, it is clear that there can be no generalization about optimizers such that one optimizer is always better than other or vice versa.
  
  % adam, adamw ve sgd momentumda decay ve momentum değerleri tune edilen değerler olduğu için hep farklı değerler alıyor. bazı adam sonuçlarında decay değeri 0 olabiliyor.
 
@@ -304,13 +304,11 @@ For each CNN architecture, the best optimizer was detected according to its succ
 
 
 
-After the experiments of CNN models and obtaining the results, the deep feature sets were extracted from exactly the same train and test data. On the other side, the demographic information feature matrices were extracted for the same separation. In this section, we report the results for machine learning experiments on $X_{info}$, $X_{cnn}$ and $X_{all}$ defined in Section~\ref{sec:CH5_forming_features}.
+After performing the experiments of CNN models and obtaining the results, the deep feature sets were extracted from the same train and test data. On the other side, the demographic information feature matrices were extracted for the same separation. In this subsection, we report the results for machine learning experiments with SVM with Lasso penalty, SVM with Ridge penalty, LR with Lasso penalty, LR with Ridge penalty, KNN, LDA, and LDA with Lasso penalty on $X_{info}$, $X_{cnn}$, and $X_{all}$ matrices, which were defined earlier in Section~\ref{sec:CH5_forming_features}, respectively.
 
-
- 
 \subsection{Results for $X_{info}$} \label{CH6:results_xinfo}
 
-In Table~\ref{tab:ml_info_result_table}, the result for experimented machine learning algorithms with grid search on $X_{info}$ can be viewed. The reported results can be reproduced with the Python system seed as 4. The best results were obtained with KNN algorithm, and the final hyper-parameters can be seen on Table~\ref{tab:knn_info_params}. Furthermore, the confusion matrices are in Table~\ref{tab:knn_conf_matrix_xinfo}.
+In Table~\ref{tab:ml_info_result_table}, the results for experimented machine learning algorithms, where the hyper-parameters were tuned with grid search, on $X_{info}$ can be seen. The reported results can be reproduced with the Python system seed as 4. The best result was obtained with KNN algorithm, and the final hyper-parameters of KNN algorithm can be seen in Table~\ref{tab:knn_info_params}. Furthermore, the associated confusion matrix is in Table~\ref{tab:knn_conf_matrix_xinfo}.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -335,7 +333,7 @@ In Table~\ref{tab:ml_info_result_table}, the result for experimented machine lea
 
 \begin{table}[!h]
 \centering
-\caption{KNN algorithm hyper-parameters for $X_{info}$.}
+\caption{The tuned hyper-parameters of KNN algorithm on $X_{info}$.}
 \label{tab:knn_info_params}
 \begin{tabular}{lcc}
 \hline
@@ -349,7 +347,7 @@ Metric  Function                            & euclidean                         
 
 \begin{table}[!h]
 \centering
-\caption{Confusion matrices for KNN experiments on demographic information.}
+\caption{Confusion matrix for KNN experiment on demographic information.}
 \label{tab:knn_conf_matrix_xinfo}
 \begin{tabular}{|cc|c|c|c|c|}
 \cline{1-6}
@@ -363,13 +361,14 @@ Metric  Function                            & euclidean                         
 
 \subsection{Results for $X_{cnn}$} \label{CH6:results_xcnn}
 
-In Table~\ref{tab:ml_cnn_result_table}, the machine learning experiments with grid search on different $X_{cnn}$ feature matrices obtained from AlexNet model with Adam optimizer, ResNet-18 model AdamW optimizer, ResNet-34 model AdamW optimizer, ResNet-50 model with Adam optimizer, VGG16 model with AdamW optimizer, and VGG19 model SGD optimizer can be seen. The reported results can be reproduced with the Python system seed as 4.
+In Table~\ref{tab:ml_cnn_result_table}, the results for experimented machine learning algorithms, where the hyper-parameters were tuned with grid search, on $X_{cnn}$ feature matrices obtained from AlexNet model with Adam optimizer, ResNet-18 model AdamW optimizer, ResNet-34 model AdamW optimizer, ResNet-50 model with Adam optimizer, VGG16 model with AdamW optimizer, and VGG19 model SGD optimizer can be seen. The reported results can be reproduced with the Python system seed as 4.
 
-\textcolor{purple}{Since all final results of models were yielded in both train data by using cross-validation, and test data in a directly testing method, all tables referenced here includes the results both for train data and test data. The reason why we experimented in both ways is to see the generalized performance of models, and the performance of models specific to our test data. Further information can be found in Section~\ref{CH5:train_test_ml} and Section~\ref{ch:CH7}.}
+Since all final results of models were yielded in both train data by using cross-validation, and test data in a directly testing method, all tables referenced here includes the results both for train data and test data. The reason why we experimented in both ways is to see the generalized performance of models, and the performance of models specific to our test data. Further information can be found in Section~\ref{CH5:train_test_ml} and Section~\ref{ch:CH7}.
 
-\textcolor{purple}{Since the best performance was reached by ResNet-50 model together with Adam optimizer, here we reported the outputs for this combination.} The final hyper-parameters for $X_{cnn\_ResNet50}$ feature matrix constructed by the help of ResNet-50 model Adam optimizer can be seen in Tables \ref{tab:svmridge_cnn_params}-\ref{tab:ldalasso_cnn_params}. Furthermore, the confusion matrices and all other metrics derived from these confusion matrices are given in Tables \ref{tab:svmridge_cnn_results}-\ref{tab:ldalasso_cnn_results}.
+It can be seen in Table~\ref{tab:ml_cnn_result_table} that we obtained the highest metrics for machine learning algorithms on the feature matrix $X_{cnn}$ extracted using the weights of ResNet-50 model with Adam optimizer. This makes sense as we obtained the higher result from ResNet-50 model with Adam optimizer in the CNN experiments. 
 
-\textcolor{purple}{It can be seen in Table~\ref{tab:ml_cnn_result_table} that we obtained the highest metrics on the feature matrix $X_{cnn}$ extracted by using the weights ResNet-50 model together with Adam optimizer, as we obtained the higher result by ResNet-50 model with Adam optimizer during the CNN experiments. Therefore, we reported the detailed result tables for the $X_{cnn\_ResNet50}$ feature matrix constructed by the help of this CNN weights. It can be seen from these reports embedded in Tables \ref{tab:svmridge_cnn_results}-\ref{tab:ldalasso_cnn_results} that the results obtained on test data is clearly higher than the results obtained on train data. On the other hand, we cannot state the best one; however, the worst results were obtained by LDA algorithm both for test and train data performances. The given hyper-parameters given in Tables \ref{tab:svmridge_cnn_params}-\ref{tab:ldalasso_cnn_params} can be used for reproducibility of our work.}
+Since the best performance was reached by ResNet-50 model together with Adam optimizer, here we only reported the outputs for this combination. The final hyper-parameters of machine learning algorithms on $X_{cnn\_ResNet50}$ feature matrix constructed by the help of ResNet-50 model Adam optimizer can be seen in Tables \ref{tab:svmlasso_cnn_params}-\ref{tab:ldalasso_cnn_params}. These values can be used for reproducibility of our work. Furthermore, the confusion matrices and all other metrics derived from these confusion matrices are given in Tables \ref{tab:svmlasso_cnn_results}-\ref{tab:ldalasso_cnn_results}.
+It can be seen from Tables \ref{tab:svmlasso_cnn_results}-\ref{tab:ldalasso_cnn_results} that the results obtained on test data is clearly higher than the results obtained on train data. On the other hand, we cannot state the best one; however, the worst results were obtained by LDA algorithm for both test and train data performances. 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -662,14 +661,22 @@ Regularization Parameter                     & 5e-5                             
 
 \subsection{Results for $X_{all}$} \label{CH6:results_xall}
 
-In Table~\ref{tab:ml_all_result_table}, the machine learning experiments with grid search on different $X_{all}$ feature matrices obtained from AlexNet model with Adam optimizer, ResNet-18 model AdamW optimizer, ResNet-34 model AdamW optimizer, ResNet-50 model with Adam optimizer, VGG16 model with AdamW optimizer, and VGG19 model SGD optimizer can be seen. The reported results can be reproduced with Python system seed as 4. 
+In Table~\ref{tab:ml_all_result_table}, the results for experimented machine learning algorithms, where the hyper-parameters were tuned with grid search, on different $X_{all}$ feature matrices obtained from AlexNet model with Adam optimizer, ResNet-18 model AdamW optimizer, ResNet-34 model AdamW optimizer, ResNet-50 model with Adam optimizer, VGG16 model with AdamW optimizer, and VGG19 model SGD optimizer can be seen. The reported results can be reproduced with Python system seed as 4. 
 
-\textcolor{purple}{Since all final results of models were yielded in both train data by using cross-validation, and test data in a directly testing method, all tables referenced here includes the results both for train data and test data. The reason why we experimented in both ways is to see the generalized performance of models, and the performance of models specific to our test data. Further information can be found in Section~\ref{CH5:train_test_ml} and Section~\ref{ch:CH7}.}
+Since all final results of models were yielded in both train data by using cross-validation, and test data in a directly testing method, all tables referenced here includes the results both for train data and test data. The reason why we experimented in both ways is to see the generalized performance of models, and the performance of models specific to our test data. Further information can be found in Section~\ref{CH5:train_test_ml} and Section~\ref{ch:CH7}.
 
-\textcolor{purple}{Since the best performance was reached by ResNet-50 model together with Adam optimizer, here we reported the outputs for this combination.} The final hyper-parameters for $X_{all\_ResNet50}$ feature matrix constructed by the help of ResNet-50 model Adam optimizer can be seen in Tables \ref{tab:svmridge_all_params}-\ref{tab:ldalasso_all_params}. Furthermore, the confusion matrices and all other metrics derived from these confusion matrices are on Tables \ref{tab:svmridge_all_results}-\ref{tab:ldalasso_all_results}.
+It can be seen in Table~\ref{tab:ml_all_result_table} that we obtained the highest metrics for machine learning algorithms on the feature matrix $X_{all}$ extracted by using the weights of ResNet-50 model with Adam optimizer, as we obtained the higher result by ResNet-50 model with Adam optimizer in the CNN experiments. 
 
-\textcolor{purple}{It can be seen in Table~\ref{tab:ml_all_result_table} that we obtained the highest metrics on the feature matrix $X_{all}$ extracted by using the weights ResNet-50 model together with Adam optimizer, as we obtained the higher result by ResNet-50 model with Adam optimizer during the CNN experiments. Therefore, we reported the detailed result tables for the $X_{all\_ResNet50}$ feature matrix constructed by the help of this CNN weights. It can be seen from these reports embedded in Tables \ref{tab:svmridge_all_results}-\ref{tab:ldalasso_all_results} that the results obtained on test data is clearly higher than the results obtained on train data. On the other hand, we cannot state the best one; however, the worst results were obtained by LDA algorithm both for test and train data performances. The given hyper-parameters given in Tables \ref{tab:svmridge_all_params}-\ref{tab:ldalasso_all_params} can be used for reproducibility of our work.}
+Since the best performance was reached by ResNet-50 model together with Adam optimizer, here we only reported the outputs for this combination.
+The final hyper-parameters of machine learning algorithms on $X_{all\_ResNet50}$ feature matrix constructed by the help of ResNet-50 model Adam optimizer can be seen in Tables \ref{tab:svmlasso_all_params}-\ref{tab:ldalasso_all_params}. These values can be used for reproducibility of our work. Furthermore, the confusion matrices and all other metrics derived from these confusion matrices are on Tables \ref{tab:svmlasso_all_results}-\ref{tab:ldalasso_all_results}.
+ It can be seen from these reports embedded in Tables \ref{tab:svmlasso_all_results}-\ref{tab:ldalasso_all_results} that the results obtained on test data is clearly higher than the results obtained on train data. On the other hand, we cannot state the best one; however, the worst results were obtained by LDA algorithm both for test and train data performances. 
 
+We can also briefly summarize the results of our experiments on our data set as follows:
+\begin{itemize}
+    \item demographic information did not have a general improvement by combining with deep features; yet, only the performance of logistic regression algorithm with Lasso penalty was boosted by that way,
+    \item penalty approach only increased the success of linear discriminant analysis algorithm, and
+    \item generalized optimal hyper-parameters may not be the best combination for our initially determined test data.
+\end{itemize}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -960,9 +967,3 @@ Regularization Parameter                     & 5e-5                             
 
 \end{landscape}
 
-We can also briefly summarize the results of our experiments on our data set as follows:
-\begin{itemize}
-    \item generalized optimal hyper-parameters may not be best combination for our initially determined test data,
-    \item demographic information support only boosts the performance on logistic regression algorithm with Lasso penalty, and
-    \item penalty approach only increases the success on linear discriminant analysis algorithm.
-\end{itemize}

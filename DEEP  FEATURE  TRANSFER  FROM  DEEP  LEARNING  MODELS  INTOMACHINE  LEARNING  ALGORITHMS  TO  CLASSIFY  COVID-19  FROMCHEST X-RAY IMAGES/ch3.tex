@@ -3,7 +3,7 @@
 \label{ch:CH3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, first of all, we provide information on the basics of deep learning algorithms, and then we mention the loss function, and the optimization methods used to train deep learning algorithms. We conclude the section with the basics of convolutional neural networks, the CNN models used in the thesis, and the transfer learning concept.
+In this section, first of all, we provide information on the basics of deep learning algorithms, and then we mention the loss function, and the optimization methods used to train deep learning algorithms. We conclude the section with the basics of convolutional neural networks (CNNs), CNN architectures used in this thesis, and the transfer learning concept.
 
 \section{The Basics of Deep Learning}
 
@@ -29,21 +29,21 @@ where $\textbf{x} \in \setsymbol{R}^{2}$ is the input vector, $\textbf{W} \in \s
  
 \item \textbf{Nodes (Neurons) and Links}:  Neural networks are made of nodes (neurons). The connections between the layer nodes are called as links. Each link has weight and bias parameters which are carried over neurons. Nodes receives the parameters of incident links, process them, and produces an output.
   
-\item \textbf{Weight and Bias}: Weight and bias terms are learnable parameters related to input data, and must be updated iteratively to reach the optimal cost value. At the first iteration, they can be taken as zeros or a random initialization can be used. Both of them are transformed from input nodes through output nodes over the nodes of hidden layers via links in a neural network. Some sources includes the bias term into the weight, and only use the weight value.
+\item \textbf{Weight and Bias}: Weight and bias terms are learnable parameters related to input data and they must be updated iteratively to reach the optimal cost value. At the initial iteration, they can be taken as zeros or a random initialization can be used. Both of them are transformed from input nodes to output nodes over the nodes of hidden layers via links in a neural network. Some sources include the bias term into the weight, and only use the weight value as well.
 
 \item \textbf{Feed-forward and Back-propagation}: Basically, a neural network which has no loops or cyclic links over nodes considered as a group of feed-forward networks. The direction of information flow is straight-forward. Input layer handles the input data, and the outputs of input layer goes through the hidden layer as input. There may be one or several number of hidden layers, and the output of each is the input of the next hidden layer. Finally, the output of last hidden layer feeds the output layer, and the output nodes forward their outputs to the loss function. During this process, the weights and bias values do not change. To update and find the most appropriate weight and bias values, back-propagation is used. To reach the optimal loss value, at each iteration of training, the negative gradient of the loss function is used to update the weight and bias terms. At the first iteration, this gradients are considered as zero or a random initialization is used. More information and examples can be found in Section~\ref{sec:basics_of_cnn}.
 
 \item \textbf{Epoch}: An epoch is an iteration when the train data passes forward and backward through the whole neural network only once. Generally, the train data passes through the whole network multiple times to optimize the learning process.
 
-\item \textbf{Batch}: If an epoch is too large to enter the neural network at once, data in the epoch can be dived into several smaller batches. Then, a batch is defined as a group of data points selected from this data. The number of data points in a batch are mostly chosen as a power of $2$ such as $2^4$, $2^5$, and  $2^6$ etc. If the train data enters the neural network in batches, then it is recommended to shuffle data order in each epoch before creating new batches from train data.
+\item \textbf{Batch}: If an epoch is too large to enter the neural network at once, data in the epoch can be dived into several smaller batches. Then, a batch is defined as a group of data samples selected from this data. The number of data samples in a batch are mostly chosen as a power of $2$ such as $2^4$, $2^5$, and  $2^6$ etc. If the train data enters the neural network in batches, then it is recommended to shuffle data order in each epoch before creating new batches from train data.
   
-\item \textbf{Train Data and Training}: The data group reserved to be used in learning process is called as train data. The ratio of train data size to whole data is generally determined as 7:10 or 8:10, and the rest of data is placed into the test data group. The train data must be strictly separated from validation and test data, and should be only used on training process. Training process consists of multiple epochs. At each epoch, the train data goes into the model as input, the neural network works for learning data, the losses and accuracy (if desired) are computed, and the losses are optimized. If batching is used, this process is applied onto each batch, and the average and final losses and accuracy (if desired) are calculated over all batches at the end of each epoch.
+\item \textbf{Train Data and Training}: The data group reserved to be used in learning process is called as train data. The ratio of train data size to whole data is generally determined as 7:10 or 8:10, and the rest of data is placed into the test data group. The train data must be strictly separated from validation and test data, and should be used on training process only. Training process consists of multiple epochs. At each epoch, the train data goes into the model as input, the neural network works for learning data, the losses and accuracy (if desired) are computed, and the losses are optimized. If batching is used, this process is applied onto each batch, and the average and final losses and accuracy (if desired) are calculated over all batches at the end of each epoch.
   
-\item \textbf{Validation Data and Validating}: If there exists enough train data for the problem and learning process, one may need validation data to validate the learning process periodically. The validation data group is strictly separated from train data such that its size is generally 70\% or 80\% of train data. During the validation process no optimization process is applied, for that reason, the weights and biases are stable. The losses and other desired metrics such as accuracy are computed only.
+\item \textbf{Validation Data and Validating}: If there exists enough train data for the problem and learning process, one may need validation data to validate the learning process periodically. The validation data group is strictly separated from train data such that its size is generally 70\% or 80\% of train data. During the validation process no optimization process is applied. For that reason, the weights and biases are stable. The losses and other desired metrics such as accuracy are computed only.
   
-\item \textbf{Test Data and Testing}: The data group reserved to be used in testing process is called as test data. The ratio of the size of test data to the whole data is generally determined as 2:10 or 3:10. The test data must be strictly separated from train data, and should be only used on testing process. The training process should not see any of test data. Testing process is usually only applied at the end of all epochs. However, when the train data is not feasible to be divided into validation data, at the end of each epoch testing process may be applied on test data. This method is also used to determine the over-fitting and stop point.
+\item \textbf{Test Data and Testing}: The data group reserved to be used in testing process is called as test data. The ratio of the size of test data to the whole data is generally determined as 2:10 or 3:10. The test data must be strictly separated from train data, and should be used on testing process only. The training process should not see any of test data. Testing process is usually applied at the end of all epochs. However, when the train data is not feasible to be divided into validation data, at the end of each epoch testing process may be applied on test data. This method is also used to determine the over-fitting and stop point.
     
-\item \textbf{Under-fitting and Over-fitting}: A learning algorithm may have under-fitting problem when it cannot capture or fit the data well. Under-fitting problem results in insufficient metrics during the training process since the learnable parameters are not optimized enough to reach at a satisfactory loss value. On the other hand, when the model fits the train data perfectly, it might have started to memorize the train data and may not learn something new from the data. Therefore, even though training metrics are nearly perfect, the testing metrics in the opposite direction of what is desired can be seen. The main reason is that the learnable parameters were directly adjusted for train data and not feasible for test data anymore. This situation is called as over-fitting. A validation set can be used to control the over-fitting by periodically checking the metrics of a data out of train set, while trying to rise above the under-fitting. By that way, a well-fitting or appropriate-fitting may be caught. The illustrations for three situations can be seen in the Figure~\ref{fig:underfitting_overfitting}.
+\item \textbf{Under-fitting and Over-fitting}: A learning algorithm may have under-fitting problem when it cannot capture or fit the data well. Under-fitting problem results in insufficient metrics during the training process since the learnable parameters are not optimized enough to reach at a satisfactory loss value. On the other hand, when the model fits the train data perfectly, it might have started to memorize the train data and may not learn something new from the data. Therefore, even though training metrics are nearly perfect, the testing metrics in the opposite direction of what is desired can be seen. The main reason for this is that the learnable parameters were directly adjusted for train data and not feasible for test data anymore. This situation is called as over-fitting. A validation set can be used to control the over-fitting by periodically checking the metrics of a data out of train set, while trying to rise above the under-fitting. By that way, a well-fitting or appropriate-fitting may be caught. The illustrations for three situations can be seen in the Figure~\ref{fig:underfitting_overfitting}.
 
 \begin{figure}[h]
 \centering
@@ -60,23 +60,23 @@ where $\textbf{x} \in \setsymbol{R}^{2}$ is the input vector, $\textbf{W} \in \s
 
 Loss function is the function that represents the error between true and predicted values which can be called as the cost of the problem to be optimized.
 
-The cross-entropy loss function is one of the most commonly used loss functions to measure the performance of a classifier. The function calculates the cost through the negative log-likelihood function \cite{negative-ll} which uses log class probability values computed by log-Softmax function \cite{logsoftmax}. Here the loss value increases together with the divergence between the grand-truth label and how likely this label is estimated.
+The cross-entropy loss function is one of the most commonly used loss functions to measure the performance of a classifier. The cross-entropy function calculates the cost through the negative log-likelihood function \cite{negative-ll} which uses log class probability values computed by log-Softmax function \cite{logsoftmax}. Here the loss value increases together with the divergence between the grand-truth label and how likely this label is estimated.
 
-The cross-entropy loss function f, as a function of weights, is defined as given below:
+The cross-entropy loss function for a sample, f, as a function of weights, is defined as given below:
 
 \begin{equation}
 \label{eq:cross_entropy_loss_formulae}
     f(\theta) = - \sum_{i=1}^{n} y_{i} \log(p_{i}) \:,
 \end{equation}
 
-where $n$ is the total number of classes, and $y_{i}$ is the observed class label and $p_{i}$ is the estimated probability, which is a function of weight, $\theta$, from the model of interest for the $i^{th}$ class, respectively. Thus, for a binary classification problem, the cross-entropy loss function can be re-stated as:
+where $n$ is the total number of classes, $y_{i}$ is the observed class label, and $p_{i}$ is the estimated class probability, which is a function of weight, $\theta$, from the model of interest for the $i^{th}$ class, respectively, with restriction $\sum_{i=1}^{n}p_{i}=1$. Thus, for a binary classification problem, the cross-entropy loss function can be re-stated as:
 
 \begin{equation}
 \label{eq:binary_cross_entropy_loss_formulae}
     f(\theta) = - \left ( y\:\log(p) + (1 - y)\:\log(1-p) \right ) \:,
 \end{equation}
 
-where $y$ is the binary indicator variable with two class labels $1$ and $0$, where $1$, true class label, shows the presence of of the condition of interest, whereas $0$ shows the opposite, and and $p$ is the estimated probability for the true class label.
+where $y$ is the binary variable with two class labels $1$ and $0$, where $1$, true class label, shows the presence of of the condition of interest, whereas $0$ shows the opposite, and and $p$ is the estimated probability for the true class label.
 
 \section{The Basics of Optimization Methods}
 \label{sec:CH3_the_basics_of_optimization}
@@ -85,7 +85,7 @@ Various optimization methods can be used for reducing the losses and reaching mo
 
 \subsection{Stochastic Gradient Descent with Momentum  Optimization Algorithm}
 
-Stochastic gradient descent (SGD) can be considered as a stochastic approximation of gradient descent optimization \cite{gradient_descent_algorithms} and is an iterative method for optimizing an objective function with suitable smoothness properties. The momentum remembers the weight update at each iteration and determines the next update as a linear combination of the gradient and the previous update \cite{SGD_Momentum}. An example for a pseudo-code for SGD with momentum optimization is given in Figure~\ref{fig:sgd_momentum}. The weight parameter $\theta$ is denoted by $\textbf{x}$ in the figure.
+Stochastic gradient descent (SGD) can be considered as a stochastic approximation of gradient descent optimization \cite{gradient_descent_algorithms} and is an iterative method for optimizing an objective function with suitable smoothness properties. The momentum remembers the weight update at each iteration and determines the next update as a linear combination of the gradient and the previous update \cite{SGD_Momentum}. An example for a pseudo-code for SGD with momentum optimization is given in Figure~\ref{fig:sgd_momentum}. Note that the weight parameter $\theta$ is denoted by $\textbf{x}$ in this figure.
 
 \begin{figure}[h]
 	\centering
@@ -96,13 +96,13 @@ Stochastic gradient descent (SGD) can be considered as a stochastic approximatio
 
 \subsection{Adaptive Moment Estimation Optimization Algorithm}
 
-Adaptive moment estimation (Adam) is an optimization algorithm that uses the running averages of both the gradients and the second moments of the gradients. Before each step, the gradient of loss function is calculated and a step in the opposite direction is taken with corresponding rate. This process is also called as Adam with L2 regularization \cite{Adam}. An example for a pseudo-code for Adam optimization is given in Figure~\ref{fig:adam_and_adamw}. The weight parameter $\theta$ is denoted by $\textbf{x}$ in the figure.
+Adaptive moment estimation (Adam) is an optimization algorithm that uses the running averages of both the gradients and the second moments of the gradients. Before each step, the gradient of loss function is calculated and a step in the opposite direction is taken with corresponding rate. This process is also called as Adam with L2 regularization \cite{Adam}. An example for a pseudo-code for Adam optimization is given in Figure~\ref{fig:adam_and_adamw}. Note that the weight parameter $\theta$ is denoted by $\textbf{x}$ in this Figure.
 
 \subsection{Adam Decoupled Weight Decay Optimization Algorithm}
 
-Adam decoupled weight decay optimization algorithm (AdamW) does not use the regularization as the normalized by square root of second moment vector. Thus, it is only proportional to the weight itself \cite{Adam}. An example for a pseudo-code for AdamW optimization is given in Figure~\ref{fig:adam_and_adamw}. The weight parameter $\theta$ is denoted by $\textbf{x}$ in the figure.
+Adam decoupled weight decay optimization algorithm (AdamW) does not use the regularization as the normalized by square root of second moment vector. Thus, it is only proportional to the weight itself \cite{Adam}. An example for a pseudo-code for AdamW optimization is given in Figure~\ref{fig:adam_and_adamw}. Again, note that the weight parameter $\theta$ is denoted by $\textbf{x}$ in this figure.
 
-The main difference of Adam and AdamW, as given in Figure~\ref{fig:adam_and_adamw}, is that, the weight decay is directly applied to the gradient of loss function on Adam, while it is decoupled on AdamW. Hence, the weight decay affects moment vectors and appears both in numerator and denominator during weight parameter update. Furthermore, since it is in multiplication with learning rate parameter, the fine-tuning of learning rate and weight decay values become dependent to each other. On the other hand, weight decay is only applied on the step of weight parameter update, and take a separated charge during this update on AdamW.
+The main difference of Adam and AdamW, as illustrated in Figure~\ref{fig:adam_and_adamw}, is that, the weight decay is directly applied to the gradient of loss function on Adam, while it is decoupled on AdamW. Hence, the weight decay affects moment vectors and appears both in numerator and denominator during weight parameter update. Furthermore, since it is in multiplicative form with learning rate parameter, the fine-tuning of learning rate and weight decay values become dependent to each other. On the other hand, weight decay is only applied at weight parameter update step, and it takes a separated charge during this update on AdamW.
 
 \begin{figure}[h]
 	\centering
@@ -115,9 +115,9 @@ The main difference of Adam and AdamW, as given in Figure~\ref{fig:adam_and_adam
 \section{The Basics of Convolutional Neural Networks} 
 \label{sec:basics_of_cnn}
 
-The convolutional neural networks (CNNs) are the special research area of deep neural networks which are mostly used in visual problem analyzing and solving. In this section and its subsections we study on the fundamental layers and elements of CNN architectures. 
+The convolutional neural networks (CNNs) are the special research area of deep neural networks which are mostly used in analysis of visual problems. In this section, we give information on the fundamental layers and elements of CNN architectures. 
 
-Basically, a CNN model consists of three main layers: 1) An input layer, 2) hidden layers, and 3) an output layer. For example, Figure~\ref{fig:basic_cnn_sample} is an example for a CNN model with six layers consisting of one input layer, four hidden layer, one output layer.
+A CNN model basically consists of three main layers: 1) An input layer, 2) hidden layers, and 3) an output layer. For example, Figure~\ref{fig:basic_cnn_sample} is an example for a CNN model with six layers consisting of one input layer, four hidden layers, and one output layer.
 
 
 \begin{figure}[h]
@@ -130,13 +130,13 @@ Basically, a CNN model consists of three main layers: 1) An input layer, 2) hidd
 \footnotetext{Retrieved from: \hyperrefurl{https://www.jeremyjordan.me/convolutional-neural-networks/} on March 31, 2021.}
 
 
-The structure of CNNs comports with the structure of feed-forward networks where the information goes through network in forward direction only. Back-propagation algorithm is commonly used to feed and train a feed-forward network. The algorithm orders to compute the gradients in weight space of a feed-forward network with respect to the loss function f(\textbf{$\theta$}). The weight matrix is defined as $\textbf{W} =(\theta_{1}^{T}, \dots ,\theta_{n^{(i)}}^{T}) \in \setsymbol{R}^{n^{(i)}} \times m^{(i)}$ where $n^{(i)}$ and $m^{(i)}$ are the number of inputs for $i^{th}$ layer and the size of each input in this layer respectively. Then the weight space is updated with these gradients by the chosen optimizer such as SGD momentum, Adam, or AdamW. The gradient of objective loss function $f(\textbf{$\theta$})$ at a fixed weight vector \textbf{$\theta_{t}$} is computed via directional derivatives and chain rule, and represented by $\nabla f(\textbf{$\theta_{t}$})$.
+The structure of CNNs comports with the structure of feed-forward networks where the information goes through network in forward direction only. Back-propagation algorithm is commonly used to feed and train a feed-forward network. The algorithm orders to compute the gradients in weight space of a feed-forward network with respect to the loss function f(\textbf{$\theta$}). The weight matrix is defined as $\textbf{W} =(\theta_{1}^{T}, \dots ,\theta_{n^{(i)}}^{T}) \in \setsymbol{R}^{n^{(i)}} \times m^{(i)}$ where $n^{(i)}$ and $m^{(i)}$ are the number of inputs for $i^{th}$ layer and the size of each input in this layer, respectively. Then the weight space is updated with these gradients by the chosen optimizer such as SGD momentum, Adam, or AdamW. The gradient of objective loss function $f(\textbf{$\theta$})$ at a fixed weight vector \textbf{$\theta_{t}$} is computed via directional derivatives and chain rule and represented by $\nabla f(\textbf{$\theta_{t}$})$.
 
-Let's consider a simple CNN architecture illustrated in Figure~\ref{fig:basic_cnn_sample} with each layer is denoted by    
-$\textbf{a}^{(i)}$,  where $i=1,2, \ldots, 6$. Assume there exists $n$ number of $x_{i}$ initial input nodes, where $\textbf{x} = \textbf{a}^{(1)} = (x_{1}, \dots , x_{n})$ is an n-dimensional input layer vector. 
+Let's consider a simple CNN architecture illustrated in Figure~\ref{fig:basic_cnn_sample} where each layer is denoted by    
+$\textbf{a}^{(i)}$ with $i=1,2, \ldots, 6$. Assume there exists $n$ number of $x_{i}$ initial input nodes, where $\textbf{x} = \textbf{a}^{(1)} = (x_{1}, \dots , x_{n})$ is an n-dimensional input layer vector. 
 Furthermore, the layers $\textbf{a}^{(i)}$, with $i=2, \ldots, 5$, are the hidden layers. For instance, $\textbf{a}^{(3)} = (a_{1}^{(3)}, a_{2}^{(3)}, a_{3}^{(3)}, a_{4}^{(3)})$ and $\textbf{a}^{(5)} = (a_{1}^{(5)}, a_{2}^{(5)}, a_{3}^{(5)})$. Lastly, the output layer feeding the loss function is $\textbf{a}^{(6)} = (a_{1}^{(6)}, a_{2}^{(6)})$, and the output $y$ value is determined by computing the class probabilities from $\textbf{a}^{(6)}$.
  
-Then the gradient of $f$ at $\theta_{t}$ is evaluated as:
+Then the gradient of loss function $f$ at the fixed weight vector $\theta_{t}$ is evaluated as:
 
 \begin{equation}
 \nabla f (\theta_{t}) = 
@@ -208,17 +208,11 @@ In the same way, the gradient for $b^{(5)}$ can be computed as:
 
 \subsection{Convolutional Layer}
 
-Convolutional layer is the building block of CNN architectures and is used to reveal the distinctive features of input data. A convolution layer includes one or multiple windows named as filter (or kernel) that can be of different sizes such as $2 \times 2$, $3\times3$ etc. The coefficients, which are included in filters, change on each iteration during the training of a CNN. This coefficients and their updates are used to detect the significant and learnable parts of the data.
+Convolutional layer is the building block of CNN architectures and is used to reveal the distinctive features of input data. A convolution layer includes one or multiple windows named as filter (or kernel) that can be of different sizes such as $2 \times 2$, $3\times3$, and so on. The coefficients, which are included in filters, change at each iteration during the training of a CNN. This coefficients and their updates are used to detect the significant and learnable parts of the data.
 
 Filtering is started to be applied from the upper left corner of the image and keeps moving towards the right. When there are no cells left to be scanned on the right, it continues from the lower cells as before. At each step, the filter and the corresponding area of input matrix are multiplied by element-wise. The step length of scanning process is called as stride. The default stride value is 1; however, different stride values may be used depending on the input data and CNN architecture. If the stride is set as $s$, then the kernel window move by jumping $s$ cells. 
 
 Sometimes, an inconsistency between filter, stride, and input layer sizes can be seen while trying to use desired convolutional layer. In this situation, the edges of input matrix may be filled by zeros. These process is called as padding. If the padding value is set as $p$, the $p$ cells with zero values are added to the edges of input matrix. This method can be also used to pay attention to the edges and corners of original input matrix.
-
-The various filters can be applied onto the input data to reveal low and high-level feature maps. After convolution, the size of the input data changes depending on the filter (or kernel), stride, and padding choices. The outputs of the convolution layers are called activation maps.
-
-The Figure~\ref{conv_layer} gives a summary about how activation map is constructed for a given input matrix and a filter.
-
-\textcolor{red}{\textbf{TODO: tezin bu kısmından yukarısı tamamlandıktan sonra, figürün alignmentına tekrar bakılacak.}}
 
 \begin{figure}[!h]
 	\centering
@@ -227,6 +221,10 @@ The Figure~\ref{conv_layer} gives a summary about how activation map is construc
 	\caption{Activation map construction with a filter window size of  $4 \times 4$ and stride value of $2$.}
 	\label{conv_layer}
 \end{figure}
+
+The various filters can be applied onto the input data to reveal low and high-level feature maps. After convolution, the size of the input data changes depending on the filter (or kernel), stride, and padding choices. The outputs of the convolution layers are called activation maps.
+
+The Figure~\ref{conv_layer} gives a summary about how activation map is constructed for a given input matrix and a filter.
 
 Let us give another example to see the details about computations about it. Assume that the input data 
 holds raw pixel values of an image of width $223$, height $223$, and three color channels red, green, and blue so that it has a size of $223 \times 223 \times 3$. Let's choose 2 filter windows in the size of $5 \times 5$, the stride (step size) as $2$, and the padding size as $1$. If we denote the input size by $W_{input} \times H_{input} \times D_{input}$, the padding by $P$, the number of filters by $K$, the size of a filter window by $F \times F$ and the stride by $S$, then we have: 

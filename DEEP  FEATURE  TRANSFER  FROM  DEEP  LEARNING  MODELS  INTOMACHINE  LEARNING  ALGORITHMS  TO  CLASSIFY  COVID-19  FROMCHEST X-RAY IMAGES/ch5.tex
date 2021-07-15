@@ -3,21 +3,18 @@
 \label{ch:CH5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-All the code developed for the experiments explained in this Chapter can be found on master branch of the \verb|GitHub| public repository: \newline
+All the code developed for the experiments explained in this section can be found on master branch of the \verb|GitHub| public repository: \newline
 \textcolor{blue}{\hyperrefurl{https://github.com/ozanguldali/modelsWithLASSO}}.
-
-\textcolor{red}{su an public degil en son acarsin}
-
-\href{https://www.python.org/downloads/release/python-376/}{\texttt{Python}} programming language (version of 3.7.6) along with \href{https://releases.llvm.org/4.0.1/}{\texttt{Clang}} (version 4.0.1) was used to train, test, and classify data in our environment. \href{https://pytorch.org/get-started/previous-versions/#v150}{\texttt{PyTorch}} module with the torch version of 1.5.0, the torchsummary version of 1.5.1 and the torchvision version of 0.6.0, and \href{https://scikit-learn.org/stable/whats_new/v0.23.html}{\texttt{Scikit-learn}} library with the version of 0.23.2 were used for implementation of CNN and ML algorithms, respectively. All experiments were performed on the \href{https://colab.research.google.com/}{\texttt{Google Colaboratory}} using its GPU with the number of workers as four.
+h
+\href{https://www.python.org/downloads/release/python-376/}{\texttt{Python}} programming language (version of 3.7.6) along with \href{https://releases.llvm.org/4.0.1/}{\texttt{Clang}} (version 4.0.1) was used to train, test, and classify data in our environment. \href{https://pytorch.org/get-started/previous-versions/#v150}{\texttt{PyTorch}} module with the torch version of 1.5.0, the torchsummary version of 1.5.1 and the torchvision version of 0.6.0, and \href{https://scikit-learn.org/stable/whats_new/v0.23.html}{\texttt{scikit-learn}} library with the version of 0.23.2 were used for implementation of CNN and ML algorithms, respectively. All experiments were performed on the \href{https://colab.research.google.com/}{\texttt{Google Colaboratory}} using its GPU with the number of workers as four.
 
 The construction stages of the experiments we aim to carry out in the thesis can be listed as follows:
 
-\textcolor{purple}{
 \begin{enumerate}
     \item Determine the problem to study,
-    \item Explore the data source and choose the one containing appropriate samples to the determined problem, which is a chest X-ray image data source consisting of COVID-19 samples and non-COVID-19 samples and including the demographic information of samples for our study,
+    \item Explore the data source and choose the one containing appropriate samples  for the determined problem, which is a chest X-ray image data source consisting of COVID-19 samples and non-COVID-19 samples and including the demographic information of samples for our study,
     \item Know and understand the data source, and define classes,
-    \item Determine the rules to construct the dataset for experiments by cleaning the samples from data source, then construct the dataset and divide it into train and test sets containing each class, \label{dividing_step}
+    \item Determine the rules to construct the data set for experiments by cleaning the samples from data source, then construct the data set and divide it into train and test sets containing each class, \label{dividing_step}
     \item Do CNN experiments on different pre-trained models with different transfer learning strategies and with different optimizers, then save the results and model weights to distinct files,
     \item Choose the best results for each model, and use their model weight files to extract the deep features of images in dataset, say $X_{cnn}$,
     \item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{cnn}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set, \label{ML_experiment_step}
@@ -27,9 +24,8 @@ The construction stages of the experiments we aim to carry out in the thesis can
     \item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{all}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set, and
     \item Report all results of experiments.
 \end{enumerate}
-}
 
-\section{Data set}
+\section{Data Set}
 
 The data was obtained from a public \texttt{GitHub} repository which can be reached via the link \textcolor{blue}{\hyperrefurl{https://github.com/ieee8023/covid-chestxray-dataset/}}. On the GitHub repository, the general information about data is in \href{https://github.com/ieee8023/covid-chestxray-dataset/blob/master/metadata.csv}{\texttt{metedata.csv}} file and the image data is available under \href{https://github.com/ieee8023/covid-chestxray-dataset/tree/master/images}{\texttt{images}} folder.
 
@@ -175,7 +171,7 @@ Afterwards, the deep features extracted from CNN models are used to feed machine
     \label{fig:modified_classification_blocks}
 \end{figure}
 
-\section{Forming the Feature Matrices} \label{sec:CH5_forming_features}
+\section{Forming Feature Matrices} \label{sec:CH5_forming_features}
 
 In this study, we have initially two different types of feature matrices and then we will combine these two to obtain a unique feature matrix. The first feature matrix includes the deep features extracted by the help of CNN models. Instead of image segmentation, Red-Green-Blue (RGB) color codes or manual image partition labeling, we use the features derived from deep learning process. The number of features are 1000 for each CNN architecture because of the output size of fully-connected layers used. We denote the matrix of deep features by $X_{cnn}$ and the feature size is $d_{cnn} = 1000$.
 
@@ -234,7 +230,7 @@ We used the L2 normalization as the final settings of the data pre-processing pi
 
 For each machine learning algorithm, there exists several hyper-parameters and these hyper-parameter settings cannot be generalized since they differ for each problem and data set. For that reason, finding the optimal combination of hyper-parameters is a separate mission. When choosing the most optimal hyper-parameter combinations, which characteristics should be looked for totally depends on the problem and the researcher. In this thesis, we made decision according to accuracy values.
 
-There are three common hyper-parameter tuning methods in machine learning such that grid search, random search, and Bayesian optimization.
+There are three common hyper-parameter optimization methods in machine learning such that grid search, random search, and Bayesian optimization.
 
 \begin{itemize}
     

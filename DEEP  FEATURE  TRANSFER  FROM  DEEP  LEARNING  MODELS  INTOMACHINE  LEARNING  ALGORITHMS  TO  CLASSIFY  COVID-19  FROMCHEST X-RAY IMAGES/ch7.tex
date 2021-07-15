@@ -3,18 +3,13 @@
 \label{ch:CH7}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The contribution of this thesis is to understand how to use deep features extracted from convolutional neural network models on machine learning algorithms, and how to combine the image data features with non-image data to use in machine learning algorithms for classification. To do research on this topic, a global health problem COVID-19 disease and chest X-Rays images data along with demographic information were used.
+The contribution of this thesis was to understand how to use deep features extracted from convolutional neural network models on machine learning algorithms, and how to combine the image data features with non-image data to use in machine learning algorithms for classification. To do research on this topic, a global health problem COVID-19 disease and chest X-Rays images data along with demographic information were used.
 
 \begin{comment}
 The main scope of this thesis was to show an approach on how to use image data without segmenting or manually extracting features to embed them into machine learning algorithms, and afterwards to apply it on a continuing global public health problem.
 \end{comment}
 
-\textcolor{purple}{
-We recommend that the chest X-ray images to be used be reviewed and, if necessary, eliminated by experts. In studies similar to ours, getting support from expert radiologists ensures that better quality images are obtained. In this way, more successful models can be obtained.}
-
-\textcolor{purple}{After constructing our dataset, which has two classes such that COVID-19 and non-COVID-19, including samples with demographic information, the deep learning experiments were done to obtain the features of images. Then, this features called as deep features are used to feed machine learning algorithms to complete the experiments of our study.}
-
-Although this study mainly focused on chest X-Rays and image data, the one of aim was to show non-image data can be combined with image data. Our non-image data is the demographic information of patients for corresponding chest X-Rays. Since the data size was not enough for a good classification and the non-image data types was restricted to two features, desired result may not be seen. To see the results of the singular use of demographic information, we also experimented only on these two features with machine learning algorithms. We expect a visible effect of non-image data, if more information from patient such as doctors report, tobacco product use, associated genetic diseases, etc. is used. Moreover, the singular use results of non-image information would be better with more effective and numerically superior features.
+Although this study mainly focused on chest X-Rays and image data, one of the aims was to show non-image data can be combined with image data. Our non-image data is the demographic information of patients for corresponding chest X-Rays. Since the data size was not enough for a good classification and the non-image data types was restricted to two features, desired result could not be seen. In general, we did not have an improvement by combining the demographic information with deep features. However, the performance of logistic regression algorithm with Lasso penalty was boosted by that way, as the only one. To see the results of the singular use of demographic information, we also experimented only on these two features with machine learning algorithms. We expect a visible effect of non-image data, if more information from patient such as doctors report, tobacco product use, associated genetic diseases, etc. is used. Moreover, the singular use results of non-image information would be better with more effective and numerically superior features.
 
 During the machine learning experiments, the reason why we applied cross validation on train data and yielding optimized hyper-parameters from these experiments is that to find the most generalized hyper-parameter settings. If the grid search was applied to the experiment including training on train data and testing on test data, the yielding parameters indeed would be only optimized for our test data. This would be enough for this work, if we only cared about the mathematical results and out success. However, we aimed to find more generalized optimal parameters. Thus, we used 10-fold cross validation which means we experimented on 10 different validation sets. Then we tested these hyper-parameters on test data and reported the final results. In addition to that, we also experimented grid search only on the initially determined test set and reported the results. In this way, the comparison on metrics and optimized parameters can be performed between generalized and specific to our test data.
 
@@ -34,6 +29,11 @@ The final best results are as follows:
 \end{itemize}
 
 As it can be seen on confusion matrices of convolutional neural network results and machine learning results, the performance of classification for non-COVID labeled data was improved by machine learning algorithms. Moreover, the sensitivity, specificity, precision and F1 score was 0.9216, 0.9215, 0.9216 and 0.9216 respectively for ResNet-50 model, the result for machine learning algorithms was 0.9216, 0.9230, 0.9242, and 0.9216 for the sensitivity, specificity, precision and F1 score respectively. Briefly, even though the accuracy, sensitivity and F1 score did not improve, the specificity and precision improved. This can be interpreted as the answers of two questions could be given better: 1) how many of data estimated as infected were actually infected, and 2) how many of non-COVID-19 data over all patients correctly predicted.
+
+
+We recommend that the chest X-ray images to be used be reviewed and, if necessary, eliminated by experts. In studies similar to ours, getting support from expert radiologists ensures that better quality images are obtained. In this way, more successful models can be obtained.
+
+After constructing our data set, which has two classes such that COVID-19 and non-COVID-19, including samples with demographic information, the deep learning experiments were done to obtain the features of images. Then, this features called as deep features are used to feed machine learning algorithms to complete the experiments of our study.
 
 \section{Future Work}
 

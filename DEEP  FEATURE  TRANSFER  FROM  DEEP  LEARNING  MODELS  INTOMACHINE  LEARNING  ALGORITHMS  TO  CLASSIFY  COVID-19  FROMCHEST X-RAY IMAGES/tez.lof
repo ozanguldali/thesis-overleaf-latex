@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces A pseudo-code for SGD with momentum optimization \cite {weight_decay_regularization}.\relax }}{18}{figure.caption.10}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Pseudo-codes for Adam and AdamW optimization algorithms \cite {weight_decay_regularization}.\relax }}{19}{figure.caption.11}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces An example for a simple CNN architecture.}}{20}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Activation map construction with a filter window size of $4 \times 4$ and stride value of $2$.\relax }}{23}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Activation map construction with a filter window size of $4 \times 4$ and stride value of $2$.\relax }}{22}{figure.caption.13}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Maximum pooling operation sample with $2 \times 2$ window and stride value of 2.}}{24}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces (a) A standard neural network, (b) A neural network after applying drop-out\cite {dropout_article}.\relax }}{25}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces The usage of a full-connected layer for a binary classifier.}}{26}{figure.caption.16}%
@@ -41,12 +41,12 @@
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {90 degrees rotated}}}{57}{figure.caption.37}%
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {180 degrees rotated}}}{57}{figure.caption.37}%
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {270 degrees rotated}}}{57}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces The sample visualization representing one iteration on ResNet-50 architecture and class probability result for COVID-19 labeled data from our dataset. The higher resolution version of image is available at \leavevmode {\color {blue}\href {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}{\url {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}}}\relax }}{61}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Illustration of modified classification blocks for AlexNet, ResNet, and VGG.\relax }}{63}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Feature maps where $d_{cnn} = 1000$, $d_{info} = 2$, and $d_{all} = d_{cnn} + d_{info} = 1002$.\relax }}{63}{figure.caption.41}%
-\contentsline {figure}{\numberline {6.1}{\ignorespaces AlexNet model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{73}{figure.caption.47}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces ResNet-18 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{74}{figure.caption.48}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces ResNet-34 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{75}{figure.caption.49}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ResNet-50 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{76}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces VGG16 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{77}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces VGG19 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{78}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The sample visualization representing one iteration on ResNet-50 architecture and class probability result for COVID-19 labeled data from our dataset. The higher resolution version of image is available at \leavevmode {\color {blue}\href {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}{\url {https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}}}\relax }}{60}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Illustration of modified classification blocks for AlexNet, ResNet, and VGG.\relax }}{62}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Feature maps where $d_{cnn} = 1000$, $d_{info} = 2$, and $d_{all} = d_{cnn} + d_{info} = 1002$.\relax }}{62}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces AlexNet model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{71}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces ResNet-18 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{72}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces ResNet-34 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{73}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ResNet-50 model accuracy and loss curves on train and validation processes with the SGD momentum, Adam, and AdamW optimizers.\relax }}{74}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces VGG16 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{75}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces VGG19 model accuracy and loss curves on train and validation processes for the SGD momentum, Adam, and AdamW optimizers.\relax }}{76}{figure.caption.52}%

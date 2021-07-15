@@ -483,23 +483,23 @@ The linear discriminant analysis (LDA) is a supervised learning algorithm that i
 \phantomsection
 \subsubsection*{\textit{Derivation}}
 
-A discriminant function $g(\textbf{x})$ from $\setsymbol{R}^{d}$ to $\setsymbol{R}$ is generally a monotonically increasing function defining a boundary between two groups or classes. Here $\textbf{x} \in \setsymbol{R}^{d}$ is a sample with $d$ features and $g_{i}(\textbf{x})$ is the probability of $\textbf{x}$ belonging to class $c_{i}$ over $k$ number of classes as given below:
+A discriminant function $g(\textbf{x})$ from $\setsymbol{R}^{d}$ to $\setsymbol{R}$ is generally a monotonically increasing function defining a boundary between two groups or classes. Here $\textbf{x} \in \setsymbol{R}^{d}$ is a sample with $d$ features and $Pr(c_{i} | \textbf{x})$ is the probability of $\textbf{x}$ belonging to class $c_{i}$ over $k$ number of classes as given below:
 
 \be
     \label{eq:prob_x_to_ci}
-    g_{i}(\textbf{x}) = Pr(c_{i} | \textbf{x}) = \frac{Pr(\textbf{x}|c_{i}) Pr(c_{i})}{Pr(\textbf{x})}, 
+   Pr(c_{i} | \textbf{x}) = \frac{Pr(\textbf{x}|c_{i}) Pr(c_{i})}{Pr(\textbf{x})}, 
 \ee
 
-where $Pr(\textbf{x}|c_{i})$ is the likelihood of observing $\textbf{x}$ given class $c_{i}$, $Pr(c_{i})$ is the prior probability of belonging to class $c_{i}$, $Pr(\textbf{x})$ is the marginal likelihood of observing $\textbf{x}$, and $i = 1, \dots, k$. Here, we discard the $Pr(\textbf{x})$ since observing $\textbf{x}$ is independent of class.
+where $Pr(\textbf{x}|c_{i})$ is the likelihood of observing $\textbf{x}$ given class $c_{i}$, $Pr(c_{i})$ is the prior probability of belonging to class $c_{i}$, $Pr(\textbf{x})$ is the marginal likelihood of observing $\textbf{x}$, and $i = 1, \dots, k$. Here, we can discard the $Pr(\textbf{x})$ since observing $\textbf{x}$ is independent of class.
 
-We can also take the logarithm of $g(\textbf{x})$ in equation~(\ref{eq:prob_x_to_ci}) since it is monotonically increasing. For parsimony of notations, let us re-define the probability function $g_{i}(\textbf{x})$ as:
+We can also take the logarithm of $Pr(c_{i} | \textbf{x})$ in equation~(\ref{eq:prob_x_to_ci}) since it is monotonically increasing. Then, a new function $g_{i}(\textbf{x})$ can be defined as:
 
 \be
 \label{eq:log_g}
 g_{i}(\textbf{x}) = \ln(Pr(c_{i}|\textbf{x})) = \ln(Pr(\textbf{x}|c_{i})) + \ln(Pr(c_{i}))\:.
 \ee
 
-Here, we suppose that the class density $Pr(\textbf{x}|c_{i})$ follows a multivariate normal distribution with mean $\textbf{$\mu$}_{i}$ and variance $\textbf{$\Sigma$}_{i}$ where $\textbf{$\Sigma$}_{i}$ describes class-specific covariance matrix which is generally considered as $\sigma^{2}I$.
+Here, we suppose that the class density $Pr(\textbf{x}|c_{i})$ follows a multivariate normal distribution with mean $\textbf{$\mu$}_{i}$ and variance $\textbf{$\Sigma$}_{i}$, where $\textbf{$\Sigma$}_{i}$ describes class-specific covariance matrix which is generally considered as $\sigma^{2}I$.
 
 \be
 \label{eq:normal_distribution}
@@ -602,8 +602,8 @@ g_{i}(\textbf{x}) = -\frac{1}{2}(\textbf{x} - \textbf{$\mu$}_{i})^{T}{\widehat{\
 
 \subsubsection*{\textit{Solvers}}
 
-In this thesis, to solve the LDA functions, we use the solvers presented by scikit-learn
-package \cite{scikit-learn} in Python programming language. Further information about estimators provided by scikit-learn package can be found at \cite{scikit-learn_lda-solvers}.
+In this thesis, to solve the LDA functions, we use the solvers presented by \href{https://scikit-learn.org/stable/whats_new/v0.23.html}{\texttt{scikit-learn}}
+package \cite{scikit-learn} in \href{https://www.python.org/downloads/release/python-376/}{\texttt{Python}} programming language. Further information about estimators provided by \href{https://scikit-learn.org/stable/whats_new/v0.23.html}{\texttt{scikit-learn}} package can be found at \cite{scikit-learn_lda-solvers}.
 
 
 
