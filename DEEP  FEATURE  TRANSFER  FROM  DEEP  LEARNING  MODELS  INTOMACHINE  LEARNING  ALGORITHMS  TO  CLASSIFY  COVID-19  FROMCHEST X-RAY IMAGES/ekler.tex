@@ -1,5 +1,216 @@
 \vglue20pt
-\chapter{APPENDIX A.1 ReadMe File}
+\chapter{APPENDIX A.1 The Tuned Hyper-Parameters of ML Algorithms}
+
+% The tuned hyper-parameters of ML algorithms on $X_{info}$
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of KNN algorithm on $X_{info}$.}
+	\label{tab:knn_info_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}}Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Number of Neighbors                          & 17                                                                                        & 17                                                                                       \\
+		Type of Majority Voting                      & uniform                                                                                   & uniform                                                                                  \\
+		Neighborhood Finder                          & brute force                                                                               & brute force                                                                              \\
+		Metric  Function                            & euclidean                                                                                 & euclidean       \\ \hline                                                                         
+	\end{tabular}
+\end{table}
+
+% The tuned hyper-parameters of ML algorithms on $X_{cnn\_ResNet50}$
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of SVM algorithm with Lasso penalty on $X_{cnn\_ResNet50}$.}
+	\label{tab:svmlasso_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Regularization Parameter                     & 5e-3                                                                                      & 5e-2        \\ \hline                                                                             
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of SVM algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.}
+	\label{tab:svmridge_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}}Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Kernel Function                              & linear                                                                                    & linear                                                                                   \\
+		Regularization Parameter                     & 5e-5                                                                                      & 5e-5  \\ \hline                                                                                  
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LR algorithm on $X_{cnn\_ResNet50}$.}
+	\label{tab:lr_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                              & newton-cg                                                                                 & newton-cg    \\ \hline                                                                            
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LR algorithm wit Lasso penalty for $X_{cnn\_ResNet50}$.}
+	\label{tab:lrlasso_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}}Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                              & liblinear                                                                                 & liblinear                                                                                \\
+		Regularization Parameter                     & 2e-2                                                                                      & 1.0    \\ \hline                                                                                  
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LR algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.}
+	\label{tab:lrridge_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}}Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                              & liblinear                                                                                 & liblinear                                                                                \\
+		Regularization Parameter                     & 5e-5                                                                                     & 5e-5     \\ \hline                                                                               
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of KNN algorithm on $X_{cnn\_ResNet50}$.}
+	\label{tab:knn_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Number of Neighbors                          & 3                                                                                         & 3                                                                                        \\
+		Type of Majority Voting                      & uniform                                                                                   & uniform                                                                                  \\
+		Neighborhood Finder                          & ball tree                                                                                 & ball tree                                                                                \\
+		Metric Function                              & euclidean                                                                                 & euclidean   \\ \hline                                                                             
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LDA algorithm  on $X_{cnn\_ResNet50}$.}
+	\label{tab:lda_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}}                                                                & \textbf{\begin{tabular}[c]{@{}c@{}}Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                                                                                             & svd                                                                                       & svd                                                                                      \\
+		\begin{tabular}[c]{@{}l@{}}Computing the Weighted\\ Within-Class Covariance\\ (for svd solver)\end{tabular} & True                                                                                      & True        \\ \hline                                                                             
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LDA algorithm with Lasso penalty  for $X_{cnn\_ResNet50}$.}
+	\label{tab:ldalasso_cnn_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}}Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Regularization Parameter                     & 5e-5                                                                                      & 5e-3    \\ \hline                                                                                 
+	\end{tabular}
+\end{table}
+
+% The tuned hyper-parameters of ML algorithms on $X_{all\_ResNet50}$
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of SVM algorithm with Lasso penalty on $X_{all\_ResNet50}$.}
+	\label{tab:svmlasso_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Regularization Parameter                     & 5e-3                                                                                      & 5e-2   \\ \hline                                                                                 
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of SVM algorithm with Ridge penalty on $X_{all\_ResNet50}$.}
+	\label{tab:svmridge_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}}Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Kernel Function                              & linear                                                                                    & linear                                                                                   \\
+		Regularization Parameter                     & 5e-5                                                                                      & 5e-5  \\ \hline                                                                                  
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LR algorithm on $X_{all\_ResNet50}$.}
+	\label{tab:lr_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                              & newton-cg                                                                                 & newton-cg  \\ \hline                                                                             
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LR algorithm with Lasso on $X_{all\_ResNet50}$.}
+	\label{tab:lrlasso_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                              & liblinear                                                                                 & liblinear                                                                                \\
+		Regularization Parameter                     & 2e-2                                                                                      & 2.0  \\ \hline                                                                                   
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LR algorithm with Ridge penalty on $X_{all\_ResNet50}$.}
+	\label{tab:lrridge_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                              & liblinear                                                                                 & liblinear                                                                                \\
+		Regularization Parameter                     & 5e-5                                                                                     & 5e-5   \\ \hline                                                                                
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of KNN algorithm on $X_{all\_ResNet50}$.}
+	\label{tab:knn_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Number of Neighbors                          & 3                                                                                         & 3                                                                                        \\
+		Type of Majority Voting                      & uniform                                                                                   & uniform                                                                                  \\
+		Neighborhood Finder                          & ball tree                                                                                 & ball tree                                                                                \\
+		Metric Function                              & euclidean                                                                                 & euclidean  \\ \hline                                                                             
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LDA algorithm on $X_{all\_ResNet50}$.}
+	\label{tab:lda_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}}                                                                & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Solver Function                                                                                             & svd                                                                                       & svd                                                                                      \\
+		\begin{tabular}[c]{@{}l@{}}Computing the Weighted\\ Within-Class Covariance\\ (for svd solver)\end{tabular} & True                                                                                      & True   \\ \hline                                                                                 
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{The tuned hyper-parameters of LDA algorithm with Lasso penalty on $X_{all\_ResNet50}$.}
+	\label{tab:ldalasso_all_params}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{\begin{tabular}[c]{@{}c@{}} Train Data\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Test Data\end{tabular}} \\ \hline \hline
+		Regularization Parameter                     & 5e-5                                                                                      & 5e-3   \\ \hline                                                                                 
+	\end{tabular}
+\end{table}
+
+\clearpage
+
+\section*{APPENDIX A.2 ReadMe File}
 
 The ReadMe.md file is available at \textcolor{blue}{\hyperrefurl{https://github.com/ozanguldali/modelsWithLASSO/blob/master/ReadMe.md}}.
 
@@ -23,8 +234,8 @@ LEARNING ALGORITHMS TO CLASSIFY COVID-19 FROM CHEST X-RAY IMAGES
 ---
 
 * ###### dataset may be a must for some run-configurations
-    - Link to dataset: https://github.com/ozanguldali/modelsWithLASSO/
-    blob/master/dataset
+- Link to dataset: https://github.com/ozanguldali/modelsWithLASSO/
+blob/master/dataset
 * ###### dataset_constructor.py was used to create the dataset from
 https://github.com/ieee8023/covid-chestxray-dataset source
 * ###### image_operations.py was used to investigate the augmentations 
@@ -98,35 +309,35 @@ _Example of Transfer Leaning:_
 - Unless exists, 92.16_resnet50_Adam_out.pth file must be downloaded and 
 inserted into "cnn/saved_models" directory.
 - Link to file:
-  - https://github.com/ozanguldali/modelsWithLASSO/blob/master/cnn
-  /saved_models/92.16_resnet50_Adam_out.pth
-    
+- https://github.com/ozanguldali/modelsWithLASSO/blob/master/cnn
+/saved_models/92.16_resnet50_Adam_out.pth
+
 `app.main(transfer_learning=True, ml_model_name="all",
 ml_features="all", cnn_model_name="resnet50", is_pre_trained=True,
-         cv=10, dataset_folder="dataset", 
-         pretrain_file="92.16_resnet50_Adam_out", seed=4)`
-  
+cv=10, dataset_folder="dataset", 
+pretrain_file="92.16_resnet50_Adam_out", seed=4)`
+
 2. (Dataset folder is not needed)
 - Unless exists, 92.16_resnet50_Adam_final_X_cnn_train.npy,
 92.16_resnet50_Adam_final_X_cnn_test.npy, X_info_train.npy, 
 X_info_test.npy, y_train.npy, and y_test.npy files must be 
 downloaded and inserted into project root directory.
 - Link to files: 
-  - https://github.com/ozanguldali/modelsWithLASSO/blob/master
-  /92.16_resnet50_Adam_final_X_cnn_train.npy
-  - https://github.com/ozanguldali/modelsWithLASSO/blob/master
-  /92.16_resnet50_Adam_final_X_cnn_test.npy
-  - https://github.com/ozanguldali/modelsWithLASSO/blob/master
-  /X_info_train.npy
-  - https://github.com/ozanguldali/modelsWithLASSO/blob/master
-  /X_info_test.npy
-  - https://github.com/ozanguldali/modelsWithLASSO/blob/master
-  /y_train.npy
-  - https://github.com/ozanguldali/modelsWithLASSO/blob/master
-  /y_test.npy
-    
+- https://github.com/ozanguldali/modelsWithLASSO/blob/master
+/92.16_resnet50_Adam_final_X_cnn_train.npy
+- https://github.com/ozanguldali/modelsWithLASSO/blob/master
+/92.16_resnet50_Adam_final_X_cnn_test.npy
+- https://github.com/ozanguldali/modelsWithLASSO/blob/master
+/X_info_train.npy
+- https://github.com/ozanguldali/modelsWithLASSO/blob/master
+/X_info_test.npy
+- https://github.com/ozanguldali/modelsWithLASSO/blob/master
+/y_train.npy
+- https://github.com/ozanguldali/modelsWithLASSO/blob/master
+/y_test.npy
+
 `app.main(transfer_learning=True, ml_model_name="all", ml_features="all", load_numpy=True, validate_cv=True, cv=10,
-         numpy_prefix="92.16_resnet50_Adam_final", seed=4)`
+numpy_prefix="92.16_resnet50_Adam_final", seed=4)`
 
 ---
 
@@ -164,9 +375,9 @@ downloaded and inserted into project root directory.
 
 \input ReadMe.tex
 
-\newpage
+\clearpage
 
-\section*{APPENDIX A.2 Python Notebook File}
+\section*{APPENDIX A.3 Python Notebook File}
 
 The Python Notebook app\_run.ipynb file is available at \textcolor{blue}{\hyperrefurl{https://github.com/ozanguldali/modelsWithLASSO/blob/master/app_run.ipynb}}.
 

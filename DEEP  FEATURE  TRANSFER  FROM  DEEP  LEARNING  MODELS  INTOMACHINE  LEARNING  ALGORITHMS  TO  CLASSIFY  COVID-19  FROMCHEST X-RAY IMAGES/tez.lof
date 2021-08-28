@@ -4,15 +4,15 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {AP projection}}}{11}{figure.caption.7}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {AP-Supine projection}}}{11}{figure.caption.7}%
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {L projection}}}{11}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A simple neural network with two neurons.}}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A simple neural network with two neurons.\relax }}{13}{figure.caption.8}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration of under-fitting, well-fitting, and over-fitting of models to the data.}}{16}{figure.caption.9}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces A pseudo-code for SGD with momentum optimization \cite {weight_decay_regularization}.\relax }}{18}{figure.caption.10}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Pseudo-codes for Adam and AdamW optimization algorithms \cite {weight_decay_regularization}.\relax }}{19}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces An example for a simple CNN architecture.}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces An example for a simple CNN architecture.\relax }}{20}{figure.caption.12}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Activation map construction with a filter window size of $4 \times 4$ and stride value of $2$.\relax }}{22}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Maximum pooling operation sample with $2 \times 2$ window and stride value of 2.}}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Maximum pooling operation sample with $2 \times 2$ window and stride value of 2.\relax }}{24}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces (a) A standard neural network, (b) A neural network after applying drop-out\cite {dropout_article}.\relax }}{25}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces The usage of a full-connected layer for a binary classifier.}}{26}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The usage of a full-connected layer for a binary classifier.\relax }}{26}{figure.caption.16}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Different fine-tuning strategies on a pre-trained model.}}{27}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Deep feature extraction from CNN models and using them in machine learning models \cite {A_novelCNNModel}.\relax }}{28}{figure.caption.18}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Illustration of AlexNet architecture with a size of $224 \times 224 \times 3$ input image and 1000 class prediction support.\cite {AlexNet}.\relax }}{29}{figure.caption.19}%
@@ -22,10 +22,10 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Sample machine learning road map.\relax }}{33}{figure.caption.23}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces (a) Clustering problem, (b) Classification problem, and (c) Regression problem \cite {parallel_linear_algebra}.\relax }}{34}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces K-fold cross-validation.}}{35}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces A Hyper-plane and margins of an SVM for a binary classification problem.}}{38}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces The dual and primal problems, and the duality gap between their extreme points.}}{41}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A Hyper-plane and margins of an SVM for a binary classification problem.\relax }}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The dual and primal problems, and the duality gap between their extreme points.\relax }}{41}{figure.caption.27}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Logistic sigmoid function with different scaling w values. \relax }}{43}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces A KNN example illustration for detecting the class of the green sample.}}{46}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces A KNN example illustration for detecting the class of the green sample.\relax }}{46}{figure.caption.31}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces LDA process for fixed and varying covariances.}}{50}{figure.caption.33}%
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Data set samples.\relax }}{55}{figure.caption.34}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Image labeled as COVID-19. }}}{55}{figure.caption.34}%

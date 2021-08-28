@@ -18,11 +18,11 @@ In this chapter, we start with the basics of machine learning. Then we mention c
 The goal of machine learning (ML) is to learn from available data or experiences to solve a given problem. A traditional ML pipeline may be listed as follows:
 
 \begin{itemize}
-    \item defining the problem to solve,
-    \item collecting the data for training and testing,
-    \item designing or extracting the features describing data,
-    \item training the model to optimize the loss function by tuning the parameters through experiments, and
-    \item testing the model to evaluate the performance of trained model on unseen test data.
+	\item defining the problem to solve,
+	\item collecting the data for training and testing,
+	\item designing or extracting the features describing data,
+	\item training the model to optimize the loss function by tuning the parameters through experiments, and
+	\item testing the model to evaluate the performance of trained model on unseen test data.
 \end{itemize}
 
 The majority of the problems in ML classified as either supervised or unsupervised learning approaches. Clustering as an example for unsupervised learning, and classification and regression as two examples for supervised learning are given in Figure~\ref{clustering_classification_regression}.
@@ -137,12 +137,14 @@ In this thesis, we have a binary classification problem; thus, our space is two-
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.4\linewidth]{fig/SVM_margin_binary.png}
+	% \includegraphics[width=.4\linewidth]{fig/SVM_margin_binary.png}
+	\includegraphics[width=.6\linewidth]{fig/simpleSVMBinary.png}
 	\vspace*{2mm}
-	\captionfootnotemark{A Hyper-plane and margins of an SVM for a binary classification problem.}
+	\caption{A Hyper-plane and margins of an SVM for a binary classification problem.}
+	% \captionfootnotemark{A Hyper-plane and margins of an SVM for a binary classification problem.}
 	\label{fig:simple_svm}
 \end{figure}
-\footnotetext{Retrieved from: \hyperrefurl{https://en.wikipedia.org/wiki/Support-vector_machine} on April 11, 2021.}
+% \footnotetext{Retrieved from: \hyperrefurl{https://en.wikipedia.org/wiki/Support-vector_machine} on April 11, 2021.}
 
 A linear SVM hyper-plane is defined as:
 
@@ -158,41 +160,41 @@ where $\textbf{x}$ is a p-dimensional real vector, $\textbf{w}$ is a weight vect
 First, let us name the hyper-plane and margins in Figure~\ref{fig:simple_svm} as:
 
 \begin{itemize}
-    \item \textbf{hyper-plane:} 
-    \be \label{h0_formula} H_{0} = \textbf{w}^{T}\textbf{x} - b = 0 \:,\ee
-    \item \textbf{margin for label +1:}
-    \be \label{h+1_formula} H_{+1} = \textbf{w}^{T}\textbf{x} - b = +1 \:,\:\text{and}\ee
-    \item \textbf{margin for label -1:}
-    \be \label{h-1_formula} H_{-1} = \textbf{w}^{T}\textbf{x} - b = -1 \:.\ee
+	\item \textbf{hyper-plane:} 
+	\be \label{h0_formula} H_{0} = \textbf{w}^{T}\textbf{x} - b = 0 \:,\ee
+	\item \textbf{margin for label +1:}
+	\be \label{h+1_formula} H_{+1} = \textbf{w}^{T}\textbf{x} - b = +1 \:,\:\text{and}\ee
+	\item \textbf{margin for label -1:}
+	\be \label{h-1_formula} H_{-1} = \textbf{w}^{T}\textbf{x} - b = -1 \:.\ee
 \end{itemize}
 
 Thus, we have the following condition and result relationships for a p-dimensional sample $\textbf{x}^{i}$ vector with its observed label $y^{i}$ where $y^{i}$ takes either -1 or +1:
 
 \begin{itemize}
-    \item if $\textbf{w}^{T}\textbf{x}^{i} - b \geq +1$ and $y^{i} = +1$, then the prediction is correct and the sample belongs to class +1;
-    \item else, if $\textbf{w}^{T}\textbf{x}^{i} - b \leq -1$ and $y^{i} = -1$, then the prediction is correct and the sample belongs to class -1;
-    \item else, the prediction is incorrect and the sample belongs to opposite of predicted label.
+	\item if $\textbf{w}^{T}\textbf{x}^{i} - b \geq +1$ and $y^{i} = +1$, then the prediction is correct and the sample belongs to class +1;
+	\item else, if $\textbf{w}^{T}\textbf{x}^{i} - b \leq -1$ and $y^{i} = -1$, then the prediction is correct and the sample belongs to class -1;
+	\item else, the prediction is incorrect and the sample belongs to opposite of predicted label.
 \end{itemize}
 
 When we combine the conditions above, we obtain the following common condition:
 
 \begin{equation}
-\label{common_loss} 
-1 - (\textbf{w}^{T}\textbf{x}^{i} - b)y^{i} \leq 0\:.
+	\label{common_loss} 
+	1 - (\textbf{w}^{T}\textbf{x}^{i} - b)y^{i} \leq 0\:.
 \end{equation}
 
 And finally, the margin perception loss function, called as hinge loss, is written as:
 
 \begin{equation}
-\label{hinge_loss} 
-loss_{hinge}(\textbf{w}, b) = \sum_{i=1}^{n} \max(0, 1 - (\textbf{w}^{T}\textbf{x}^{i} - b)y^{i}).
+	\label{hinge_loss} 
+	loss_{hinge}(\textbf{w}, b) = \sum_{i=1}^{n} \max(0, 1 - (\textbf{w}^{T}\textbf{x}^{i} - b)y^{i}).
 \end{equation}
 
 Besides, the squared hinge loss is defined as:
 
 \begin{equation}
-\label{squared_hinge_loss} 
-loss_{squared\_hinge}(\textbf{w}, b) = \sum_{i=1}^{n} (\max(0, 1 - (\textbf{w}^{T}\textbf{x}^{i} - b)y^{i}))^{2}.
+	\label{squared_hinge_loss} 
+	loss_{squared\_hinge}(\textbf{w}, b) = \sum_{i=1}^{n} (\max(0, 1 - (\textbf{w}^{T}\textbf{x}^{i} - b)y^{i}))^{2}.
 \end{equation}
 
 The constrained optimization problem of SVM is derived as:
@@ -224,12 +226,14 @@ If $\text{duality gap} = 0$, it is called as strong duality. That is the solutio
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.2\linewidth]{fig/duality_gap.jpg}
+	% \includegraphics[width=.2\linewidth]{fig/duality_gap.jpg}
+	\includegraphics[width=.15\linewidth]{fig/dualityGap.png}
 	\vspace*{2mm}
-	\captionfootnotemark{The dual and primal problems, and the duality gap between their extreme points.}
+	% \captionfootnotemark{The dual and primal problems, and the duality gap between their extreme points.}
+	\caption{The dual and primal problems, and the duality gap between their extreme points.}
 	\label{fig:duality_gap}
 \end{figure}
-\footnotetext{Retrieved from: \hyperrefurl{https://kseow.com/svm.html.}}
+% \footnotetext{Retrieved from: \hyperrefurl{https://kseow.com/svm.html.}}
 
 Further details on constraint optimization of SVM, primal and dual problems and their solutions can be found at  \cite[pg.~13-19]{svm_book}.
 
@@ -237,38 +241,38 @@ Further details on constraint optimization of SVM, primal and dual problems and 
 To decrease the effects of original constraints of SVM problems and construct more feasible hyper-planes regarding to outlier samples, we use penalty terms adding to original SVM problems. Here $\lambda$ always refers to the regularization parameter which is a new hyper-parameter to be tuned during this subsection.
 
 \begin{itemize}
-    \item \textbf{L2 Regularizer:} According to Koshiba and  Abe \cite[pg.~2054-2059]{svm_penalty}, let's first recall the primal form of SVM optimization problem in equation (\ref{eq:primal_svm}). We can modify the problem as:
-   
-    \be
-    \label{eq:l2_svm_primal}
-    \min_{\textbf{w}, b} \sum_{i=1}^{n} loss(\textbf{w}, b) + \lambda \frac{\norm{\textbf{w}}_{2}^{2}}{2},
-    \ee
-   
-    
- where the loss function can be either hinge or squared hinge loss function.
-    
-    Then, the corresponding dual problem can be obtained as:
-    \be
-    \label{eq:l2_svm_dual}
-    \max_{\alpha} \sum_{i=1}^{n}\alpha_{i} - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_{i}\alpha_{j}\:y^{i}y^{i} \big ( \:{\textbf{x}^{i}}^{T}\textbf{x}^{j} + \lambda \delta_{ij} \big ) \quad \text{such that} \:\:\sum_{i=1}^{n}\alpha_{i}y^{i} = 0\:,
-    \ee
-    where $\alpha_{i}$ is the lagrange multiplier given in the equation (\ref{eq:dual_svm}) and $\delta_{ij}$ is the Kronecker’s delta function such that it returns $1$ for $i=j$, and $0$ otherwise.
-    
-    \item \textbf{L1 Regularizer:}
-    As stated in Koshiba and  Abe \cite[pg.~2054-2059]{svm_penalty}, L1 regularization is only applicable for the linear SVM problem. The L1 penalized SVM optimization problem is given by the following equation where the $loss(\textbf{w}, b)$ is either hinge or squared hinge loss function:
-    \be
-    \label{eq:l1_svm_primal}
-    \min_{\textbf{w}, b} \sum_{i=1}^{n} loss(\textbf{w}, b) + \lambda  \norm{\textbf{w}}_{1}\:.
-    \ee
- 
-    Then, the corresponding dual problem can be obtained as:
-    \be
-    \label{eq:l1_svm_dual}
-    \max_{\alpha} \sum_{i=1}^{n}\alpha_{i} - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_{i}\alpha_{j}\:y^{i}y^{i}\:{\textbf{x}^{i}}^{T}\textbf{x}^{j} \quad  \text{such that} \:\:\sum_{i=1}^{n}\alpha_{i}y^{i} = 0 \:\:\text{and}\:\: \alpha_{i} \leq \frac{1}{\lambda}\:,
-    \ee
-    where $\alpha_{i}$ are lagrange multipliers given in the equation (\ref{eq:dual_svm}), respectively.
-    
-    
+	\item \textbf{L2 Regularizer:} According to Koshiba and  Abe \cite[pg.~2054-2059]{svm_penalty}, let's first recall the primal form of SVM optimization problem in equation (\ref{eq:primal_svm}). We can modify the problem as:
+	
+	\be
+	\label{eq:l2_svm_primal}
+	\min_{\textbf{w}, b} \sum_{i=1}^{n} loss(\textbf{w}, b) + \lambda \frac{\norm{\textbf{w}}_{2}^{2}}{2},
+	\ee
+	
+	
+	where the loss function can be either hinge or squared hinge loss function.
+	
+	Then, the corresponding dual problem can be obtained as:
+	\be
+	\label{eq:l2_svm_dual}
+	\max_{\alpha} \sum_{i=1}^{n}\alpha_{i} - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_{i}\alpha_{j}\:y^{i}y^{i} \big ( \:{\textbf{x}^{i}}^{T}\textbf{x}^{j} + \lambda \delta_{ij} \big ) \quad \text{such that} \:\:\sum_{i=1}^{n}\alpha_{i}y^{i} = 0\:,
+	\ee
+	where $\alpha_{i}$ is the lagrange multiplier given in the equation (\ref{eq:dual_svm}) and $\delta_{ij}$ is the Kronecker’s delta function such that it returns $1$ for $i=j$, and $0$ otherwise.
+	
+	\item \textbf{L1 Regularizer:}
+	As stated in Koshiba and  Abe \cite[pg.~2054-2059]{svm_penalty}, L1 regularization is only applicable for the linear SVM problem. The L1 penalized SVM optimization problem is given by the following equation where the $loss(\textbf{w}, b)$ is either hinge or squared hinge loss function:
+	\be
+	\label{eq:l1_svm_primal}
+	\min_{\textbf{w}, b} \sum_{i=1}^{n} loss(\textbf{w}, b) + \lambda  \norm{\textbf{w}}_{1}\:.
+	\ee
+	
+	Then, the corresponding dual problem can be obtained as:
+	\be
+	\label{eq:l1_svm_dual}
+	\max_{\alpha} \sum_{i=1}^{n}\alpha_{i} - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_{i}\alpha_{j}\:y^{i}y^{i}\:{\textbf{x}^{i}}^{T}\textbf{x}^{j} \quad  \text{such that} \:\:\sum_{i=1}^{n}\alpha_{i}y^{i} = 0 \:\:\text{and}\:\: \alpha_{i} \leq \frac{1}{\lambda}\:,
+	\ee
+	where $\alpha_{i}$ are lagrange multipliers given in the equation (\ref{eq:dual_svm}), respectively.
+	
+	
 \end{itemize}
 
 
@@ -284,26 +288,26 @@ K(\textbf{x}_{i}, \textbf{x}_{j}) = <\phi(\textbf{x}_{i}), \phi(\textbf{x}_{j})>
 This replacement affects the whole structure of SVM optimization problem. The most commonly used kernel functions, which are also used in this thesis, are:
 
 \begin{itemize}
-    \item \textbf{Linear function:}
-    \be
-    \label{eq:lienar_kernel_function}
-    K(\textbf{x}_{i}, \textbf{x}_{j}) = \textbf{x}_{i}^{T}\textbf{x}_{j}.
-    \ee
-    
-    \item \textbf{Gaussian radial basis function (RBF):}
-    \be
-    \label{eq:rbf_kernel_function}
-    K(\textbf{x}_{i}, \textbf{x}_{j}) = \exp(-\gamma \norm{\textbf{x}_{i}-\textbf{x}_{j}}_{2}^{2})\:,
-    \ee
-    for $\gamma >0$. It is common to choose $\gamma =\frac{1}{2\sigma^{2}}$ where $\sigma$ represents the standard deviation of original feature map.
-    
-    \item \textbf{Sigmoid function:}
-    \be
-    \label{sigmoid_kernel_function}
-    K(\textbf{x}_{i}, \textbf{x}_{j}) = \tanh(\alpha \textbf{x}_{i}^{T}\textbf{x}_{j} + c)\:,
-    \ee
-    for some $\alpha > 0$ and $c < 0$, and $\tanh(.)$ refers the hyperbolic tangent function.
-
+	\item \textbf{Linear function:}
+	\be
+	\label{eq:lienar_kernel_function}
+	K(\textbf{x}_{i}, \textbf{x}_{j}) = \textbf{x}_{i}^{T}\textbf{x}_{j}.
+	\ee
+	
+	\item \textbf{Gaussian radial basis function (RBF):}
+	\be
+	\label{eq:rbf_kernel_function}
+	K(\textbf{x}_{i}, \textbf{x}_{j}) = \exp(-\gamma \norm{\textbf{x}_{i}-\textbf{x}_{j}}_{2}^{2})\:,
+	\ee
+	for $\gamma >0$. It is common to choose $\gamma =\frac{1}{2\sigma^{2}}$ where $\sigma$ represents the standard deviation of original feature map.
+	
+	\item \textbf{Sigmoid function:}
+	\be
+	\label{sigmoid_kernel_function}
+	K(\textbf{x}_{i}, \textbf{x}_{j}) = \tanh(\alpha \textbf{x}_{i}^{T}\textbf{x}_{j} + c)\:,
+	\ee
+	for some $\alpha > 0$ and $c < 0$, and $\tanh(.)$ refers the hyperbolic tangent function.
+	
 \end{itemize}
 
 \subsection{Logistic Regression}
@@ -342,38 +346,38 @@ Here, the ratio $\frac{Pr(\textbf{x})}{1 - Pr(\textbf{x})}$ is called as odds, a
 For simplicity, let's define $z = \textbf{w}^{T}\textbf{x}+b$. Then, we have the following constraints:
 
 \begin{itemize}
-    \item if $y = 1$, we want $Pr(z) \approx 1$, i.e. $z >> 0$, and
-    \item if $y = 0$, we want $Pr(z) \approx 0$, i.e. $z << 0$.
+	\item if $y = 1$, we want $Pr(z) \approx 1$, i.e. $z >> 0$, and
+	\item if $y = 0$, we want $Pr(z) \approx 0$, i.e. $z << 0$.
 \end{itemize}
 
 Now, we can construct the natural logarithm of the loss function for a sample pair $(\textbf{x}^{i}, y^{i})$ for $i \in \{1, ..., n\}$ as follows:
 
 \begin{equation}
-\label{log_loss_onesample} 
-loss^{i}(\textbf{w}, b) = -y\ln(Pr(z^{i}))  + (1-y)\ln(1-Pr(z^{i})).
+	\label{log_loss_onesample} 
+	loss^{i}(\textbf{w}, b) = -y\ln(Pr(z^{i}))  + (1-y)\ln(1-Pr(z^{i})).
 \end{equation}
 
 Consequently, the optimization problem is yielded as:
 
 \begin{equation}
-\label{lr_optimization} 
-\min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i}(\textbf{w}, b).
+	\label{lr_optimization} 
+	\min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i}(\textbf{w}, b).
 \end{equation}
 
 \subsubsection*{\textit{Penalty Terms}}
 To take the loss function under control by a constraint while constructing the logistic curve separating classes, penalty terms are used. Here $\lambda$ always refers to the regularization parameter during this subsection.
 
 \begin{itemize}
-    \item \textbf{L2 Regularizer:}
-        \begin{equation}
-        \label{lr_l1} 
-        \min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i} + \lambda \norm{w}_{2}^{2}.
-        \end{equation}
-    \item \textbf{L1 Regularizer:}
-        \begin{equation}
-        \label{lr_l1} 
-        \min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i} + \lambda \norm{w}_{1}.
-        \end{equation}
+	\item \textbf{L2 Regularizer:}
+	\begin{equation}
+		\label{lr_l1} 
+		\min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i} + \lambda \norm{w}_{2}^{2}.
+	\end{equation}
+	\item \textbf{L1 Regularizer:}
+	\begin{equation}
+		\label{lr_l1} 
+		\min_{\textbf{w}, b} \sum_{i=1}^{n} loss^{i} + \lambda \norm{w}_{1}.
+	\end{equation}
 \end{itemize}
 
 
@@ -382,15 +386,15 @@ To take the loss function under control by a constraint while constructing the l
 In this thesis, to solve the optimization problem on LR problem, we use the following solvers presented by scikit-learn package \cite{scikit-learn} in Python programming language:
 
 \begin{itemize}
-    \item Newton’s method (newton-cg) \cite{lr_newton_cg}, 
-    
-    \item Limited-memory Broyden–Fletcher–Goldfarb–Shanno Algorithm \\(lbfgs) \cite{lr_lbfgsb},
-    
-    \item A library for Large Linear Classification (liblinear) \cite{lr_liblinear},
-    
-    \item Stochastic average gradient (sag) \cite{lr_sag}, and
-    
-    \item SAGA \cite{lr_saga}.
+	\item Newton’s method (newton-cg) \cite{lr_newton_cg}, 
+	
+	\item Limited-memory Broyden–Fletcher–Goldfarb–Shanno Algorithm \\(lbfgs) \cite{lr_lbfgsb},
+	
+	\item A library for Large Linear Classification (liblinear) \cite{lr_liblinear},
+	
+	\item Stochastic average gradient (sag) \cite{lr_sag}, and
+	
+	\item SAGA \cite{lr_saga}.
 \end{itemize}
 
 Different types of optimizers were used for a better approximation to the loss function, and to find the best minimization on this loss function. Table~\ref{tab:lr_solver_table} shows the solvers which are compatible with regularizers.
@@ -398,19 +402,19 @@ Different types of optimizers were used for a better approximation to the loss f
 %% https://stackoverflow.com/questions/38640109/logistic-regression-python-solvers-defintions
 
 \begin{table}[h]
-\centering
-\caption{Compatibility of logistic regression optimization solvers with regularizers.}
-\label{tab:lr_solver_table}
-\begin{tabular}{|l|c|c|c|}
-\hline
-\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Solver}    }} & \multicolumn{3}{c|}{\textbf{Regularizer}}                                                                                                                                                                                        \\ \cline{2-4} 
-\multicolumn{1}{|c|}{}                        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}No \\ Penalty\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}L1 \\ Penalty\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}L2 \\ Penalty\end{tabular}} \\ \hline
-newton-cg                                    & \checkmark                                                                          &                                                                            & \checkmark                                                                          \\ \hline
-lbfgs                                         & \checkmark                                                                          &                                                                            & \checkmark                                                                          \\ \hline
-liblinear                                    &                                                                            & \checkmark                                                                          & \checkmark                                                                          \\ \hline
-sag                                         & \checkmark                                                                          &                                                                            & \checkmark                                                                          \\ \hline
-saga                                             & \checkmark                                                                          & \checkmark                                                                          & \checkmark                                                                          \\ \hline
-\end{tabular}
+	\centering
+	\caption{Compatibility of logistic regression optimization solvers with regularizers.}
+	\label{tab:lr_solver_table}
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Solver}    }} & \multicolumn{3}{c|}{\textbf{Regularizer}}                                                                                                                                                                                        \\ \cline{2-4} 
+		\multicolumn{1}{|c|}{}                        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}No \\ Penalty\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}L1 \\ Penalty\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}L2 \\ Penalty\end{tabular}} \\ \hline
+		newton-cg                                    & \checkmark                                                                          &                                                                            & \checkmark                                                                          \\ \hline
+		lbfgs                                         & \checkmark                                                                          &                                                                            & \checkmark                                                                          \\ \hline
+		liblinear                                    &                                                                            & \checkmark                                                                          & \checkmark                                                                          \\ \hline
+		sag                                         & \checkmark                                                                          &                                                                            & \checkmark                                                                          \\ \hline
+		saga                                             & \checkmark                                                                          & \checkmark                                                                          & \checkmark                                                                          \\ \hline
+	\end{tabular}
 \end{table}
 
 
@@ -424,39 +428,41 @@ K-Nearest Neighbor (KNN) is a classification algorithm developed by Fix and Hodg
 Below, the basic algorithm for KNN is explained for n samples $\textbf{x}^{i} \in \setsymbol{R}^{d}$ and their corresponding class labels $c^{i} \in \{-1, +1\}$. Let the target pair is denoted by $(\textbf{x}^{*}, c^{*})$.
 
 \begin{enumerate}
-    \item The K nearest neighbors of $\textbf{x}^{*}$ is found with respect to distance between target $\textbf{x}^{*}$ and all other samples. To calculate the distance, different metric functions can be used. The metrics used in this thesis are:
-    
-    \begin{itemize}
-        \item \textbf{Euclidean Distance:}
-        \be
-        \label{eucledian_distance}
-        d(\textbf{x}^{*}, \textbf{x}^{i}) = \sqrt{\sum_{j=1}^{d} ({\textbf{x}^{*}}_{j} - {\textbf{x}^{i}}_{j})^{2}}\:,
-        \ee
-   
-        \item \textbf{Manhattan Distance:}
-        \be
-        \label{manhattan_distance}
-        d(\textbf{x}^{*}, \textbf{x}^{i}) = \sum_{j=1}^{d} |{\textbf{x}^{*}}_{j} - {\textbf{x}^{i}}_{j}|\:, \quad \text{and}
-        \ee
-        
-        \item \textbf{Chebyshev Distance:}
-        \be
-        \label{chebyshev_distance}
-        d(\textbf{x}^{*}, \textbf{x}^{i}) = \max (|{\textbf{x}^{*}}_{1} - {\textbf{x}^{i}}_{1}|, |{\textbf{x}^{*}}_{2} - {\textbf{x}^{i}}_{2}|, \dots, |{\textbf{x}^{*}}_{d} - {\textbf{x}^{i}}_{d}|)\:.
-        \ee
-    \end{itemize}
-    
-    \item The class label for $\textbf{x}^{*}$ is estimated by majority voting around K nearest neighbors of target sample found in step 1. Majority voting makes its decision by looking at which class label has the majority in appearance around K nearest neighbors. K is preferred as an odd number. For example, if K is chosen as 3 and these three nearest neighbors have class labels as $\{+1, -1, +1\}$, then the majority voting predicts the target label as +1 since it appears more frequent than label -1. Besides, it can be considered that all of the voters may not have the same effect. In this scenario, one can use weighted majority voting approach which allows the closer neighbor in K nearest neighbors to have the higher effect. That is, the weight of a voter is the multiplicative inverse of its distance to the target sample. For example, assume that the K is chosen as 3 and these three nearest neighbors have class labels as $\{+1, -1, +1\}$ with their distances to the target sample as $\{3, 1, 2\}$, respectively. Then the weights of the neighbors are considered as $\{\frac{1}{3}, 1, \frac{1}{2}\}$ or $\{2, 6, 3\}$ respectively. Here, the label -1 has the majority; thus, the target label is predicted as -1.
+	\item The K nearest neighbors of $\textbf{x}^{*}$ is found with respect to distance between target $\textbf{x}^{*}$ and all other samples. To calculate the distance, different metric functions can be used. The metrics used in this thesis are:
+	
+	\begin{itemize}
+		\item \textbf{Euclidean Distance:}
+		\be
+		\label{eucledian_distance}
+		d(\textbf{x}^{*}, \textbf{x}^{i}) = \sqrt{\sum_{j=1}^{d} ({\textbf{x}^{*}}_{j} - {\textbf{x}^{i}}_{j})^{2}}\:,
+		\ee
+		
+		\item \textbf{Manhattan Distance:}
+		\be
+		\label{manhattan_distance}
+		d(\textbf{x}^{*}, \textbf{x}^{i}) = \sum_{j=1}^{d} |{\textbf{x}^{*}}_{j} - {\textbf{x}^{i}}_{j}|\:, \quad \text{and}
+		\ee
+		
+		\item \textbf{Chebyshev Distance:}
+		\be
+		\label{chebyshev_distance}
+		d(\textbf{x}^{*}, \textbf{x}^{i}) = \max (|{\textbf{x}^{*}}_{1} - {\textbf{x}^{i}}_{1}|, |{\textbf{x}^{*}}_{2} - {\textbf{x}^{i}}_{2}|, \dots, |{\textbf{x}^{*}}_{d} - {\textbf{x}^{i}}_{d}|)\:.
+		\ee
+	\end{itemize}
+	
+	\item The class label for $\textbf{x}^{*}$ is estimated by majority voting around K nearest neighbors of target sample found in step 1. Majority voting makes its decision by looking at which class label has the majority in appearance around K nearest neighbors. K is preferred as an odd number. For example, if K is chosen as 3 and these three nearest neighbors have class labels as $\{+1, -1, +1\}$, then the majority voting predicts the target label as +1 since it appears more frequent than label -1. Besides, it can be considered that all of the voters may not have the same effect. In this scenario, one can use weighted majority voting approach which allows the closer neighbor in K nearest neighbors to have the higher effect. That is, the weight of a voter is the multiplicative inverse of its distance to the target sample. For example, assume that the K is chosen as 3 and these three nearest neighbors have class labels as $\{+1, -1, +1\}$ with their distances to the target sample as $\{3, 1, 2\}$, respectively. Then the weights of the neighbors are considered as $\{\frac{1}{3}, 1, \frac{1}{2}\}$ or $\{2, 6, 3\}$ respectively. Here, the label -1 has the majority; thus, the target label is predicted as -1.
 \end{enumerate}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.6\linewidth]{fig/knn_example.png}
+	% \includegraphics[width=.6\linewidth]{fig/knn_example.png}
+	\includegraphics[width=.6\linewidth]{fig/knnExample.png}
 	\vspace*{2mm}
-	\captionfootnotemark{A KNN example illustration for detecting the class of the green sample.}
+	% \captionfootnotemark{A KNN example illustration for detecting the class of the green sample.}
+	\caption{A KNN example illustration for detecting the class of the green sample.}
 	\label{fig:knn_example}
 \end{figure}
-\footnotetext{Retrieved from: \hyperrefurl{https://ai.plainenglish.io/k-nearest-neighbors-from-scratch-633dfbeac740} on April 17, 2021.}
+% \footnotetext{Retrieved from: \hyperrefurl{https://ai.plainenglish.io/k-nearest-neighbors-from-scratch-633dfbeac740} on April 17, 2021.}
 
 Figure~\ref{fig:knn_example} illustrates a classification problem for the the sample colored in green. When KNN algorithm with K = 3 is used, the green sample is labeled as red both by majority voting and weighted majority voting. However, when K = 5, use of majority voting or weighted majority voting results in a different label for the green sample. While majority voting labels it as blue,
 weighted majority voting labels it as red.
@@ -468,12 +474,12 @@ package \cite{scikit-learn} in Python programming language are used to find neig
 
 %% https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbor-algorithms
 \begin{itemize}
-    \item \textbf{Brute Force:} Distances between all pairs of samples are computed. Brute force may be quite efficient for small sized dataset.
-    
-    \item \textbf{K-dimensional Tree:} When Brute force becomes inefficient as the size of  data set increases, K-dimensional (K-D) tree may be used to reduce the required number of computations. If samples $x_{0}$ and $x_{1}$ are very distant, and samples $x_{1}$ and $x_{2}$ are very close to each other, then we can directly conclude that the samples $x_{0}$ and $x_{2}$ are very distant to each other as well. To create a K-D tree structure, the data space partitioned along the Cartesian axes. Because of the curse of dimensionality, the construction of K-D tree may be inefficient for large dimensions. Further information can be found at \cite{kd_tree}.
-    
-    \item \textbf{Ball Tree:} Ball tree algorithm was developed to solve the size and dimensionality problems. The data space are partitioned along the spherical axes to construct the tree structure; hence it is more costly than K-D tree. However the structure itself is more effective, especially in high dimensions. Further information can be found at \cite{ball_tree}.
-    
+	\item \textbf{Brute Force:} Distances between all pairs of samples are computed. Brute force may be quite efficient for small sized dataset.
+	
+	\item \textbf{K-dimensional Tree:} When Brute force becomes inefficient as the size of  data set increases, K-dimensional (K-D) tree may be used to reduce the required number of computations. If samples $x_{0}$ and $x_{1}$ are very distant, and samples $x_{1}$ and $x_{2}$ are very close to each other, then we can directly conclude that the samples $x_{0}$ and $x_{2}$ are very distant to each other as well. To create a K-D tree structure, the data space partitioned along the Cartesian axes. Because of the curse of dimensionality, the construction of K-D tree may be inefficient for large dimensions. Further information can be found at \cite{kd_tree}.
+	
+	\item \textbf{Ball Tree:} Ball tree algorithm was developed to solve the size and dimensionality problems. The data space are partitioned along the spherical axes to construct the tree structure; hence it is more costly than K-D tree. However the structure itself is more effective, especially in high dimensions. Further information can be found at \cite{ball_tree}.
+	
 \end{itemize}
 
 \subsection{Linear Discriminant Analysis}
@@ -486,8 +492,8 @@ The linear discriminant analysis (LDA) is a supervised learning algorithm that i
 A discriminant function $g(\textbf{x})$ from $\setsymbol{R}^{d}$ to $\setsymbol{R}$ is generally a monotonically increasing function defining a boundary between two groups or classes. Here $\textbf{x} \in \setsymbol{R}^{d}$ is a sample with $d$ features and $Pr(c_{i} | \textbf{x})$ is the probability of $\textbf{x}$ belonging to class $c_{i}$ over $k$ number of classes as given below:
 
 \be
-    \label{eq:prob_x_to_ci}
-   Pr(c_{i} | \textbf{x}) = \frac{Pr(\textbf{x}|c_{i}) Pr(c_{i})}{Pr(\textbf{x})}, 
+\label{eq:prob_x_to_ci}
+Pr(c_{i} | \textbf{x}) = \frac{Pr(\textbf{x}|c_{i}) Pr(c_{i})}{Pr(\textbf{x})}, 
 \ee
 
 where $Pr(\textbf{x}|c_{i})$ is the likelihood of observing $\textbf{x}$ given class $c_{i}$, $Pr(c_{i})$ is the prior probability of belonging to class $c_{i}$, $Pr(\textbf{x})$ is the marginal likelihood of observing $\textbf{x}$, and $i = 1, \dots, k$. Here, we can discard the $Pr(\textbf{x})$ since observing $\textbf{x}$ is independent of class.
@@ -525,49 +531,49 @@ This linear discriminant function outputs the likelihood of $\textbf{x}$ to be i
 There are two presumptive cases on the linear discriminant function which are given below: 
 
 \begin{itemize}
-    \item \textbf{$\textbf{$\Sigma$}_{i} = \sigma^{2}I$:} All features have different means, but the same covariance matrix for mathematical convenience. By replacing $\textbf{$\Sigma$}_{i}$ with $\sigma^{2}I$, we yield the discriminant function as follows.
-
-    \begin{flalign}
-        \label{linear_disc_func_case1}
-        \nonumber
-        g_{i}(\textbf{x}) &= -\frac{1}{2\sigma^{2}}(\textbf{x} - \textbf{$\mu$}_{i})^{T}(\textbf{x} - \textbf{$\mu$}_{i}) -\frac{1}{2}\ln(\sigma^{2d}) + \ln(Pr(c_{i}))\:,\\
-        \nonumber
-        &= -\frac{1}{2\sigma^{2}}(\textbf{x} - \textbf{$\mu$}_{i})^{T}(\textbf{x} - \textbf{$\mu$}_{i}) + \ln(Pr(c_{i}))\quad \text{since}\:\: \frac{1}{2}\ln(\sigma^{2d})\:\: \text{is constant,}\\
-        \nonumber
-        &= -\frac{1}{2\sigma^{2}} \big ( \textbf{x}^{T}\textbf{x} - \textbf{x}^{T}\textbf{$\mu$}_{i} - \textbf{$\mu$}_{i}^{T}\textbf{x} - \textbf{$\mu$}_{i}^{T}\textbf{$\mu$}_{i} \big ) + \ln(Pr(c_{i}))\:,\\
-        \nonumber
-        &= -\frac{1}{2\sigma^{2}} \big ( -2\textbf{x}^{T}\textbf{$\mu$}_{i} - \textbf{$\mu$}_{i}^{T}\textbf{$\mu$}_{i} \big ) + \ln(Pr(c_{i}))\quad \text{since}\:\:\textbf{x}^{T}\textbf{x} \:\: \text{is constant and}\:\: \textbf{x}^{T}\textbf{$\mu$}_{i} = \textbf{$\mu$}_{i}^{T}\textbf{x}\:,\\
-        &= \frac{\textbf{$\mu$}_{i}^{T}}{\sigma^{2}}\textbf{x} + \Big (\ln(Pr(c_{i})) -\frac{\textbf{$\mu$}_{i}^{T}\textbf{$\mu$}_{i}}{2\sigma^{2}} \Big ).
-    \end{flalign}
-
-It can be seen that, the final discriminant function in equation (\ref{linear_disc_func_case1}) is a linear function. 
-
-    \item \textbf{$\textbf{$\Sigma$}_{i} = \textbf{$\Sigma$}$:} Covariance matrices are all arbitrary, but equal across classes.
-    
-    \begin{flalign}
-        \label{linear_disc_func_case2}
-        \nonumber
-        g_{i}(\textbf{x}) &= -\frac{1}{2}(\textbf{x} - \textbf{$\mu$}_{i})^{T}\textbf{$\Sigma$}^{-1}(\textbf{x} - \textbf{$\mu$}_{i}) -\frac{1}{2}\ln|\textbf{$\Sigma$}| + \ln(Pr(c_{i}))\:,\\
-        \nonumber
-        &= -\frac{1}{2}(\textbf{x} - \textbf{$\mu$}_{i})^{T}\textbf{$\Sigma$}^{-1}(\textbf{x} - \textbf{$\mu$}_{i}) + \ln(Pr(c_{i}))\quad \text{since}\:\: \ln|\textbf{$\Sigma$}|\:\: \text{is constant,}\\
-        \nonumber
-        &= \frac{-1}{2}\big ( \textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{x} - \textbf{$\mu$}_{i}\textbf{$\Sigma$}^{-1}\textbf{x} \textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} + \textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i}\big ) + \ln(Pr(c_{i}))\:.
-        \nonumber
-    \end{flalign}
-    
-Since $\textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{x}$ is constant and $\textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{x} = \textbf{$\mu$}_{i}\textbf{$\Sigma$}^{-1}\textbf{x}$, it follows that:   
-
-\begin{flalign}
-        g_{i}(\textbf{x}) 
-        &= \frac{-1}{2}\big( -2\textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} + \textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} \big) + \ln(Pr(c_{i}))\quad 
-        \nonumber
-        \\
-        &= \big( \textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1} \big) \textbf{x} + \Big(\ln(Pr(c_{i})) -\frac{1}{2}\textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} \Big)\:.
-    \end{flalign}
-
-It can be seen that, the final discriminant function in equation (\ref{linear_disc_func_case2}) is a linear function. The illustrations for fixed and varying covariance having data can be found in Figure~\ref{fig:lda_example}.
+	\item \textbf{$\textbf{$\Sigma$}_{i} = \sigma^{2}I$:} All features have different means, but the same covariance matrix for mathematical convenience. By replacing $\textbf{$\Sigma$}_{i}$ with $\sigma^{2}I$, we yield the discriminant function as follows.
+	
+	\begin{flalign}
+		\label{linear_disc_func_case1}
+		\nonumber
+		g_{i}(\textbf{x}) &= -\frac{1}{2\sigma^{2}}(\textbf{x} - \textbf{$\mu$}_{i})^{T}(\textbf{x} - \textbf{$\mu$}_{i}) -\frac{1}{2}\ln(\sigma^{2d}) + \ln(Pr(c_{i}))\:,\\
+		\nonumber
+		&= -\frac{1}{2\sigma^{2}}(\textbf{x} - \textbf{$\mu$}_{i})^{T}(\textbf{x} - \textbf{$\mu$}_{i}) + \ln(Pr(c_{i}))\quad \text{since}\:\: \frac{1}{2}\ln(\sigma^{2d})\:\: \text{is constant,}\\
+		\nonumber
+		&= -\frac{1}{2\sigma^{2}} \big ( \textbf{x}^{T}\textbf{x} - \textbf{x}^{T}\textbf{$\mu$}_{i} - \textbf{$\mu$}_{i}^{T}\textbf{x} - \textbf{$\mu$}_{i}^{T}\textbf{$\mu$}_{i} \big ) + \ln(Pr(c_{i}))\:,\\
+		\nonumber
+		&= -\frac{1}{2\sigma^{2}} \big ( -2\textbf{x}^{T}\textbf{$\mu$}_{i} - \textbf{$\mu$}_{i}^{T}\textbf{$\mu$}_{i} \big ) + \ln(Pr(c_{i}))\quad \text{since}\:\:\textbf{x}^{T}\textbf{x} \:\: \text{is constant and}\:\: \textbf{x}^{T}\textbf{$\mu$}_{i} = \textbf{$\mu$}_{i}^{T}\textbf{x}\:,\\
+		&= \frac{\textbf{$\mu$}_{i}^{T}}{\sigma^{2}}\textbf{x} + \Big (\ln(Pr(c_{i})) -\frac{\textbf{$\mu$}_{i}^{T}\textbf{$\mu$}_{i}}{2\sigma^{2}} \Big ).
+	\end{flalign}
+	
+	It can be seen that, the final discriminant function in equation (\ref{linear_disc_func_case1}) is a linear function. 
+	
+	\item \textbf{$\textbf{$\Sigma$}_{i} = \textbf{$\Sigma$}$:} Covariance matrices are all arbitrary, but equal across classes.
+	
+	\begin{flalign}
+		\label{linear_disc_func_case2}
+		\nonumber
+		g_{i}(\textbf{x}) &= -\frac{1}{2}(\textbf{x} - \textbf{$\mu$}_{i})^{T}\textbf{$\Sigma$}^{-1}(\textbf{x} - \textbf{$\mu$}_{i}) -\frac{1}{2}\ln|\textbf{$\Sigma$}| + \ln(Pr(c_{i}))\:,\\
+		\nonumber
+		&= -\frac{1}{2}(\textbf{x} - \textbf{$\mu$}_{i})^{T}\textbf{$\Sigma$}^{-1}(\textbf{x} - \textbf{$\mu$}_{i}) + \ln(Pr(c_{i}))\quad \text{since}\:\: \ln|\textbf{$\Sigma$}|\:\: \text{is constant,}\\
+		\nonumber
+		&= \frac{-1}{2}\big ( \textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{x} - \textbf{$\mu$}_{i}\textbf{$\Sigma$}^{-1}\textbf{x} \textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} + \textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i}\big ) + \ln(Pr(c_{i}))\:.
+		\nonumber
+	\end{flalign}
+	
+	Since $\textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{x}$ is constant and $\textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{x} = \textbf{$\mu$}_{i}\textbf{$\Sigma$}^{-1}\textbf{x}$, it follows that:   
+	
+	\begin{flalign}
+		g_{i}(\textbf{x}) 
+		&= \frac{-1}{2}\big( -2\textbf{x}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} + \textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} \big) + \ln(Pr(c_{i}))\quad 
+		\nonumber
+		\\
+		&= \big( \textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1} \big) \textbf{x} + \Big(\ln(Pr(c_{i})) -\frac{1}{2}\textbf{$\mu$}_{i}^{T}\textbf{$\Sigma$}^{-1}\textbf{$\mu$}_{i} \Big)\:.
+	\end{flalign}
+	
+	It can be seen that, the final discriminant function in equation (\ref{linear_disc_func_case2}) is a linear function. The illustrations for fixed and varying covariance having data can be found in Figure~\ref{fig:lda_example}.
 \end{itemize}
-    
+
 
 
 \begin{figure}[h]
@@ -589,8 +595,8 @@ When the number of features is very high, LDA may experience computational diffi
 for some real valued $\alpha$ in between the range of $[0, 1]$. We can consider this regularization as what we are used to use in Section~\ref{sec:CH5_regularization}:
 
 \begin{flalign}
-    &\widehat{\textbf{$\Sigma$}} = \lambda\textbf{$\Sigma$} + I\quad\text{, or}\\
-    &\widehat{\textbf{$\Sigma$}} = \textbf{$\Sigma$} + \lambda I\:,
+	&\widehat{\textbf{$\Sigma$}} = \lambda\textbf{$\Sigma$} + I\quad\text{, or}\\
+	&\widehat{\textbf{$\Sigma$}} = \textbf{$\Sigma$} + \lambda I\:,
 \end{flalign}
 
 for positive real valued regularization parameter $\lambda$. Consequently, the regularized LDA is formulated as:

@@ -1,0 +1,14 @@
+[s11] - Figure 2.2: Examples for COVID-19 chest X-rays filmed with PA, AP, AP-Supine, and Lateral projections, respectively
+Done - [s13] - Figure 3.1: A simple neural network with two neurons.
+[s16] - Figure 3.2: Illustration of under-fitting, well-fitting, and over-fitting of models to the data
+Done - [s20] - Figure 3.5: An example for a simple CNN architecture
+Done - [s24] - Figure 3.7: Maximum pooling operation sample with 2×2 window and stride value of 2
+Done - [s26] - Figure 3.9: The usage of a full-connected layer for a binary classifier
+[s27] - Figure 3.10: Different fine-tuning strategies on a pre-trained model
+[s29] - Figure 3.13: An illustration for residual block
+[s32] - Figure 3.15: An illustration of VGG architectures
+[s35] - Figure 4.3: K-fold cross-validation
+Done - [s38] - Figure 4.4: A Hyper-plane and margins of an SVM for a binary classification problem
+Done - [s41] - Figure 4.5: The dual and primal problems, and the duality gap between their extreme points
+Done - [s46] - Figure 4.7: A KNN example illustration for detecting the class of the green sample
+[s50] - Figure 4.8: LDA process for fixed and varying covariances
