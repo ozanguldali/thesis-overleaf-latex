@@ -409,6 +409,8 @@ Simonyan and Zisserman \cite{VGG} proposed a very profound architecture for the 
 \end{figure}
 \footnotetext{Retrieved from: \hyperrefurl{http://datahacker.rs/deep-learning-vgg-16-vs-vgg-19/} on April 4, 2021.}
 
+\newpage
+
 \subsubsection*{\textit{VGG16}}
 
 The model architecture starts with an input layer, and there are following 12 convolution layers using $3 \times 3$ filters. There are a total of 5 maximum pooling layers used after some convolution layers. In maximum pooling, $2 \times 2$ windows were used with stride as 2. After the convolution layers, there are three fully-connected layers such that the first two of which have 4096 neurons and the last one has neurons in the size of the number of classes, which is 1000 in Figure~\ref{fig:vgg16_vgg19_archs}. The ReLU activation function was used after all the hidden layers.

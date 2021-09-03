@@ -11,18 +11,18 @@ h
 The construction stages of the experiments we aim to carry out in the thesis can be listed as follows:
 
 \begin{enumerate}
-    \item Determine the problem to study,
-    \item Explore the data source and choose the one containing appropriate samples  for the determined problem, which is a chest X-ray image data source consisting of COVID-19 samples and non-COVID-19 samples and including the demographic information of samples for our study,
-    \item Know and understand the data source, and define classes,
-    \item Determine the rules to construct the data set for experiments by cleaning the samples from data source, then construct the data set and divide it into train and test sets containing each class, \label{dividing_step}
-    \item Do CNN experiments on different pre-trained models with different transfer learning strategies and with different optimizers, then save the results and model weights to distinct files,
-    \item Choose the best results for each model, and use their model weight files to extract the deep features of images in dataset, say $X_{cnn}$,
-    \item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{cnn}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set, \label{ML_experiment_step}
-    \item Extract the demographic information from dataset for each sample, and construct the demographic information feature matrix, say $X_{info}$,
-    \item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{info}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set,
-    \item Combine feature matrices $X_{cnn}$ and $X_{info}$ column-wise to construct the feature matrix for each sample, say $X_{all}$, i.e. the feature matrix consisting of the deep features of image data and demographic information of each sample,
-    \item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{all}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set, and
-    \item Report all results of experiments.
+	\item Determine the problem to study,
+	\item Explore the data source and choose the one containing appropriate samples  for the determined problem, which is a chest X-ray image data source consisting of COVID-19 samples and non-COVID-19 samples and including the demographic information of samples for our study,
+	\item Know and understand the data source, and define classes,
+	\item Determine the rules to construct the data set for experiments by cleaning the samples from data source, then construct the data set and divide it into train and test sets containing each class, \label{dividing_step}
+	\item Do CNN experiments on different pre-trained models with different transfer learning strategies and with different optimizers, then save the results and model weights to distinct files,
+	\item Choose the best results for each model, and use their model weight files to extract the deep features of images in dataset, say $X_{cnn}$,
+	\item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{cnn}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set, \label{ML_experiment_step}
+	\item Extract the demographic information from dataset for each sample, and construct the demographic information feature matrix, say $X_{info}$,
+	\item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{info}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set,
+	\item Combine feature matrices $X_{cnn}$ and $X_{info}$ column-wise to construct the feature matrix for each sample, say $X_{all}$, i.e. the feature matrix consisting of the deep features of image data and demographic information of each sample,
+	\item Do ML experiments using grid search to reach the optimal hyper-parameters on different models over $X_{all}$ feature matrix with two methodologies: 1) apply cross-validation only on train set separated in step (\ref{dividing_step}) to yield the generalized results, and 2) train on train set and test on test set separated in step (\ref{dividing_step}) to yield the results for predetermined test set, and
+	\item Report all results of experiments.
 \end{enumerate}
 
 \section{Data Set}
@@ -63,25 +63,25 @@ In the thesis,  position augmentation, that can be seen via an example in Figure
 The number of data on train and test sets for each class after data augmentation can be seen in Table~\ref{tab:final_dataset_size}.
 
 \begin{table*}[h]
-{
-    \setlength{\tabcolsep}{14pt}
-    \caption{The distribution of class sizes across train (including augmented train set) and test sets.}
-    \begin{center}
-    % \vspace{-6mm}
-    \begin{tabular}{lccrrrrr}
-    \hline
-    \multirow{2}{*}{\textbf{Class}} & \multirow{2}{*}{\textbf{Original Set}} & \multicolumn{2}{c}{\textbf{Train Set}} & \multirow{2}{*}{\textbf{Test Set}} \\ \cline{3-4}
-                           &                               & \textbf{Chosen}  & \textbf{Augmented}  &    \\
-    \hline \hline
-    COVID-19           & 131                           & 105     & \multicolumn{1}{c}{630} & \multicolumn{1}{c}{26} \\
-    Non-COVID-19               & 123                           & 98      & \multicolumn{1}{c}{588} & \multicolumn{1}{c}{25} \\
-    TOTAL                  & 254                           & 203     & \multicolumn{1}{c}{1218} & \multicolumn{1}{c}{51} \\   
-    \hline
-    \end{tabular}
-    % \vspace{-6mm}
-    \end{center}
-    \label{tab:final_dataset_size}
-}
+	{
+		\setlength{\tabcolsep}{14pt}
+		\caption{The distribution of class sizes across train (including augmented train set) and test sets.}
+		\begin{center}
+			% \vspace{-6mm}
+			\begin{tabular}{lccrrrrr}
+				\hline
+				\multirow{2}{*}{\textbf{Class}} & \multirow{2}{*}{\textbf{Original Set}} & \multicolumn{2}{c}{\textbf{Train Set}} & \multirow{2}{*}{\textbf{Test Set}} \\ \cline{3-4}
+				&                               & \textbf{Chosen}  & \textbf{Augmented}  &    \\
+				\hline \hline
+				COVID-19           & 131                           & 105     & \multicolumn{1}{c}{630} & \multicolumn{1}{c}{26} \\
+				Non-COVID-19               & 123                           & 98      & \multicolumn{1}{c}{588} & \multicolumn{1}{c}{25} \\
+				TOTAL                  & 254                           & 203     & \multicolumn{1}{c}{1218} & \multicolumn{1}{c}{51} \\   
+				\hline
+			\end{tabular}
+			% \vspace{-6mm}
+		\end{center}
+		\label{tab:final_dataset_size}
+	}
 \end{table*}
 
 \begin{figure}[h]
@@ -96,6 +96,8 @@ The number of data on train and test sets for each class after data augmentation
 	\label{augmented_sample}
 \end{figure}
 
+\newpage
+
 \section{Training and Testing with Convolutional Neural Network Models}\label{sec:CH5_cnn_experiments}
 
 All CNN experiments used in this thesis was performed on pre-trained CNN models which are AlexNet, ResNet-18, ResNet-34, ResNet-50, VGG16, and VGG19. In other words, the appropriate model weights were used with different strategies explained in Section~\ref{CH3:transfer_learning} to feed the models.
@@ -103,9 +105,9 @@ All CNN experiments used in this thesis was performed on pre-trained CNN models 
 Since our data set is small and the data content is different from ImageNet dataset \cite{imagenet}, we experimented two different transfer learning strategies such that the first is to train the entire model, and the second is to freeze the first few layers and train others. The frozen layers on the second strategy for each experiment model are:
 
 \begin{itemize}
-    \item The first convolution layer and the following ReLU and maximum pooling layers for AlexNet architecture,
-    \item The first convolution layer and the following batch normalization, ReLU, and maximum pooling layers for ResNet architectures, and
-    \item The first six layers which are in order of convolution, batch normalization, ReLU, convolution, batch normalization, ReLU, and maximum pooling layers for VGG architectures.
+	\item The first convolution layer and the following ReLU and maximum pooling layers for AlexNet architecture,
+	\item The first convolution layer and the following batch normalization, ReLU, and maximum pooling layers for ResNet architectures, and
+	\item The first six layers which are in order of convolution, batch normalization, ReLU, convolution, batch normalization, ReLU, and maximum pooling layers for VGG architectures.
 \end{itemize}
 
 Throughout the study, our experience and earlier comparison results, which are not reported here, have shown that training the entire model instead of freezing the associated layers discussed above for the corresponding architectures gives more minimal losses and more accurate classification results. However, it must be remarked that, even the number of frozen layers are not high, since the number of parameters is smaller in freezing approach than the number of parameters in training the entire model, the computation time of each batch is observably shorter in freezing approach.
@@ -119,16 +121,16 @@ The cross-entropy loss function, explained in Section~\ref{sec:CH3_cross_entropy
 Final hyper-parameters that are accepted as the best for each model differ under each different optimizer. As an example, the best final hyper-parameters for ResNet-50 model under SGD momentum, Adam, and AdamW optimizers can be seen in Table~\ref{tab:cnn_hyperparameters}. Furthermore, in terms of computational time and obtained losses, we encountered the optimal batch size  as $2^4$ in our experiments. Hence, the number of iterations at each epoch was 77 for augmented train data and 4 for test data which was used both on test and validation processes.
 
 \begin{table}[h]
-\centering
-\caption{Final hyper-parameters for ResNet-50 model.}
-\label{tab:cnn_hyperparameters}
-\begin{tabular}{lccc}
-\hline 
-\multicolumn{1}{c}{\textbf{Optimizer}} & \textbf{Learning Rate} & \textbf{Momentum} & \textbf{Weight Decay} \\ \hline \hline
-SGD Momentum                           & 1e-4                   & 0.9               & -                     \\ 
-Adam                                   & 1e-5                   & -                 & 1e-3                     \\ 
-AdamW                                  & 1e-5                   & -                 & 1e-4   \\  \hline              
-\end{tabular}
+	\centering
+	\caption{Final hyper-parameters for ResNet-50 model.}
+	\label{tab:cnn_hyperparameters}
+	\begin{tabular}{lccc}
+		\hline 
+		\multicolumn{1}{c}{\textbf{Optimizer}} & \textbf{Learning Rate} & \textbf{Momentum} & \textbf{Weight Decay} \\ \hline \hline
+		SGD Momentum                           & 1e-4                   & 0.9               & -                     \\ 
+		Adam                                   & 1e-5                   & -                 & 1e-3                     \\ 
+		AdamW                                  & 1e-5                   & -                 & 1e-4   \\  \hline              
+	\end{tabular}
 \end{table}
 
 All pre-trained CNN models were experimented by setting the final layer output as the class size, i.e. 2. Furthermore, for all architectures experienced in this thesis,  a modification is applied onto the classification section by adding a block of ReLU, drop-out, and fully-connected layers right after the last fully-connected layer to adapt the models for our work.
@@ -139,13 +141,13 @@ Figure~\ref{fig:resnet50_visualization} describes how the process starts with an
 
 
 \begin{landscape}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\linewidth]{fig/resnet50_visualization.png}
-    \vspace{1mm}
-    \caption{The sample visualization representing one iteration on ResNet-50 architecture and class probability result for COVID-19 labeled data from our dataset. The higher resolution version of image is available at \\  \textcolor{blue}{\hyperrefurl{https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}}}
-    \label{fig:resnet50_visualization}
-\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\linewidth]{fig/resnet50_visualization.png}
+		\vspace{1mm}
+		\caption{The sample visualization representing one iteration on ResNet-50 architecture and class probability result for COVID-19 labeled data from our dataset. The higher resolution version of image is available at \\  \textcolor{blue}{\hyperrefurl{https://github.com/ozanguldali/modelsWithLASSO/blob/master/figures/resnet50_visual.png}}}
+		\label{fig:resnet50_visualization}
+	\end{figure}
 \end{landscape}
 
 \section{Deep Feature Extraction}
@@ -155,20 +157,20 @@ After training, validating, and testing the data set on pre-trained CNN models, 
 Here, the modifications on CNN models stated at previous subsection show its another purpose. The deep features are extracted from the latest fully-connected layer right before the modified classification block consisting of ReLu, drop-out, and the fully-connected layer. Figure~\ref{fig:modified_classification_blocks} briefly gives the deep feature extraction layer and the modified classification block for simple AlexNet, ResNet and VGG architectures. As it can be seen from Figure~\ref{fig:modified_classification_blocks}, the deep features are extracted from:
 
 \begin{itemize}
-    \item the third fully-connected layer for AlexNet architecture,
-    \item the first fully-connected layer for ResNet architectures, and
-    \item the third fully-connected layer for VGG architectures,
+	\item the third fully-connected layer for AlexNet architecture,
+	\item the first fully-connected layer for ResNet architectures, and
+	\item the third fully-connected layer for VGG architectures,
 \end{itemize}
 
 which are all framed in red color. 
 Afterwards, the deep features extracted from CNN models are used to feed machine learning algorithms to improve the classification success.
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=.8\linewidth]{fig/modified_classification_blocks.png}
-    \vspace{2mm}
-    \caption{Illustration of modified classification blocks for AlexNet, ResNet, and VGG.}
-    \label{fig:modified_classification_blocks}
+	\centering
+	\includegraphics[width=.8\linewidth]{fig/modified_classification_blocks.png}
+	\vspace{2mm}
+	\caption{Illustration of modified classification blocks for AlexNet, ResNet, and VGG.}
+	\label{fig:modified_classification_blocks}
 \end{figure}
 
 \section{Forming Feature Matrices} \label{sec:CH5_forming_features}
@@ -180,11 +182,11 @@ On the other part, we have demographic information, that's age and gender inform
 Hence, as can be seen in the Figure~\ref{fig:feature_maps}, the merged feature matrix denoted by $X_{all}$ has the feature size as $d_{all} = 1002$, where the number of rows, N, is 254 in our study.
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=.6\linewidth]{fig/feature_maps.png}
-    \vspace{2mm}
-    \caption{Feature maps where $d_{cnn} = 1000$, $d_{info} = 2$, and $d_{all} = d_{cnn} + d_{info} = 1002$.}
-    \label{fig:feature_maps}
+	\centering
+	\includegraphics[width=.6\linewidth]{fig/feature_maps.png}
+	\vspace{2mm}
+	\caption{Feature maps where $d_{cnn} = 1000$, $d_{info} = 2$, and $d_{all} = d_{cnn} + d_{info} = 1002$.}
+	\label{fig:feature_maps}
 \end{figure}
 
 \section{Data Pre-Processing}
@@ -205,26 +207,28 @@ where $\mu$ is the mean of training samples and $\sigma$ is set as 1.
 Data normalization scales each individual sample to have a real value in the unit interval [0.0, 1.0]. Two ways of normalization was experimented which are least absolute technique, known as L1 normalization, and least squares technique, known as L2 normalization.
 
 \begin{itemize}
-    \item \textbf{L1 Norm:} Scales the sum of the absolute differences of each individual feature for a sample to 1. That is, it scales the $S_{{L1}_{k}}$ to 1 in the equation (\ref{eq:data_l1_norm}):
-    
-    \be
-    \label{eq:data_l1_norm}
-    S_{{L1}_{k}} = \sum_{i=1}^{d} \big|y_{k} - X_{k,i}\big|\:,
-    \ee
-    
-    where d is the number of features, $X_{k}$ is the $k^{th}$ sample ($k=1,\ldots,N$) and $X_{k,i}$ is the $i^{th}$ feature value of corresponding sample, and $y_{k}$ is the target value for corresponding sample. Here, the scaling ratio is $1 / S_{{L1}_{k}}$; thus, $X_{k} / S_{{L1}_{k}}$ gives the L1 normalized feature values for this sample.
-    
-    \item \textbf{L2 Norm:} Scales the sum of the squares of differences of each individual feature for a sample to 1. That is, it scales the $S_{{L2}_{k}}$ to 1 in the equation (\ref{eq:data_l2_norm}):
-    
-    \be
-    \label{eq:data_l2_norm}
-    S_{{L2}_{k}} = \sum_{i=1}^{d} \big(y_{k} - X_{k,i}\big)^{2}\:,
-    \ee
-    
-    where d is the number of features, $X_{k}$ is the $k^{th}$ sample ($k=1,\ldots,N$) and $X_{k,i}$ is the $i^{th}$ feature value of corresponding sample, and $y_{k}$ is the target value for corresponding sample. Here, the scaling ratio is $\sqrt{1 / S_{{L2}_{k}}}$; thus, $X_{k} / \sqrt{S_{{L2}_{k}}}$ gives the L2 normalized feature values for this sample.
+	\item \textbf{L1 Norm:} Scales the sum of the absolute differences of each individual feature for a sample to 1. That is, it scales the $S_{{L1}_{k}}$ to 1 in the equation (\ref{eq:data_l1_norm}):
+	
+	\be
+	\label{eq:data_l1_norm}
+	S_{{L1}_{k}} = \sum_{i=1}^{d} \big|y_{k} - X_{k,i}\big|\:,
+	\ee
+	
+	where d is the number of features, $X_{k}$ is the $k^{th}$ sample ($k=1,\ldots,N$) and $X_{k,i}$ is the $i^{th}$ feature value of corresponding sample, and $y_{k}$ is the target value for corresponding sample. Here, the scaling ratio is $1 / S_{{L1}_{k}}$; thus, $X_{k} / S_{{L1}_{k}}$ gives the L1 normalized feature values for this sample.
+	
+	\item \textbf{L2 Norm:} Scales the sum of the squares of differences of each individual feature for a sample to 1. That is, it scales the $S_{{L2}_{k}}$ to 1 in the equation (\ref{eq:data_l2_norm}):
+	
+	\be
+	\label{eq:data_l2_norm}
+	S_{{L2}_{k}} = \sum_{i=1}^{d} \big(y_{k} - X_{k,i}\big)^{2}\:,
+	\ee
+	
+	where d is the number of features, $X_{k}$ is the $k^{th}$ sample ($k=1,\ldots,N$) and $X_{k,i}$ is the $i^{th}$ feature value of corresponding sample, and $y_{k}$ is the target value for corresponding sample. Here, the scaling ratio is $\sqrt{1 / S_{{L2}_{k}}}$; thus, $X_{k} / \sqrt{S_{{L2}_{k}}}$ gives the L2 normalized feature values for this sample.
 \end{itemize}
 
 We used the L2 normalization as the final settings of the data pre-processing pipeline.
+
+\newpage
 
 \section{Hyper-Parameter Tuning}
 
@@ -233,13 +237,13 @@ For each machine learning algorithm, there exists several hyper-parameters and t
 There are three common hyper-parameter optimization methods in machine learning such that grid search, random search, and Bayesian optimization.
 
 \begin{itemize}
-    
-    \item \textbf{Grid Search:} All combinations between hyper-parameter options are experimented. For instance, if there exists $m$ number of hyper-parameters and each of them has $a_{i}$ options where $a_{i}$'s are positive integers for $i \in \{1,2,\dots,m\}$, then the total number of grid search iterations are $\prod_{i=0}^{m} a_{i}$. Moreover, if K-Fold cross validation is applied, the number of iterations are raised to $K \times \prod_{i=0}^{m} a_{i}$.
-    
-    \item \textbf{Random Search:} Over all possible hyper-parameter combinations, randomly chosen ones are experienced. The number of combinations to be experienced are determined by the researcher. Here, the number of chosen combinations are less then the number of all combinations.
-    
-    \item \textbf{Bayesian Optimization:} This methodology is based on Bayesian principle. While the combinations of hyper-parameter options are experimented, the previously known results leads to create a new combination space by using Bayesian rule. This time, the choice of combinations are not random, but depends on the useful or irrelevant combination estimation.
-    
+	
+	\item \textbf{Grid Search:} All combinations between hyper-parameter options are experimented. For instance, if there exists $m$ number of hyper-parameters and each of them has $a_{i}$ options where $a_{i}$'s are positive integers for $i \in \{1,2,\dots,m\}$, then the total number of grid search iterations are $\prod_{i=0}^{m} a_{i}$. Moreover, if K-Fold cross validation is applied, the number of iterations are raised to $K \times \prod_{i=0}^{m} a_{i}$.
+	
+	\item \textbf{Random Search:} Over all possible hyper-parameter combinations, randomly chosen ones are experienced. The number of combinations to be experienced are determined by the researcher. Here, the number of chosen combinations are less then the number of all combinations.
+	
+	\item \textbf{Bayesian Optimization:} This methodology is based on Bayesian principle. While the combinations of hyper-parameter options are experimented, the previously known results leads to create a new combination space by using Bayesian rule. This time, the choice of combinations are not random, but depends on the useful or irrelevant combination estimation.
+	
 \end{itemize}
 
 In thesis, we experimented grid search with 10-fold cross validation.
@@ -261,53 +265,53 @@ Penalty terms, which are no penalty, lasso penalty and ridge penalty, were not c
 When the optimal hyper-parameter combinations were determined with the aim of generalization, the model weights obtained by the training of a corresponding machine learning algorithm with these hyper-parameters are used on testing stage. The final results were achieved by testing on this fitted model. Furthermore, another grid search was applied on determined train and test data, and the results were compared by the generalized ones.
 
 \begin{table}[h]
-\centering
-\caption{The hyper-parameter tuning for SVM algorithm.}
-\label{tab:svm_hyperparameter_table}
-\begin{tabular}{lcc}
-\hline
-\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{Lasso Penalty}            & \textbf{Ridge Penalty} \\ \hline \hline
-Kernel Function                              & linear     & (linear, sigmoid, rbf)               \\ \hline  
-Regularization Parameter                     & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular}                        & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular} \\ \hline           
-\end{tabular}
+	\centering
+	\caption{The hyper-parameter tuning for SVM algorithm.}
+	\label{tab:svm_hyperparameter_table}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{Lasso Penalty}            & \textbf{Ridge Penalty} \\ \hline \hline
+		Kernel Function                              & linear     & (linear, sigmoid, rbf)               \\ \hline  
+		Regularization Parameter                     & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular}                        & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular} \\ \hline           
+	\end{tabular}
 \end{table}
 
 \begin{table}[h]
-\centering
-\caption{The hyper-parameter tuning for LR algorithm.}
-\label{tab:lr_hyperparameter_table}
-\begin{tabular}{lccc}
- \hline
-\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{No Penalty}                                                    & \textbf{Lasso Penalty}                                                    & \textbf{Ridge Penalty}                                                            \\ \hline \hline
-Solver Function                              & \begin{tabular}[c]{@{}c@{}}(newton-cg, lbfgs, \\ sag, saga)\end{tabular} & (liblinear, saga)                                                           & \begin{tabular}[c]{@{}c@{}}(newton-cg, lbfgs, sag, \\ saga, liblinear)\end{tabular} \\ \hline
-Regularization Parameter                     & -                                                                      & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular} & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular}         \\ \hline
-\end{tabular}
+	\centering
+	\caption{The hyper-parameter tuning for LR algorithm.}
+	\label{tab:lr_hyperparameter_table}
+	\begin{tabular}{lccc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{No Penalty}                                                    & \textbf{Lasso Penalty}                                                    & \textbf{Ridge Penalty}                                                            \\ \hline \hline
+		Solver Function                              & \begin{tabular}[c]{@{}c@{}}(newton-cg, lbfgs, \\ sag, saga)\end{tabular} & (liblinear, saga)                                                           & \begin{tabular}[c]{@{}c@{}}(newton-cg, lbfgs, sag, \\ saga, liblinear)\end{tabular} \\ \hline
+		Regularization Parameter                     & -                                                                      & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular} & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular}         \\ \hline
+	\end{tabular}
 \end{table}
 
 \begin{table}[h]
-\centering
-\caption{The hyper-parameter tuning for KNN algorithm.}
-\label{tab:knn_hyperparameter_table}
-\begin{tabular}{lc}
-\hline
-\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{No Penalty}                                 \\ \hline \hline
-Number of Neighbors                          & (3, 5, $\sqrt \text{the number of samples})$                         \\ \hline
-Type of Majority Voting                      & (uniform, weighted)                                   \\ \hline
-Neighborhood Finder                          & \multicolumn{1}{l}{(brute force, ball tree, k dimensional tree)} \\ \hline
-Metric Function                              & \multicolumn{1}{l}{(euclidean, manhattan, chebyshev)} \\ \hline
-\end{tabular}
+	\centering
+	\caption{The hyper-parameter tuning for KNN algorithm.}
+	\label{tab:knn_hyperparameter_table}
+	\begin{tabular}{lc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}} & \textbf{No Penalty}                                 \\ \hline \hline
+		Number of Neighbors                          & (3, 5, $\sqrt \text{the number of samples})$                         \\ \hline
+		Type of Majority Voting                      & (uniform, weighted)                                   \\ \hline
+		Neighborhood Finder                          & \multicolumn{1}{l}{(brute force, ball tree, k dimensional tree)} \\ \hline
+		Metric Function                              & \multicolumn{1}{l}{(euclidean, manhattan, chebyshev)} \\ \hline
+	\end{tabular}
 \end{table}
 
 \begin{table}[h]
-\centering
-\caption{The hyper-parameter tuning for LDA algorithm.}
-\label{tab:lda_hyperparameter_table}
-\begin{tabular}{lcc}
-\hline
-\multicolumn{1}{c}{\textbf{Hyper-Parameter}}                                                                 & \textbf{No Penalty} & \textbf{Lasso Penalty}                                                   \\ \hline \hline
-Solver Function                                                                                              & (svd, lsqr, eigen)    & -                                                                        \\ \hline 
-\begin{tabular}[c]{@{}l@{}}Computing the Weighted \\ Within-Class Covariance\\ (for svd solver)\end{tabular} & (Yes, No)             & -                                                                        \\ \hline
-Regularization Parameter                                                                                     & -                   & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular} \\ \hline
-\end{tabular}
+	\centering
+	\caption{The hyper-parameter tuning for LDA algorithm.}
+	\label{tab:lda_hyperparameter_table}
+	\begin{tabular}{lcc}
+		\hline
+		\multicolumn{1}{c}{\textbf{Hyper-Parameter}}                                                                 & \textbf{No Penalty} & \textbf{Lasso Penalty}                                                   \\ \hline \hline
+		Solver Function                                                                                              & (svd, lsqr, eigen)    & -                                                                        \\ \hline 
+		\begin{tabular}[c]{@{}l@{}}Computing the Weighted \\ Within-Class Covariance\\ (for svd solver)\end{tabular} & (Yes, No)             & -                                                                        \\ \hline
+		Regularization Parameter                                                                                     & -                   & \begin{tabular}[c]{@{}c@{}}(5e-5, 1e-4, 2e-4, \\ 5e-4, 5e-3, 1e-2, \\ 2e-2, 5e-2, 0.1, \\ 0.5, 1.0, 2.0, \\ 5.0, 10.0, 15.0)\end{tabular} \\ \hline
+	\end{tabular}
 \end{table}
 

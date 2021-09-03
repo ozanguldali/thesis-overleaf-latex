@@ -16,38 +16,38 @@
 \contentsline {table}{\numberline {6.8}{\ignorespaces The confusion matrix of VGG19 model result with SGD Momentum optimizer.\relax }}{79}{table.caption.59}%
 \contentsline {table}{\numberline {6.9}{\ignorespaces The results of machine learning experiments on demographic information.\relax }}{79}{table.caption.60}%
 \contentsline {table}{\numberline {6.10}{\ignorespaces Confusion matrix for KNN experiment on demographic information.\relax }}{80}{table.caption.61}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces The results of machine learning experiments on $X_{cnn}$. \relax }}{81}{table.caption.62}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Lasso penalty for $X_{cnn\_ResNet50}$.\relax }}{82}{table.caption.63}%
-\contentsline {table}{\numberline {6.13}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{82}{table.caption.64}%
-\contentsline {table}{\numberline {6.14}{\ignorespaces The confusion matrices and results obtained by LR algorithm for $X_{cnn\_ResNet50}$.\relax }}{82}{table.caption.65}%
-\contentsline {table}{\numberline {6.15}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Lasso penalty on $X_{cnn\_ResNet50}$.\relax }}{83}{table.caption.66}%
-\contentsline {table}{\numberline {6.16}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{83}{table.caption.67}%
-\contentsline {table}{\numberline {6.17}{\ignorespaces The confusion matrices and results obtained by KNN algorithm on $X_{cnn\_ResNet50}$.\relax }}{83}{table.caption.68}%
-\contentsline {table}{\numberline {6.18}{\ignorespaces The confusion matrices and results obtained by LDA algorithm on $X_{cnn\_ResNet50}$.\relax }}{83}{table.caption.69}%
-\contentsline {table}{\numberline {6.19}{\ignorespaces The confusion matrices and results obtained by LDA algorithm with Lasso penalty on $X_{cnn\_ResNet50}$.\relax }}{84}{table.caption.70}%
-\contentsline {table}{\numberline {6.20}{\ignorespaces The results of machine learning experiments on $X_{all}$.\relax }}{87}{table.caption.71}%
-\contentsline {table}{\numberline {6.21}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{88}{table.caption.72}%
-\contentsline {table}{\numberline {6.22}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{88}{table.caption.73}%
-\contentsline {table}{\numberline {6.23}{\ignorespaces The confusion matrices and results obtained by LR algorithm on $X_{all\_ResNet50}$.\relax }}{88}{table.caption.74}%
-\contentsline {table}{\numberline {6.24}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{89}{table.caption.75}%
-\contentsline {table}{\numberline {6.25}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{89}{table.caption.76}%
-\contentsline {table}{\numberline {6.26}{\ignorespaces The confusion matrices and results obtained by KNN algorithm on $X_{all\_ResNet50}$.\relax }}{89}{table.caption.77}%
-\contentsline {table}{\numberline {6.27}{\ignorespaces The confusion matrices and results obtained by LDA algorithm on $X_{all\_ResNet50}$.\relax }}{89}{table.caption.78}%
-\contentsline {table}{\numberline {6.28}{\ignorespaces The confusion matrices and results obtained by LDA algorithm with Lasso penalty for $X_{all\_ResNet50}$.\relax }}{90}{table.caption.79}%
-\contentsline {table}{\numberline {A.1}{\ignorespaces The tuned hyper-parameters of KNN algorithm on $X_{info}$.\relax }}{103}{table.caption.81}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Lasso penalty on $X_{cnn\_ResNet50}$.\relax }}{103}{table.caption.82}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{103}{table.caption.83}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces The tuned hyper-parameters of LR algorithm on $X_{cnn\_ResNet50}$.\relax }}{103}{table.caption.84}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces The tuned hyper-parameters of LR algorithm wit Lasso penalty for $X_{cnn\_ResNet50}$.\relax }}{103}{table.caption.85}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces The tuned hyper-parameters of LR algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{104}{table.caption.86}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces The tuned hyper-parameters of KNN algorithm on $X_{cnn\_ResNet50}$.\relax }}{104}{table.caption.87}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces The tuned hyper-parameters of LDA algorithm on $X_{cnn\_ResNet50}$.\relax }}{104}{table.caption.88}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces The tuned hyper-parameters of LDA algorithm with Lasso penalty for $X_{cnn\_ResNet50}$.\relax }}{104}{table.caption.89}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{104}{table.caption.90}%
-\contentsline {table}{\numberline {A.11}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{104}{table.caption.91}%
-\contentsline {table}{\numberline {A.12}{\ignorespaces The tuned hyper-parameters of LR algorithm on $X_{all\_ResNet50}$.\relax }}{104}{table.caption.92}%
-\contentsline {table}{\numberline {A.13}{\ignorespaces The tuned hyper-parameters of LR algorithm with Lasso on $X_{all\_ResNet50}$.\relax }}{105}{table.caption.93}%
-\contentsline {table}{\numberline {A.14}{\ignorespaces The tuned hyper-parameters of LR algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{105}{table.caption.94}%
-\contentsline {table}{\numberline {A.15}{\ignorespaces The tuned hyper-parameters of KNN algorithm on $X_{all\_ResNet50}$.\relax }}{105}{table.caption.95}%
-\contentsline {table}{\numberline {A.16}{\ignorespaces The tuned hyper-parameters of LDA algorithm on $X_{all\_ResNet50}$.\relax }}{105}{table.caption.96}%
-\contentsline {table}{\numberline {A.17}{\ignorespaces The tuned hyper-parameters of LDA algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{105}{table.caption.97}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces The results of machine learning experiments on $X_{cnn}$. \relax }}{82}{table.caption.62}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Lasso penalty for $X_{cnn\_ResNet50}$.\relax }}{83}{table.caption.63}%
+\contentsline {table}{\numberline {6.13}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{83}{table.caption.64}%
+\contentsline {table}{\numberline {6.14}{\ignorespaces The confusion matrices and results obtained by LR algorithm for $X_{cnn\_ResNet50}$.\relax }}{83}{table.caption.65}%
+\contentsline {table}{\numberline {6.15}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Lasso penalty on $X_{cnn\_ResNet50}$.\relax }}{84}{table.caption.66}%
+\contentsline {table}{\numberline {6.16}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{84}{table.caption.67}%
+\contentsline {table}{\numberline {6.17}{\ignorespaces The confusion matrices and results obtained by KNN algorithm on $X_{cnn\_ResNet50}$.\relax }}{84}{table.caption.68}%
+\contentsline {table}{\numberline {6.18}{\ignorespaces The confusion matrices and results obtained by LDA algorithm on $X_{cnn\_ResNet50}$.\relax }}{84}{table.caption.69}%
+\contentsline {table}{\numberline {6.19}{\ignorespaces The confusion matrices and results obtained by LDA algorithm with Lasso penalty on $X_{cnn\_ResNet50}$.\relax }}{85}{table.caption.70}%
+\contentsline {table}{\numberline {6.20}{\ignorespaces The results of machine learning experiments on $X_{all}$.\relax }}{88}{table.caption.71}%
+\contentsline {table}{\numberline {6.21}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{89}{table.caption.72}%
+\contentsline {table}{\numberline {6.22}{\ignorespaces The confusion matrices and results obtained by SVM algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{89}{table.caption.73}%
+\contentsline {table}{\numberline {6.23}{\ignorespaces The confusion matrices and results obtained by LR algorithm on $X_{all\_ResNet50}$.\relax }}{89}{table.caption.74}%
+\contentsline {table}{\numberline {6.24}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{90}{table.caption.75}%
+\contentsline {table}{\numberline {6.25}{\ignorespaces The confusion matrices and results obtained by LR algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{90}{table.caption.76}%
+\contentsline {table}{\numberline {6.26}{\ignorespaces The confusion matrices and results obtained by KNN algorithm on $X_{all\_ResNet50}$.\relax }}{90}{table.caption.77}%
+\contentsline {table}{\numberline {6.27}{\ignorespaces The confusion matrices and results obtained by LDA algorithm on $X_{all\_ResNet50}$.\relax }}{90}{table.caption.78}%
+\contentsline {table}{\numberline {6.28}{\ignorespaces The confusion matrices and results obtained by LDA algorithm with Lasso penalty for $X_{all\_ResNet50}$.\relax }}{91}{table.caption.79}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces The tuned hyper-parameters of KNN algorithm on $X_{info}$.\relax }}{105}{table.caption.81}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Lasso penalty on $X_{cnn\_ResNet50}$.\relax }}{105}{table.caption.82}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{105}{table.caption.83}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces The tuned hyper-parameters of LR algorithm on $X_{cnn\_ResNet50}$.\relax }}{105}{table.caption.84}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces The tuned hyper-parameters of LR algorithm wit Lasso penalty for $X_{cnn\_ResNet50}$.\relax }}{105}{table.caption.85}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces The tuned hyper-parameters of LR algorithm with Ridge penalty on $X_{cnn\_ResNet50}$.\relax }}{106}{table.caption.86}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces The tuned hyper-parameters of KNN algorithm on $X_{cnn\_ResNet50}$.\relax }}{106}{table.caption.87}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces The tuned hyper-parameters of LDA algorithm on $X_{cnn\_ResNet50}$.\relax }}{106}{table.caption.88}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces The tuned hyper-parameters of LDA algorithm with Lasso penalty for $X_{cnn\_ResNet50}$.\relax }}{106}{table.caption.89}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{106}{table.caption.90}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces The tuned hyper-parameters of SVM algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{106}{table.caption.91}%
+\contentsline {table}{\numberline {A.12}{\ignorespaces The tuned hyper-parameters of LR algorithm on $X_{all\_ResNet50}$.\relax }}{106}{table.caption.92}%
+\contentsline {table}{\numberline {A.13}{\ignorespaces The tuned hyper-parameters of LR algorithm with Lasso on $X_{all\_ResNet50}$.\relax }}{107}{table.caption.93}%
+\contentsline {table}{\numberline {A.14}{\ignorespaces The tuned hyper-parameters of LR algorithm with Ridge penalty on $X_{all\_ResNet50}$.\relax }}{107}{table.caption.94}%
+\contentsline {table}{\numberline {A.15}{\ignorespaces The tuned hyper-parameters of KNN algorithm on $X_{all\_ResNet50}$.\relax }}{107}{table.caption.95}%
+\contentsline {table}{\numberline {A.16}{\ignorespaces The tuned hyper-parameters of LDA algorithm on $X_{all\_ResNet50}$.\relax }}{107}{table.caption.96}%
+\contentsline {table}{\numberline {A.17}{\ignorespaces The tuned hyper-parameters of LDA algorithm with Lasso penalty on $X_{all\_ResNet50}$.\relax }}{107}{table.caption.97}%

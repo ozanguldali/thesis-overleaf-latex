@@ -19,13 +19,13 @@ Another main comparison was about the effect of regularization on machine learni
 
 The final best results are as follows:
 \begin{itemize}
-    \item \textbf{CNN:} The best result was obtained from ResNet-50 model after 9th train epoch in 7 minutes with the accuracy, sensitivity, specificity, precision, F1 score, and AUC score of 92.16\%, 0.9216, 0.9215, 0.9216, 0.9216, 0.9219 respectively, and the loss of 9th train epoch and validation were 0.0223 and 1.3687, respectively.
-    \item \textbf{ML:} since the best model on CNN experiments was ResNet-50 model, the feature matrices of deep features providing the best results were also the ones transferred from ResNet-50 model. The results for three feature matrices $X_{info}$, $X_{cnn\_ResNet50}$ and $X_{all\_ResNet50}$ are as follows:
-    \begin{itemize}
-        \item the best result obtained from demographic information features was on KNN algorithm as the accuracy of 56.86\%, the sensitivity of 0.56863, the specificity of 0.58368 the precision of 0.6863, the F1 score of 0.49545, and the AUC score of 0.5745. The hyper-parameters were the number of neighbors as 17, the type of majority voting as uniform, the neighbor finder as brute force, and the metric function as euclidean,
-        \item the best result obtained from deep transferred features was not singular. According the generalized hyper-parameters, SVM with Ridge regularizer, LR, LR with Ridge, and KNN algorithms had the same results with the accuracy, sensitivity, specificity, precision, F1 score and AUC score of 92.16\%, 0.9216, 0.9230, 0.9243, 0.9215, 0.9223 respectively, and
-        \item the best result obtained from the combined features of demographic information and deep features was not singular. According the generalized hyper-parameters, SVM with Ridge regularizer, LR, LR with Ridge, and KNN algorithms had the same results with the accuracy, sensitivity, specificity, precision, F1 score and AUC score of 92.16\%, 0.9216, 0.9230, 0.9243, 0.9215, 0.9223 respectively.
-    \end{itemize}
+	\item \textbf{CNN:} The best result was obtained from ResNet-50 model after 9th train epoch in 7 minutes with the accuracy, sensitivity, specificity, precision, F1 score, and AUC score of 92.16\%, 0.9216, 0.9215, 0.9216, 0.9216, 0.9219 respectively, and the loss of 9th train epoch and validation were 0.0223 and 1.3687, respectively.
+	\item \textbf{ML:} since the best model on CNN experiments was ResNet-50 model, the feature matrices of deep features providing the best results were also the ones transferred from ResNet-50 model. The results for three feature matrices $X_{info}$, $X_{cnn\_ResNet50}$ and $X_{all\_ResNet50}$ are as follows:
+	\begin{itemize}
+		\item the best result obtained from demographic information features was on KNN algorithm as the accuracy of 56.86\%, the sensitivity of 0.56863, the specificity of 0.58368 the precision of 0.6863, the F1 score of 0.49545, and the AUC score of 0.5745. The hyper-parameters were the number of neighbors as 17, the type of majority voting as uniform, the neighbor finder as brute force, and the metric function as euclidean,
+		\item the best result obtained from deep transferred features was not singular. According the generalized hyper-parameters, SVM with Ridge regularizer, LR, LR with Ridge, and KNN algorithms had the same results with the accuracy, sensitivity, specificity, precision, F1 score and AUC score of 92.16\%, 0.9216, 0.9230, 0.9243, 0.9215, 0.9223 respectively, and
+		\item the best result obtained from the combined features of demographic information and deep features was not singular. According the generalized hyper-parameters, SVM with Ridge regularizer, LR, LR with Ridge, and KNN algorithms had the same results with the accuracy, sensitivity, specificity, precision, F1 score and AUC score of 92.16\%, 0.9216, 0.9230, 0.9243, 0.9215, 0.9223 respectively.
+	\end{itemize}
 \end{itemize}
 
 As it can be seen on confusion matrices of convolutional neural network results and machine learning results, the performance of classification for non-COVID labeled data was improved by machine learning algorithms. Moreover, the sensitivity, specificity, precision and F1 score was 0.9216, 0.9215, 0.9216 and 0.9216 respectively for ResNet-50 model, the result for machine learning algorithms was 0.9216, 0.9230, 0.9242, and 0.9216 for the sensitivity, specificity, precision and F1 score respectively. Briefly, even though the accuracy, sensitivity and F1 score did not improve, the specificity, precision and AUC Score improved. This can be interpreted as the answers of two questions could be given better: 1) how many of data estimated as infected were actually infected, and 2) how many of non-COVID-19 data over all patients correctly predicted.
@@ -34,6 +34,8 @@ As it can be seen on confusion matrices of convolutional neural network results 
 We recommend that the chest X-ray images to be used be reviewed and, if necessary, eliminated by experts. In studies similar to ours, getting support from expert radiologists ensures that better quality images are obtained. In this way, more successful models can be obtained.
 
 After constructing our data set, which has two classes such that COVID-19 and non-COVID-19, including samples with demographic information, the deep learning experiments were done to obtain the features of images. Then, this features called as deep features are used to feed machine learning algorithms to complete the experiments of our study.
+
+\newpage
 
 \section{Future Work}
 

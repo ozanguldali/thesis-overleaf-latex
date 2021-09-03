@@ -22,7 +22,7 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Sample machine learning road map.\relax }}{33}{figure.caption.23}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces (a) Clustering problem, (b) Classification problem, and (c) Regression problem \cite {parallel_linear_algebra}.\relax }}{34}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces K-fold cross-validation.}}{35}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces A Hyper-plane and margins of an SVM for a binary classification problem.\relax }}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A Hyper-plane and margins of an SVM for a binary classification problem.\relax }}{39}{figure.caption.26}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces The dual and primal problems, and the duality gap between their extreme points.\relax }}{41}{figure.caption.27}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Logistic sigmoid function with different scaling w values. \relax }}{43}{figure.caption.28}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces A KNN example illustration for detecting the class of the green sample.\relax }}{46}{figure.caption.31}%
